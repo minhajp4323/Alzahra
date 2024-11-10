@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import Logo from "../assets/Logo  Arabic.png";
+import Logo from "../assets/Arabic Logo.svg";
 
 function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -32,22 +32,22 @@ function Header() {
       >
         <img src={Logo} alt="Logo" className="h-12" />
 
-        <ul
+        {/* <ul
           className={`list-none md:flex gap-10 pr-10 transition-all duration-300 ${
             isOpen
               ? "flex-col absolute top-[60px] left-0 w-full z-50 rounded-lg"
               : "hidden md:flex"
           }`}
         >
-          {/* <li className="p-2">HOME</li>
+          <li className="p-2">HOME</li>
           <li className="p-2">ABOUT US</li>
           <li className="p-2">HAJJ</li>
           <li className="p-2">UMRAH</li>
           <li className="p-2">OTHER SERVICES</li>
-          <li className="p-2">CONTACT US</li> */}
-        </ul>
+          <li className="p-2">CONTACT US</li>
+        </ul> */}
 
-        <div
+        {/* <div
           className="md:hidden flex items-center z-50"
           onClick={() => setIsOpen(!isOpen)} 
         >
@@ -58,7 +58,7 @@ function Header() {
               <span>&#9776;</span> 
             )}
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

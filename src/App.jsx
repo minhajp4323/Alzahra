@@ -9,7 +9,6 @@ function App() {
   const [showWelcome, setShowWelcome] = useState(true);
 
   useEffect(() => {
-    // Check if the user has visited before
     const hasVisited = localStorage.getItem("hasVisited");
     if (hasVisited) {
       setShowWelcome(false);
@@ -22,7 +21,19 @@ function App() {
   };
 
   return (
-    <div className="bg-gradient-to-t from-[#FFDEA8] via-[#FFF1DE] to-[#FFDEA8]">
+    <div
+      style={{
+        backgroundImage: `
+        repeating-linear-gradient(
+          to top,
+          #FFDEA8, #FFF1DE, #FFDEA8,
+          #FFDEA8, #FFF1DE, #FFDEA8,
+        
+          #FFDEA8, #FFF1DE, #FFDEA8
+        )
+      `,
+      }}
+    >
       {/* {showWelcome ? (
         <Welcome onClose={handleWelcomeClose} />
       ) : ( */}

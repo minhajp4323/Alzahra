@@ -7,7 +7,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'jeko-medium': ['Jeko-Medium', 'sans-serif'], // Add 'Jeko-Medium' to the fontFamily
+        'jeko-medium': ['Jeko-Medium', 'sans-serif'], // Adding the custom Jeko-Medium font
+      },
+      screens: {
+        xs: '320px', 
       },
     },
   },
