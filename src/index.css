@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Jeko";
+  src: url("../src/assets/Fonts/FontsFree-Net-Jeko-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jeko";
+  src: url("../src/assets/Fonts/FontsFree-Net-Jeko-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  overflow-x: hidden;
+}
