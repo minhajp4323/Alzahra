@@ -12,11 +12,13 @@ import Crowd from "../assets/Crowd.svg";
 
 function Features() {
   return (
-    <div className="w-[80%] flex mx-auto">
+    <div className="w-[90%] sm:w-[85%] md:w-[80%] flex mx-auto ">
       <div className="feature mx-[5%] sm:mx-[10%] mt-0">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894a1b] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-20">
           <div className="flex justify-center md:justify-end w-full">
             <img
+              srcSet={`${Licensed} 320w, ${Licensed} 480w, ${Licensed} 800w`}
+              sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, 800px"
               src={Licensed}
               alt="Licensed"
               className="md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-0 lg:mt-0 md:absolute md:bottom-0 md:left-28"
@@ -54,9 +56,11 @@ function Features() {
           </div>
           <div className="flex justify-center md:justify-start md:mt-10 w-full">
             <img
+              srcSet={`${Accommodation} 320w, ${Accommodation} 480w, ${Accommodation} 800w`}
+              sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, 800px"
               src={Accommodation}
               alt="Accommodation"
-              className="hidden sm:block w-[100px] sm:w-[150px] md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-0 lg:mt-0 md:absolute md:bottom-0 md:right-20 "
+              className="hidden sm:block w-[100px] sm:w-[150px] md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-0 lg:mt-0 md:absolute md:bottom-0 md:right-20"
             />
           </div>
         </div>
@@ -64,6 +68,8 @@ function Features() {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-32">
           <div className="flex justify-center md:justify-end w-full">
             <img
+              srcSet={`${Room} 320w, ${Room} 480w, ${Room} 800w`}
+              sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, 800px"
               src={Room}
               alt="Flexible Room Types"
               className="w-[200px] sm:w-[150px] md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:left-[5%]"
@@ -77,8 +83,18 @@ function Features() {
               Flexible Room Types
             </h3>
             <p className="text-gray-700 text-sm sm:text-base">
-              Quint: Ideal for larger groups Quad: Suited for families Triple: A
-              balance of community and privacy...
+              <p>
+                Quint: <i> Ideal for larger groups</i>
+              </p>
+              <p>
+                Quad: <i> Suited for families </i>
+              </p>
+              <p>
+                Triple: <i> A balance of community and privacy </i>
+              </p>
+              <p>
+                Double: <i> Perfect for couples or pairs </i>
+              </p>
             </p>
           </div>
           <div className="absolute right-0 bottom-0 h-[20%] border-l-2 border-[#894A1B]"></div>
@@ -101,6 +117,8 @@ function Features() {
           </div>
           <div className="flex justify-center md:justify-start w-full">
             <img
+              srcSet={`${Transparent} 320w, ${Transparent} 480w, ${Transparent} 800w`}
+              sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, 800px"
               src={Transparent}
               alt="Transparent"
               className="hidden sm:block w-[220px] sm:w-[270px] md:w-[330px] lg:w-[400px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:right-0"
@@ -110,6 +128,8 @@ function Features() {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-20">
           <div className="flex justify-center md:justify-end w-full">
             <img
+              srcSet={`${Arrangement} 320w, ${Arrangement} 480w, ${Arrangement} 800w`}
+              sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, 800px"
               src={Arrangement}
               alt="Licensed"
               className="w-[250px] sm:w-[240px] md:w-[350px] lg:w-[450px] object-cover mt-4 md:mt-0 lg:mt-0 md:absolute md:bottom-0 md:left-0"
@@ -124,8 +144,16 @@ function Features() {
               Accommodation Arrangements
             </h3>
             <p className="text-gray-700 text-sm sm:text-base">
-              Makkah: 5 Nights Madinah: 7 Nights Each stay offers Comfort,
-              Proximity, & Tranquility in sacred surroundings.
+              <p>
+                {" "}
+                <i> Makkah: 5 Nights</i>
+              </p>
+              <p>
+                {" "}
+                <i> Madinah: 7 Nights</i>{" "}
+              </p>
+              Each stay offers Comfort, Proximity, & Tranquility in sacred
+              surroundings.
             </p>
           </div>
           <div className="absolute right-0 bottom-0 h-[20%] border-l-2 border-[#894A1B]"></div>
@@ -146,11 +174,13 @@ function Features() {
               journey.
             </p>
           </div>
-          <div className="flex justify-center md:justify-start md:mt-10 w-full">
+          <div className="flex justify-center md:justify-end w-full">
             <img
+              srcSet={`${CustomerSupport} 320w, ${CustomerSupport} 480w, ${CustomerSupport} 800w`}
+              sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, 800px"
               src={CustomerSupport}
               alt="Accommodation"
-              className="hidden sm:block w-[100px] sm:w-[150px] md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-0 lg:mt-0 md:absolute md:bottom-0 md:right-20 "
+              className="hidden sm:block w-[100px] sm:w-[150px] md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-0 lg:mt-0 md:absolute md:bottom-0 md:right-20"
             />
           </div>
         </div>
@@ -158,6 +188,8 @@ function Features() {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-32">
           <div className="flex justify-center md:justify-end w-full">
             <img
+              srcSet={`${Guidance} 320w, ${Guidance} 480w, ${Guidance} 800w`}
+              sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, 800px"
               src={Guidance}
               alt="Flexible Room Types"
               className="w-[150px] sm:w-[120px] md:w-[180px] lg:w-[240px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:left-[5%]"
@@ -197,6 +229,8 @@ function Features() {
           </div>
           <div className="flex justify-center md:justify-start w-full">
             <img
+              srcSet={`${Packages} 320w, ${Packages} 480w, ${Packages} 800w`}
+              sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, 800px"
               src={Packages}
               alt="Transparent"
               className="hidden sm:block w-[220px] sm:w-[270px] md:w-[330px] lg:w-[400px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:right-0"
@@ -206,6 +240,8 @@ function Features() {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-32">
           <div className="flex justify-center md:justify-end w-full">
             <img
+              srcSet={`${Services} 320w, ${Services} 480w, ${Services} 800w`}
+              sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, 800px"
               src={Services}
               alt="Flexible Room Types"
               className="w-[220px] sm:w-[150px] md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:left-[5%]"
@@ -243,6 +279,8 @@ function Features() {
           </div>
           <div className="flex justify-center md:justify-start w-full">
             <img
+              srcSet={`${Airport} 320w, ${Airport} 480w, ${Airport} 800w`}
+              sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, 800px"
               src={Airport}
               alt="Transparent"
               className="hidden sm:block w-[220px] sm:w-[270px] md:w-[330px] lg:w-[400px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:right-0"

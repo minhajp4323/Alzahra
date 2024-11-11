@@ -69,16 +69,22 @@ function Footer() {
         <div className="flex flex-wrap justify-center gap-8">
           <ul className="list-none flex flex-col items-center md:items-start space-y-2 font-extrabold">
             <li className="flex flex-col md:flex-row justify-center md:justify-start w-full">
-              <span className="w-[70px]">Phone:</span>
-              <span>+96659 499 5016</span>
+              <span className="w-[70px] block text-center md:text-left">
+                Phone:
+              </span>
+              <span className="text-center md:text-left">+96659 499 5016</span>
             </li>
             <li className="flex flex-col md:flex-row justify-center md:justify-start w-full">
-              <span className="w-[70px]"></span>
-              <span>+96656 608 7162</span>
+              <span className="w-[70px] block text-center md:text-left"></span>
+              <span className="text-center md:text-left">+96656 608 7162</span>
             </li>
             <li className="flex flex-col md:flex-row justify-center md:justify-start w-full">
-              <span className="w-[70px]">Email:</span>
-              <span>info@alzahrahajj.com</span>
+              <span className="w-[70px] block text-center md:text-left">
+                Email:
+              </span>
+              <span className="text-center md:text-left">
+                info@alzahrahajj.com
+              </span>
             </li>
           </ul>
         </div>

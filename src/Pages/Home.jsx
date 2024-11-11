@@ -1,11 +1,11 @@
-import kaba from "../assets/K'aba.png";
+// import kaba from "../assets/K'aba.png";
 import banner from "../assets/Desert BG.svg";
 import bannerMobile from "../assets/MobileBanner.svg";
 import BG from "../assets/Part 2 BG.svg";
 import Corner from "../assets/Corner Vector.svg";
 import prayer from "../assets/Praying.svg";
 import Pilgrims from "../assets/Pilgrims.svg";
-import { Dropdown } from "flowbite-react";
+// import { Dropdown } from "flowbite-react";
 import Footer from "../Components/Footer";
 import Features from "../Components/Features";
 
