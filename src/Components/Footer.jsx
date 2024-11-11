@@ -9,15 +9,15 @@ import Youtube from "../assets/Social Icons/youtube.svg";
 function Footer() {
   return (
     <div
-      className="flex flex-col md:flex-row gap-8 justify-between p-16 text-center md:text-left bg-gradient-to-t from-[#eabb70] to-transparent "
+      className="flex flex-col md:flex-row gap-8 justify-between p-16 xs:gap-2 text-center md:text-left bg-gradient-to-t from-[#eabb70] to-transparent px-[10%] "
       style={{
         position: "relative",
         zIndex: 9999,
       }}
     >
-      <div className="flex flex-col items-start gap-4 w-full md:w-1/4 mx-auto md:items-start">
-        <img src={Logo} alt="Logo" className="w-auto mx-auto" />
-        <div className="flex gap-4 justify-center mt-4 items-center mx-auto md:mx-0">
+      <div className="flex flex-col items-start gap-4 w-full md:w-1/4 mx-auto md:items-start mb-0 "> 
+        <img src={Logo} alt="Logo" className="w-[260px] md:w[240px]  mx-auto md:mx-0 xs:w-[160px]" />
+        <div className="flex gap-6 justify-center mt-16 items-center mx-auto md:mx-0  ">
           <img src={Facebook} alt="Facebook" className="w-6 h-6" />
           <img src={Instagram} alt="Instagram" className="w-6 h-6" />
           <img src={Snapchat} alt="Snapchat" className="w-6 h-6" />

@@ -1,4 +1,4 @@
-// import kaba from "../assets/K'aba.png";
+import kaba from "../assets/K'aba.png";
 import banner from "../assets/Desert BG.svg";
 import bannerMobile from "../assets/MobileBanner.svg";
 import BG from "../assets/Part 2 BG.svg";
@@ -16,12 +16,16 @@ function Home() {
       style={{ fontFamily: "Jeko, sans-serif", zIndex: 9999 }}
     >
       <div className="First xs:mb-[18%] lg:mb-[18%] md:mb-[19%] sm:mb-[29%] mt-5">
-        <div className="flex flex-col text-center gap-4 mb-1">
+        <div className="flex flex-col text-center gap-4 md:-mb-10 md:mt-20 xs:mt-40 xs:-mb-40">
           <h1 className="font-bold text-[#C05D1B] text-4xl md:text-5xl lg:text-5xl">
-            Your Journey, Our Honor
+            <span className="block md:inline">Your Journey,</span> Our Honor
           </h1>
+
           <p className="text-gray-700 text-lg md:text-xl lg:text-2xl">
-            Embrace a seamless Hajj Umrah Experience
+            <span className="block md:inline">
+              Embrace a seamless Hajj Umrah
+            </span>{" "}
+            Experience
           </p>
         </div>
 
@@ -33,7 +37,7 @@ function Home() {
             style={{ height: "auto" }}
           />
           <img
-            src={bannerMobile} 
+            src={bannerMobile}
             alt="Desert Banner Mobile"
             className="absolute bottom-0 z-0 sm:hidden w-[92%] max-w-[700px]"
             style={{ height: "auto" }}
@@ -94,7 +98,7 @@ function Home() {
             className="absolute xs:bottom-0 sm:bottom-0 md:bottom-0 lg:bottom-0 xl:bottom-0 right-0 h-[530px] sm:h-[400px] xs:h-[350px] md:h-[450px] lg:h-[600px]"
           />
 
-          <div className="xs:w-screen md:w-[400px] sm:w-[400px] relative h-[100%]  xl:ml-28 lg:ml-20 md:ml-16 bg-slate-100 backdrop-blur-md opacity-70 p-12 text-xl sm:ml-0 sm:text-base md:text-lg lg:text-xl z-20">
+          <div className="xs:w-screen md:w-[400px] sm:w-[400px] relative h-[100%] xl:ml-28 lg:ml-20 md:ml-16 bg-slate-100 backdrop-blur-md opacity-70 p-12 text-xl sm:ml-0 sm:text-base md:text-lg lg:text-xl z-20">
             <h3 className="text-xl sm:text-2xl md:text-3xl mb-4">
               Why Choose <b>Alzahra Hajj and Umrah</b> Services..?
             </h3>
@@ -104,7 +108,7 @@ function Home() {
               by pilgrims worldwide:
             </p>
 
-            <div className="bg-white bg-opacity-100 p-2 rounded-md inline-flex items-center gap-2 mt-8">
+            <div className="bg-white p-2 rounded-md inline-flex items-center gap-2 mt-8 opacity-100">
               <img src={Pilgrims} alt="Happy Pilgrims" className="w-6 h-6" />
               <div>1000+ happy pilgrims</div>
             </div>

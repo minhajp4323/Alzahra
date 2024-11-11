@@ -1,13 +1,13 @@
-import Licensed from "../assets/Lisenced.svg";
-import Accommodation from "../assets/Accomedation.svg";
-import Room from "../assets/Room.svg";
-import Transparent from "../assets/Transparent.svg";
-import Arrangement from "../assets/Arrangements.svg";
-import CustomerSupport from "../assets/CustomerSupport.svg";
-import Guidance from "../assets/Guidance.svg";
-import Packages from "../assets/Packages.svg";
-import Services from "../assets/Services.svg";
-import Airport from "../assets/Airport.svg";
+import Licensed from "../assets/Lisenced.png";
+import Accommodation from "../assets/Accomedation.png";
+import Room from "../assets/Room.png";
+import Transparent from "../assets/Transparent.png";
+import Arrangement from "../assets/Arrangements.png";
+import CustomerSupport from "../assets/CustomerSupport.png";
+import Guidance from "../assets/Guidance.png";
+import Packages from "../assets/Packages.png";
+import Services from "../assets/Services.png";
+import Airport from "../assets/Airport.png";
 import Crowd from "../assets/Crowd.svg";
 
 function Features() {
