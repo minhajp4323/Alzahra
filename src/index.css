@@ -1,25 +1,52 @@
+/* Move @import to the top as required */
+@import url("https://fonts.googleapis.com/css2?family=Jeko:wght@400;500;700&display=swap");
+
+/* Define font faces */
 @font-face {
   font-family: "Jeko";
   src: url("../src/assets/Fonts/FontsFree-Net-Jeko-Bold.ttf") format("truetype");
-  font-weight: bold;
+  font-weight: 700; /* Use numerical weight for better control */
   font-style: normal;
 }
-/* Add this to your global CSS file (e.g., index.css or App.css) */
-@import url("https://fonts.googleapis.com/css2?family=Jeko:wght@400;500;700&display=swap");
 
 @font-face {
   font-family: "Jeko";
   src: url("../src/assets/Fonts/FontsFree-Net-Jeko-Medium.ttf")
     format("truetype");
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Gilroy";
+  src: url("../src/assets/Fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy Light";
+  src: url("../src/assets/Fonts/gilroy/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Tailwind imports */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Body styling */
 body {
   overflow-x: hidden;
   font-family: "Jeko", sans-serif;
+}
+
+/* Add to your global CSS file (e.g., index.css) */
+.font-gilroy {
+  font-family: "Gilroy", sans-serif;
+}
+
+.font-gilroy-light {
+  font-family: "Gilroy Light", sans-serif;
 }

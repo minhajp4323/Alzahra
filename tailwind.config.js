@@ -1,16 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        'jeko-medium': ['Jeko-Medium', 'sans-serif'], // Adding the custom Jeko-Medium font
+        jekoMedium: ["Jeko-Medium", "sans-serif"],
+        gilroyLight: ["Gilroy-Light", "sans-serif"],
+        gilroyUltraLight: ["Gilroy Ultra Light", "sans-serif"],
       },
       screens: {
-        xs: '320px', 
+        xs: "320px",
       },
     },
   },

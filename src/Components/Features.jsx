@@ -19,8 +19,7 @@ function Features() {
             <img
               src={Licensed}
               alt="Licensed"
-              className="w-[100px] sm:w-
-               md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-0 lg:mt-0 md:absolute md:bottom-0 md:left-28"
+              className="md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-0 lg:mt-0 md:absolute md:bottom-0 md:left-28"
             />
           </div>
           <div className="text-left space-y-2 md:space-y-4 p-4 sm:p-6">
@@ -67,7 +66,7 @@ function Features() {
             <img
               src={Room}
               alt="Flexible Room Types"
-              className="w-[100px] sm:w-[150px] md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:left-[5%]"
+              className="w-[200px] sm:w-[150px] md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:left-[5%]"
             />
           </div>
           <div className="text-left space-y-2 md:space-y-4 p-4 sm:p-6">
@@ -113,7 +112,7 @@ function Features() {
             <img
               src={Arrangement}
               alt="Licensed"
-              className="w-[180px] sm:w-[240px] md:w-[350px] lg:w-[450px] object-cover mt-4 md:mt-0 lg:mt-0 md:absolute md:bottom-0 md:left-0"
+              className="w-[250px] sm:w-[240px] md:w-[350px] lg:w-[450px] object-cover mt-4 md:mt-0 lg:mt-0 md:absolute md:bottom-0 md:left-0"
             />
           </div>
 
@@ -161,7 +160,7 @@ function Features() {
             <img
               src={Guidance}
               alt="Flexible Room Types"
-              className="w-[80px] sm:w-[120px] md:w-[180px] lg:w-[240px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:left-[5%]"
+              className="w-[150px] sm:w-[120px] md:w-[180px] lg:w-[240px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:left-[5%]"
             />
           </div>
 
@@ -209,7 +208,7 @@ function Features() {
             <img
               src={Services}
               alt="Flexible Room Types"
-              className="w-[100px] sm:w-[150px] md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:left-[5%]"
+              className="w-[220px] sm:w-[150px] md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:left-[5%]"
             />
           </div>
           <div className="text-left space-y-2 md:space-y-4 p-4 sm:p-6">
