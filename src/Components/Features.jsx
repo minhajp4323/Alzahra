@@ -19,7 +19,8 @@ function Features() {
             <img
               src={Licensed}
               alt="Licensed"
-              className="w-[100px] sm:w-[150px] md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-0 lg:mt-0 md:absolute md:bottom-0 md:left-28"
+              className="w-[100px] sm:w-
+               md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-0 lg:mt-0 md:absolute md:bottom-0 md:left-28"
             />
           </div>
           <div className="text-left space-y-2 md:space-y-4 p-4 sm:p-6">
@@ -56,7 +57,7 @@ function Features() {
             <img
               src={Accommodation}
               alt="Accommodation"
-              className="w-[100px] sm:w-[150px] md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-0 lg:mt-0 md:absolute md:bottom-0 md:right-20 "
+              className="hidden sm:block w-[100px] sm:w-[150px] md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-0 lg:mt-0 md:absolute md:bottom-0 md:right-20 "
             />
           </div>
         </div>
@@ -103,7 +104,7 @@ function Features() {
             <img
               src={Transparent}
               alt="Transparent"
-              className="w-[220px] sm:w-[270px] md:w-[330px] lg:w-[400px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:right-0"
+              className="hidden sm:block w-[220px] sm:w-[270px] md:w-[330px] lg:w-[400px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:right-0"
             />
           </div>
         </div>
@@ -150,7 +151,7 @@ function Features() {
             <img
               src={CustomerSupport}
               alt="Accommodation"
-              className="w-[100px] sm:w-[150px] md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-0 lg:mt-0 md:absolute md:bottom-0 md:right-20 "
+              className="hidden sm:block w-[100px] sm:w-[150px] md:w-[220px] lg:w-[300px] object-cover mt-4 md:mt-0 lg:mt-0 md:absolute md:bottom-0 md:right-20 "
             />
           </div>
         </div>
@@ -199,7 +200,7 @@ function Features() {
             <img
               src={Packages}
               alt="Transparent"
-              className="w-[220px] sm:w-[270px] md:w-[330px] lg:w-[400px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:right-0"
+              className="hidden sm:block w-[220px] sm:w-[270px] md:w-[330px] lg:w-[400px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:right-0"
             />
           </div>
         </div>
@@ -245,7 +246,7 @@ function Features() {
             <img
               src={Airport}
               alt="Transparent"
-              className="w-[220px] sm:w-[270px] md:w-[330px] lg:w-[400px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:right-0"
+              className="hidden sm:block w-[220px] sm:w-[270px] md:w-[330px] lg:w-[400px] object-cover mt-4 md:mt-9 md:absolute md:bottom-0 md:right-0"
             />
           </div>
         </div>

@@ -24,7 +24,7 @@ function Header() {
   }, []);
 
   return (
-    <div className="sticky top-0 z-50">
+    <div className=" top-0 z-50">
       <div
         className={`p-6 flex justify-between items-center relative transition-all duration-300 ${
           isScrolled ? "bg-white bg-opacity-20 backdrop-blur-md" : ""

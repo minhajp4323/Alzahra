@@ -1,3 +1,6 @@
 grid-rows-footer {
-    grid-template-rows: auto 1fr 1fr 1fr; /* Adjust based on your needs */
+    grid-template-rows: auto 1fr 1fr 1fr; 
+  }
+  body{
+    overflow-x: hidden;
   }

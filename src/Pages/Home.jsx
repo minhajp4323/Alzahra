@@ -1,5 +1,6 @@
 import kaba from "../assets/K'aba.png";
 import banner from "../assets/Desert BG.svg";
+import bannerMobile from "../assets/MobileBanner.svg";
 import BG from "../assets/Part 2 BG.svg";
 import Corner from "../assets/Corner Vector.svg";
 import prayer from "../assets/Praying.svg";
@@ -10,10 +11,13 @@ import Features from "../Components/Features";
 
 function Home() {
   return (
-    <div className="Home" style={{ fontFamily: "Jeko, sans-serif" }}>
-      <div className="First xs:mb-[18%] lg:mb-[18%] md:mb-[19%] sm:mb-[29%]">
-        <div className="flex flex-col text-center gap-4 mb-4">
-          <h1 className="font-bold text-[#C05D1B] text-4xl md:text-5xl lg:text-6xl">
+    <div
+      className="Home"
+      style={{ fontFamily: "Jeko, sans-serif", zIndex: 9999 }}
+    >
+      <div className="First xs:mb-[18%] lg:mb-[18%] md:mb-[19%] sm:mb-[29%] mt-5">
+        <div className="flex flex-col text-center gap-4 mb-1">
+          <h1 className="font-bold text-[#C05D1B] text-4xl md:text-5xl lg:text-5xl">
             Your Journey, Our Honor
           </h1>
           <p className="text-gray-700 text-lg md:text-xl lg:text-2xl">
@@ -25,37 +29,44 @@ function Home() {
           <img
             src={banner}
             alt="Desert Banner"
-            className="absolute bottom-0 z-0 w-full max-w-[1412px] sm:max-w-[700px] md:max-w-[1412px]"
+            className="absolute bottom-0 z-0 hidden sm:block w-[92%] max-w-[1412px]"
             style={{ height: "auto" }}
           />
           <img
+            src={bannerMobile} 
+            alt="Desert Banner Mobile"
+            className="absolute bottom-0 z-0 sm:hidden w-[92%] max-w-[700px]"
+            style={{ height: "auto" }}
+          />
+          {/* <img
             src={kaba}
             alt="Kaaba"
-            className="absolute bottom-0 z-10 max-w-[35%] sm:max-w-[35%] md:max-w-[35%]"
-          />
+            className="absolute bottom-0 z-10 max-w-[35%] sm:max-w-[35%] md:max-w-[35%] -ml-2"
+          /> */}
 
-          <div className="mt-auto absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex gap-4 bg-white rounded-2xl p-4 shadow-[0_4px_40px_#EDB480] justify-center items-center z-50 w-[90%] sm:w-[70%] md:w-[60%] lg:w-[503px] max-w-full">
-            <Dropdown label="HAJJ" size="xl">
+          <div className="mt-auto absolute md:-bottom-9 sm:-bottom-9 xs:-bottom-6  left-1/2 transform -translate-x-1/2 flex gap-4 sm:gap-8 md:gap-14 bg-white rounded-2xl p-3 sm:p-5 md:p-6 shadow-[0_4px_40px_#EDB480] justify-center items-center z-50 w-auto max-w-full ">
+            <div className="text-xs sm:text-sm md:text-lg">HAJJ</div>
+            <div className="border-l-2 border-gray-300 h-[20px] sm:h-[30px] mx-1 sm:mx-2"></div>
+            <div className="text-xs sm:text-sm md:text-lg">UMRAH</div>
+            <div className="border-l-2 border-gray-300 h-[20px] sm:h-[30px] mx-1 sm:mx-2"></div>
+            <div className="text-xs sm:text-sm md:text-lg">SERVICES</div>
+            {/* <Dropdown label="HAJJ" size="xl">
               <Dropdown.Item className="text-[16px] sm:text-[20px] md:text-[24px] flex items-center">
                 Option 1
               </Dropdown.Item>
             </Dropdown>
-
             <div className="border-l-2 border-gray-300 h-[30px] mx-2"></div>
-
             <Dropdown label="UMRAH" size="xl">
               <Dropdown.Item className="text-[16px] sm:text-[20px] md:text-[24px] flex items-center">
                 Option 2
               </Dropdown.Item>
             </Dropdown>
-
             <div className="border-l-2 border-gray-300 h-[30px] mx-2"></div>
-
             <Dropdown label="SERVICES" size="xl">
               <Dropdown.Item className="text-[16px] sm:text-[20px] md:text-[24px] flex items-center">
                 Option 3
               </Dropdown.Item>
-            </Dropdown>
+            </Dropdown> */}
           </div>
         </div>
       </div>
@@ -83,7 +94,7 @@ function Home() {
             className="absolute xs:bottom-0 sm:bottom-0 md:bottom-0 lg:bottom-0 xl:bottom-0 right-0 h-[530px] sm:h-[400px] xs:h-[350px] md:h-[450px] lg:h-[600px]"
           />
 
-          <div className="relative h-[100%] w-[400px] xl:ml-28 lg:ml-20 md:ml-16 bg-slate-100 backdrop-blur-md opacity-70 p-12 text-xl sm:ml-0 sm:text-base md:text-lg lg:text-xl z-20">
+          <div className="xs:w-screen md:w-[400px] sm:w-[400px] relative h-[100%]  xl:ml-28 lg:ml-20 md:ml-16 bg-slate-100 backdrop-blur-md opacity-70 p-12 text-xl sm:ml-0 sm:text-base md:text-lg lg:text-xl z-20">
             <h3 className="text-xl sm:text-2xl md:text-3xl mb-4">
               Why Choose <b>Alzahra Hajj and Umrah</b> Services..?
             </h3>
@@ -99,7 +110,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="absolute h-[110%] w-[350px] xl:ml-28 lg:ml-20 md:ml-16 border-2 -mt-5 border-[#894a1b] top-0 left-6 pointer-events-none"></div>
+          <div className="absolute h-[110%] xs:w-[calc(100vw-12%)] md:w-[350px] sm:w-[350px] xl:ml-28 lg:ml-20 md:ml-16 border-[2.5px] -mt-5 border-[#894a1b] top-0 left-6 pointer-events-none"></div>
         </div>
       </div>
 
