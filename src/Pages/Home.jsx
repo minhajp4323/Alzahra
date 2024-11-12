@@ -16,9 +16,12 @@ function Home() {
       style={{ fontFamily: "Jeko, sans-serif", zIndex: 9999 }}
     >
       <div className="First xs:mb-[18%] lg:mb-[18%] md:mb-[19%] sm:mb-[29%] mt-5">
-        <div className="flex flex-col text-center gap-4 md:-mb-10 md:mt-20 xs:mt-40 xs:-mb-40">
+        <div className="flex flex-col text-center gap-4 md:-mb-10 md:mt-20 xs:mt-20 xs:-mb-40">
           <h1 className="font-bold text-[#C05D1B] text-4xl md:text-5xl lg:text-5xl">
-            <span className="block md:inline">Your Journey,</span> Our Honor
+            <span className="block md:inline">
+              Your Journey<span className="hidden md:inline">,</span>
+            </span>{" "}
+            Our Honor
           </h1>
 
           <p className="text-gray-700 text-lg md:text-xl lg:text-2xl">
@@ -48,7 +51,7 @@ function Home() {
             className="absolute bottom-0 z-10 max-w-[35%] sm:max-w-[35%] md:max-w-[35%] -ml-2"
           /> */}
 
-          <div className="mt-auto absolute md:-bottom-9 sm:-bottom-9 xs:-bottom-6  left-1/2 transform -translate-x-1/2 flex gap-16 sm:gap-8 md:gap-14 bg-white xs:rounded-xl md:rounded-2xl p-3 sm:p-5 md:p-6 shadow-[0_4px_40px_#EDB480] justify-center items-center z-50 w-auto max-w-full ">
+          <div className="mt-auto absolute md:-bottom-9 sm:-bottom-9 xs:-bottom-6  left-1/2 transform -translate-x-1/2 flex gap-6 sm:gap-8 md:gap-14 bg-white xs:rounded-xl md:rounded-2xl p-3 sm:p-5 md:p-6 shadow-[0_4px_40px_#EDB480] justify-center items-center z-50 w-auto max-w-full px-10 ">
             <div className="text-xs sm:text-sm md:text-lg">HAJJ</div>
             {/* <div className="border-l-2 border-gray-300 h-[20px] sm:h-[30px] mx-1 sm:mx-2"></div> */}
             <div className="text-xs sm:text-sm md:text-lg">UMRAH</div>
