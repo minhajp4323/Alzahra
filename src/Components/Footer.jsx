@@ -9,7 +9,7 @@ import Logo from "../assets/Arabic Logo.svg";
 function Footer() {
   return (
     <div
-      className="flex flex-col md:flex-row gap-8 justify-between p-16 xs:gap-2 text-center md:text-left bg-gradient-to-t from-[#eabb70] to-transparent px-[10%] mt-10 "
+      className="flex flex-col md:flex-row gap-8 justify-between p-16 xs:gap-2 text-center md:text-left bg-gradient-to-t from-[#edc077] to-transparent px-[10%] mt-36 pb-36 "
       style={{
         position: "relative",
         zIndex: 9999,
@@ -53,27 +53,29 @@ function Footer() {
       </div> */}
 
       {/* <div className="flex flex-col items-center md:items-start md:gap-4 xs:gap-0 md:mt-0 xs:mt-10 w-full md:w-1/4"> */}
-      <div className="flex flex-col items-center md:items-start md:gap-4 xs:gap-0 md:mt-0 xs:mt-10 w-full md:w-1/3">
-        <p className="text-2xl font-gilroy-light md:text-left text-center">
+      <div className="flex flex-col items-center md:items-start md:gap-2 xs:gap-0 md:mt-0 xs:mt-10 w-full md:w-1/3">
+        <p className="text-lg font-gilroy-light md:text-left text-center">
           Location
         </p>
-        <hr className="border-t-2 border-[#757575] my-4 w-[80%] ml-0 mx-auto opacity-20" />
+        <hr className="border-t-[1px] border-[#757575] my-4 w-[80%] md:ml-0 mt-0 mb-2 xs:mx-auto md:mx-auto" />
 
         <div className="flex flex-wrap justify-center gap-8">
-          <ul className="list-none flex flex-col items-center md:items-start font-extrabold">
-            <li>Address here,</li>
-            <li>Address here adder</li>
-            <li>Address here,</li>
+          <ul className="list-none flex flex-col gap-2 items-center md:items-start font-extrabold">
+            <li>7385 Al Aasha Al Mazeni,</li>
+            <li> 3262, Jeddah 23454,</li>
+            <li> Saudi Arabia</li>
+            {/* <li>Address here adder</li>
+              <li>Address here,</li> */}
           </ul>
         </div>
       </div>
 
       {/* <div className="flex flex-col items-center md:items-start md:gap-4 xs:gap-0 md:mt-0 xs:mt-10  w-full md:w-1/4"> */}
-      <div className="flex flex-col items-center md:items-start md:gap-4 xs:gap-0 md:mt-0 xs:mt-10  w-full md:w-1/3">
-        <p className="text-2xl font-gilroy-light md:text-left text-center">
+      <div className="flex flex-col items-center md:items-start md:gap-2 xs:gap-0 md:mt-0 xs:mt-10  w-full md:w-1/3">
+        <p className="text-lg font-gilroy-light md:text-left text-center">
           Contact Info
         </p>
-        <hr className="border-t-2 border-[#757575] my-4 w-[80%] ml-0   mx-auto opacity-20" />
+        <hr className="border-t-[1px] border-[#757575] my-4 w-[80%] md:ml-0 mt-0 mb-2 xs:mx-auto md:mx-auto " />
         <div className="window  flex-wrap justify-center gap-8 md:block hidden">
           <ul className="list-none flex flex-col items-center md:items-start space-y-2 font-extrabold">
             <li className="flex flex-col md:flex-row justify-center md:justify-start w-full">

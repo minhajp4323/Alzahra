@@ -14,7 +14,7 @@ function Features() {
   return (
     <div className="w-[90%] sm:w-[85%] md:w-[80%] flex mx-auto ">
       <div className="feature mx-[5%] sm:mx-[10%] mt-0">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894a1b] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-20">
           <div className="flex justify-center md:justify-end w-full">
             <img
               srcSet={`${Licensed} 320w, ${Licensed} 480w, ${Licensed} 800w`}
@@ -25,13 +25,13 @@ function Features() {
             />
           </div>
           <div className="text-left space-y-2 md:space-y-4 p-4 sm:p-6">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#B57439]">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-[#B57439]">
               01
             </h1>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">
+            <h3 className="text-lg sm:text-xl md:text-3xl font-semibold">
               Licensed and Certified
             </h3>
-            <p className="text-gray-700 text-sm sm:text-base">
+            <p className="text-gray-700 text-sm sm:text-base md:text-xl">
               Our authorized team streamlines visa processing and ensures all
               travel documentation meets official requirements, so you can focus
               on your spiritual journey with complete peace of mind.
@@ -40,16 +40,16 @@ function Features() {
           <div className="absolute right-0 bottom-0 h-[20%] border-l-2 border-[#894A1B]"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-r-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pt-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-r-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pt-28">
           <div className="absolute left-0 top-0 h-1/5 border-l-2 border-[#894A1B]"></div>
           <div className="text-left space-y-2 md:space-y-4 p-4 sm:p-6 md:ml-10">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#B57439]">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-[#B57439]">
               02
             </h1>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">
+            <h3 className="text-lg sm:text-xl md:text-3xl font-semibold">
               Prime Accommodations Near the Harams
             </h3>
-            <p className="text-gray-700 text-sm sm:text-base">
+            <p className="text-gray-700 text-sm sm:text-base md:text-xl">
               Experience the convenience of staying near the Holy Harams in
               Makkah and Madinah...
             </p>
@@ -65,7 +65,7 @@ function Features() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-28">
           <div className="flex justify-center md:justify-end w-full">
             <img
               srcSet={`${Room} 320w, ${Room} 480w, ${Room} 800w`}
@@ -76,13 +76,13 @@ function Features() {
             />
           </div>
           <div className="text-left space-y-2 md:space-y-4 p-4 sm:p-6">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#B57439]">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-[#B57439]">
               03
             </h1>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">
+            <h3 className="text-lg sm:text-xl md:text-3xl font-semibold">
               Flexible Room Types
             </h3>
-            <p className="text-gray-700 text-sm sm:text-base">
+            <p className="text-gray-700 text-sm sm:text-base md:text-xl">
               <p>
                 Quint: <i> Ideal for larger groups</i>
               </p>
@@ -103,13 +103,13 @@ function Features() {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-r-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pt-24">
           <div className="absolute left-0 top-0 h-1/5 border-l-2 border-[#894A1B]"></div>
           <div className="text-left space-y-2 md:space-y-4 p-4 sm:p-6 md:ml-10">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#B57439]">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-[#B57439]">
               04
             </h1>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">
-              Transparent, All-Inclusive Pricing
+            <h3 className="text-lg sm:text-xl md:text-3xl font-semibold">
+              Transparent, <br /> All-Inclusive Pricing
             </h3>
-            <p className="text-gray-700 text-sm sm:text-base">
+            <p className="text-gray-700 text-sm sm:text-xl md:text-xl">
               Our comprehensive packages include visa processing,
               accommodations, and transportation, eliminating the need for
               hidden fees.
@@ -137,13 +137,13 @@ function Features() {
           </div>
 
           <div className="text-left space-y-2 md:space-y-4 p-4 sm:p-6">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#B57439]">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-[#B57439]">
               05
             </h1>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">
+            <h3 className="text-lg sm:text-xl md:text-3xl font-semibold">
               Accommodation Arrangements
             </h3>
-            <p className="text-gray-700 text-sm sm:text-base">
+            <p className="text-gray-700 text-sm sm:text-base md:text-xl">
               <p>
                 {" "}
                 <i> Makkah: 5 Nights</i>
@@ -159,16 +159,16 @@ function Features() {
           <div className="absolute right-0 bottom-0 h-[20%] border-l-2 border-[#894A1B]"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-r-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pt-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-r-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pt-24">
           <div className="absolute left-0 top-0 h-1/5 border-l-2 border-[#894A1B]"></div>
           <div className="text-left space-y-2 md:space-y-4 p-4 sm:p-6 md:ml-10">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#B57439]">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-[#B57439]">
               06
             </h1>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">
+            <h3 className="text-lg sm:text-xl md:text-4xl font-semibold">
               24/7 Customer Support
             </h3>
-            <p className="text-gray-700 text-sm sm:text-base">
+            <p className="text-gray-700 text-sm sm:text-base md:text-xl">
               Our dedicated support team is on standby to assist you at any hour
               throughout your pilgrimage, ensuring a smooth and fulfilling
               journey.
@@ -185,7 +185,7 @@ function Features() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-24">
           <div className="flex justify-center md:justify-end w-full">
             <img
               srcSet={`${Guidance} 320w, ${Guidance} 480w, ${Guidance} 800w`}
@@ -197,13 +197,13 @@ function Features() {
           </div>
 
           <div className="text-left space-y-2 md:space-y-4 p-4 sm:p-6">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#B57439]">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-[#B57439]">
               07
             </h1>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">
+            <h3 className="text-lg sm:text-xl md:text-3xl font-semibold">
               Comprehensive Guidance & Assistance
             </h3>
-            <p className="text-gray-700 text-sm sm:text-base">
+            <p className="text-gray-700 text-sm sm:text-base md:text-xl">
               From pre-departure advice to post-return support, our team
               provides continuous assistance to make every phase of your
               pilgrimage meaningful and worry-free.
@@ -215,13 +215,13 @@ function Features() {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-r-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pt-24">
           <div className="absolute left-0 top-0 h-1/5 border-l-2 border-[#894A1B]"></div>
           <div className="text-left space-y-2 md:space-y-4 p-4 sm:p-6 md:ml-10">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#B57439]">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-[#B57439]">
               08
             </h1>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">
+            <h3 className="text-lg sm:text-xl md:text-3xl font-semibold">
               Tailored Packages
             </h3>
-            <p className="text-gray-700 text-sm sm:text-base">
+            <p className="text-gray-700 text-sm sm:text-base md:text-xl">
               Choose from our selection of standard, family, and VIP packages.
               We also offer customizable options to cater to unique needs and
               preferences.
@@ -237,7 +237,7 @@ function Features() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-24">
           <div className="flex justify-center md:justify-end w-full">
             <img
               srcSet={`${Services} 320w, ${Services} 480w, ${Services} 800w`}
@@ -248,13 +248,13 @@ function Features() {
             />
           </div>
           <div className="text-left space-y-2 md:space-y-4 p-4 sm:p-6">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#B57439]">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-[#B57439]">
               09
             </h1>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">
+            <h3 className="text-lg sm:text-xl md:text-3xl font-semibold">
               Additional Services
             </h3>
-            <p className="text-gray-700 text-sm sm:text-base">
+            <p className="text-gray-700 text-sm sm:text-base md:text-xl">
               Enhance your pilgrimage with optional services, including guided
               tours to historical sites, specialized transportation, and
               personal assistance for elderly and disabled guests.
@@ -266,13 +266,13 @@ function Features() {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-r-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pt-24">
           <div className="absolute left-0 top-0 h-1/5 border-l-2 border-[#894A1B]"></div>
           <div className="text-left space-y-2 md:space-y-4 p-4 sm:p-6 md:ml-10">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#B57439]">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-[#B57439]">
               10
             </h1>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">
+            <h3 className="text-lg sm:text-xl md:text-3xl font-semibold">
               Convenient Airport Transfers
             </h3>
-            <p className="text-gray-700 text-sm sm:text-base">
+            <p className="text-gray-700 text-sm sm:text-base md:text-xl">
               Enjoy hassle-free airport pickup and drop-off services, ensuring a
               smooth start and end to your journey.
             </p>

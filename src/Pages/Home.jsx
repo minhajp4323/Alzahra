@@ -51,7 +51,7 @@ function Home() {
             className="absolute bottom-0 z-10 max-w-[35%] sm:max-w-[35%] md:max-w-[35%] -ml-2"
           /> */}
 
-          <div className="mt-auto absolute md:-bottom-9 sm:-bottom-9 xs:-bottom-6  left-1/2 transform -translate-x-1/2 flex gap-6 sm:gap-8 md:gap-14 bg-white xs:rounded-xl md:rounded-2xl p-3 sm:p-5 md:p-6 shadow-[0_4px_40px_#EDB480] justify-center items-center z-50 w-auto max-w-full px-10 ">
+          <div className="mt-auto absolute md:-bottom-9 sm:-bottom-9 xs:-bottom-6  left-1/2 transform -translate-x-1/2 flex gap-6 sm:gap-8 md:gap-14 bg-white xs:rounded-xl md:rounded-2xl p-3 sm:p-5 md:p-6 shadow-[0_4px_40px_#EDB480] justify-center items-center z-50 w-auto max-w-full px-10 md:px-20 ">
             <div className="text-xs sm:text-sm md:text-lg">HAJJ</div>
             {/* <div className="border-l-2 border-gray-300 h-[20px] sm:h-[30px] mx-1 sm:mx-2"></div> */}
             <div className="text-xs sm:text-sm md:text-lg">UMRAH</div>
@@ -117,13 +117,13 @@ function Home() {
             </div>
           </div>
 
-          <div className="absolute h-[110%] xs:w-[calc(100vw-12%)] md:w-[350px] sm:w-[350px] xl:ml-28 lg:ml-20 md:ml-16 border-[2.5px] -mt-5 border-[#894a1b] top-0 left-6 pointer-events-none"></div>
+          <div className="absolute h-[110%] xs:w-[calc(100vw-12%)] md:w-[350px] sm:w-[350px] xl:ml-28 lg:ml-20 md:ml-16 border-[2.5px] -mt-5 border-[#C56921] top-0 left-6 pointer-events-none"></div>
         </div>
       </div>
 
       <Features />
 
-      <div className="flex justify-center items-center text-center mt-20 w-full h-auto md:h-[250px] px-4 md:px-0">
+      <div className="flex justify-center items-center text-center mt-[180px] w-full h-auto md:h-[250px] px-4 md:px-0">
         <div className="w-full sm:w-[80%] md:w-[70%] lg:w-[50%]">
           <p className="text-base sm:text-lg md:text-xl lg:text-[20px] leading-relaxed">
             At <br />
@@ -134,9 +134,14 @@ function Home() {
             respect for Islamic values, making your journey one of comfort,
             ease, and devotion.
           </p>
-          <div className="border-2 border-black rounded-[20px] p-2 sm:p-3 md:p-3 text-sm sm:text-base md:text-[18px] inline-block mt-6 md:mt-10">
+          <div className="border-2 border-black rounded-[20px] p-2 sm:p-3 md:px-6 md:py-5 text-sm sm:text-base md:text-[18px] inline-block mt-6 md:mt-14 ">
             Choose Alzahra as your partner in faith
           </div>
+
+          <p className="text-base sm:text-lg md:text-xl lg:text-[20px] mt-8">
+            & let us take care of the details so you can focus on <br /> what
+            truly matter
+          </p>
         </div>
       </div>
 
