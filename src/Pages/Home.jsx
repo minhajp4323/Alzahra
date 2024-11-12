@@ -124,7 +124,7 @@ function Home() {
       <Features />
 
       <div className="flex justify-center items-center text-center mt-[180px] w-full h-auto md:h-[250px] px-4 md:px-0">
-        <div className="w-full sm:w-[80%] md:w-[70%] lg:w-[50%]">
+        <div className="w-full sm:w-[80%] md:w-[70%] lg:w-[50%] ">
           <p className="text-base sm:text-lg md:text-xl lg:text-[20px] leading-relaxed">
             At <br />
             <b>Alzahra Hajj and Umrah Services</b>, <br />

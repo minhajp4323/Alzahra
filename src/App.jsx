@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Welcome from "./Pages/Welcome";
+import Hajj_Individual from "./Pages/Hajj/Hajj_Individual";
 
 function App() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -42,6 +43,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Hajj-individual" element={<Hajj_Individual />} />
         </Routes>
       </>
       {/* )} */}

@@ -13,7 +13,7 @@ import Crowd from "../assets/Crowd.svg";
 function Features() {
   return (
     <div className="w-[90%] sm:w-[85%] md:w-[80%] flex mx-auto ">
-      <div className="feature mx-[5%] sm:mx-[10%] mt-0">
+      <div className="feature mx-[5%] sm:mx-[10%] md:mt-0 xs:mt-0">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-20">
           <div className="flex justify-center md:justify-end w-full">
             <img
