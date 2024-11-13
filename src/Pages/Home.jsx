@@ -8,6 +8,7 @@ import Pilgrims from "../assets/Pilgrims.svg";
 // import { Dropdown } from "flowbite-react";
 import Footer from "../Components/Footer";
 import Features from "../Components/Features";
+import ServicesMenu from "../Components/SeviceMenu";
 
 function Home() {
   return (
@@ -51,29 +52,12 @@ function Home() {
             className="absolute bottom-0 z-10 max-w-[35%] sm:max-w-[35%] md:max-w-[35%] -ml-2"
           /> */}
 
-          <div className="mt-auto absolute md:-bottom-9 sm:-bottom-9 xs:-bottom-6  left-1/2 transform -translate-x-1/2 flex gap-6 sm:gap-8 md:gap-14 bg-white xs:rounded-xl md:rounded-2xl p-3 sm:p-5 md:p-6 shadow-[0_4px_40px_#EDB480] justify-center items-center z-50 w-auto max-w-full px-10 md:px-20 ">
-            <div className="text-xs sm:text-sm md:text-lg">HAJJ</div>
-            {/* <div className="border-l-2 border-gray-300 h-[20px] sm:h-[30px] mx-1 sm:mx-2"></div> */}
+          <div className="mt-auto absolute md:-bottom-9 sm:-bottom-9 xs:-bottom-6   left-1/2 transform -translate-x-1/2 flex    justify-center items-center z-50 w-auto max-w-full xs:max-w-[70%] ">
+            {/* <div className="text-xs sm:text-sm md:text-lg">HAJJ</div>
             <div className="text-xs sm:text-sm md:text-lg">UMRAH</div>
-            {/* <div className="border-l-2 border-gray-300 h-[20px] sm:h-[30px] mx-1 sm:mx-2"></div> */}
-            <div className="text-xs sm:text-sm md:text-lg">SERVICES</div>
-            {/* <Dropdown label="HAJJ" size="xl">
-              <Dropdown.Item className="text-[16px] sm:text-[20px] md:text-[24px] flex items-center">
-                Option 1
-              </Dropdown.Item>
-            </Dropdown>
-            <div className="border-l-2 border-gray-300 h-[30px] mx-2"></div>
-            <Dropdown label="UMRAH" size="xl">
-              <Dropdown.Item className="text-[16px] sm:text-[20px] md:text-[24px] flex items-center">
-                Option 2
-              </Dropdown.Item>
-            </Dropdown>
-            <div className="border-l-2 border-gray-300 h-[30px] mx-2"></div>
-            <Dropdown label="SERVICES" size="xl">
-              <Dropdown.Item className="text-[16px] sm:text-[20px] md:text-[24px] flex items-center">
-                Option 3
-              </Dropdown.Item>
-            </Dropdown> */}
+            <div className="text-xs sm:text-sm md:text-lg">SERVICES</div> */}
+
+            <ServicesMenu />
           </div>
         </div>
       </div>

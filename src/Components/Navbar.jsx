@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import Logo from "../assets/Arabic Logo.svg";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   // const [isOpen, setIsOpen] = useState(false);
-  
+  const nav= useNavigate()
   const [isScrolled, setIsScrolled] = useState(false);
 
   
@@ -30,7 +31,7 @@ function Header() {
           isScrolled ? "bg-white bg-opacity-20 backdrop-blur-md" : ""
         }`}
       >
-        <img src={Logo} alt="Logo" className="h-12" />
+        <img src={Logo} alt="Logo" className="h-12" onClick={()=>nav("/")} />
 
         {/* <ul
           className={`list-none md:flex gap-10 pr-10 transition-all duration-300 ${
