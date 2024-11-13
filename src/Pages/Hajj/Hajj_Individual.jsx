@@ -23,13 +23,13 @@ function Hajj_Individual() {
               alt="Individual Icon"
               className="w-[200px] md:w-[280px] lg:w-[380px] -mb-20 md:mb-0 md:-mr-20 lg:-mr-28 z-10"
             />
-            <div className="text-[48px] md:text-[80px] lg:text-[124px] leading-tight flex flex-col justify-center mt-2 md:mt-0">
+            <div className=" text-[48px] md:text-[80px] lg:text-[124px] leading-tight flex flex-col justify-center mt-2 md:mt-0">
               <h1 className="m-0">Individual</h1>
               <h1 className="m-0 -mt-2 md:-mt-5 lg:-mt-10">Package</h1>
             </div>
           </div>
 
-          <div className="text-start text-[#7D7D7D] text-[20px] md:text-[24px] lg:text-[30px] -mt-6 md:-mt-8 lg:-mt-12 ml-0 md:ml-24 lg:ml-[272px] font-bold">
+          <div className="md:text-start sm:text-center text-[#7D7D7D] text-[20px] md:text-[24px] lg:text-[30px] -mt-6 md:-mt-8 lg:-mt-12 ml-0 md:ml-24 lg:ml-[272px] font-bold">
             Experience a Personalized <br /> & Fulfilling Pilgrimage Journey
           </div>
         </div>

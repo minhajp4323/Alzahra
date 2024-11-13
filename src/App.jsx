@@ -5,10 +5,11 @@ import Header from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Welcome from "./Pages/Welcome";
 import Hajj_Individual from "./Pages/Hajj/Hajj_Individual";
+import Hajj_Group from "./Pages/Hajj/Hajj_Group";
 
 function App() {
   const [showWelcome, setShowWelcome] = useState(true);
-  const location = useLocation(); 
+  const location = useLocation(); // Get the current path
 
   useEffect(() => {
     const hasVisited = localStorage.getItem("hasVisited");
@@ -25,7 +26,10 @@ function App() {
   return (
     <div
       style={{
-        background: location.pathname === "/" ? "none" : "linear-gradient(to bottom, #FFDEA8, #FFF1DE, #FFDEA8)",
+        background:
+          location.pathname === "/"
+            ? "repeating-linear-gradient(to bottom, #FFDEA8, #FFF1DE, #FFDEA8 33%)"
+            : "linear-gradient(to bottom, #FFDEA8, #FFF1DE, #FFDEA8)",
       }}
     >
       <>
@@ -33,6 +37,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Hajj-individual" element={<Hajj_Individual />} />
+          <Route path="/Hajj-group" element={<Hajj_Group />} />
         </Routes>
       </>
     </div>

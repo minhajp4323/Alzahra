@@ -3,7 +3,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 function ServicesMenu() {
-  const nav= useNavigate()
+  const nav = useNavigate();
   const [openMenu, setOpenMenu] = useState(null);
 
   const toggleMenu = (menu) => {
@@ -15,7 +15,9 @@ function ServicesMenu() {
       <div className="flex items-center justify-around space-x-6">
         <button
           onClick={() => toggleMenu("hajj")}
-          className="text-xs sm:text-sm md:text-lg flex "
+          className={`text-xs sm:text-sm md:text-lg flex ${
+            openMenu === "hajj" ? "text-[#B57439] font-bold" : ""
+          }`}
         >
           HAJJ
           <MdKeyboardArrowDown className="mt-1 xs:mt-[2px] ml-2" />
@@ -24,7 +26,9 @@ function ServicesMenu() {
 
         <button
           onClick={() => toggleMenu("umrah")}
-          className="text-xs sm:text-sm md:text-lg flex "
+          className={`text-xs sm:text-sm md:text-lg flex ${
+            openMenu === "umrah" ? "text-[#B57439] font-bold" : ""
+          }`}
         >
           UMRAH
           <MdKeyboardArrowDown className="mt-1 xs:mt-[2px] ml-2" />
@@ -33,7 +37,9 @@ function ServicesMenu() {
 
         <button
           onClick={() => toggleMenu("services")}
-          className="text-xs sm:text-sm md:text-lg flex "
+          className={`text-xs sm:text-sm md:text-lg flex ${
+            openMenu === "services" ? "text-[#B57439] font-bold" : ""
+          }`}
         >
           SERVICES
           <MdKeyboardArrowDown className="mt-1 xs:mt-[2px] ml-2" />
@@ -49,11 +55,16 @@ function ServicesMenu() {
         {openMenu === "hajj" && (
           <div className="">
             <hr className="border-t-[1px] border-gray-300 my-4 w-full md:ml-0 mt-0 mb-2 xs:mx-auto md:mx-auto " />
-            <div className="text-md md:text-[18px] cursor-pointer hover:bg-gray-200 p-2 rounded" 
-            onClick={()=>nav("/Hajj-Individual")}>
+            <div
+              className="text-md md:text-[18px] cursor-pointer hover:bg-gray-200 p-2 rounded"
+              onClick={() => nav("/Hajj-Individual")}
+            >
               Individual Package
             </div>
-            <div className="text-md md:text-[18px] cursor-pointer hover:bg-gray-200 p-2 rounded">
+            <div
+              className="text-md md:text-[18px] cursor-pointer hover:bg-gray-200 p-2 rounded"
+              onClick={() => nav("/Hajj-group")}
+            >
               Group Package
             </div>
           </div>
