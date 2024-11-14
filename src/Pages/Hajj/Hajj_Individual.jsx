@@ -4,9 +4,8 @@ import RoundTrip from "../../assets/Hajj/RoundTrip.png";
 import Airport from "../../assets/Hajj/Airport.png";
 import ScholarlyGuide from "../../assets/Hajj/ScholarlyGuide.png";
 import Visits from "../../assets/Hajj/Visits.png";
-import Contact from "../../Components/Contact";
+import Contact from "../../Components/ContactForm";
 import Footer from "../../Components/Footer";
-import Test from "../../Components/SeviceMenu";
 
 function Hajj_Individual() {
   return (
@@ -131,7 +130,6 @@ function Hajj_Individual() {
           </div>
         </div>
       </div>
-     
 
       <Contact />
       <Footer />

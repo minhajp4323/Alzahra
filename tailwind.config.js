@@ -10,6 +10,7 @@ export default {
       },
       screens: {
         xs: "320px",
+        avg: "800px",
       },
     },
   },

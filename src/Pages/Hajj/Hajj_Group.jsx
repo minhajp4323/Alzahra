@@ -4,9 +4,10 @@ import RoundTrip from "../../assets/Hajj/RoundTrip.png";
 import Airport from "../../assets/Hajj/Airport.png";
 import ScholarlyGuide from "../../assets/Hajj/ScholarlyGuide.png";
 import Visits from "../../assets/Hajj/Visits.png";
-import Contact from "../../Components/Contact";
+import Food from "../../assets/Hajj/Food.png";
+import PersonalCare from "../../assets/Hajj/PersonalCare.png";
+import Contact from "../../Components/ContactForm";
 import Footer from "../../Components/Footer";
-import Test from "../../Components/SeviceMenu";
 
 function Hajj_Group() {
   return (
@@ -117,7 +118,7 @@ function Hajj_Group() {
           </div>
         </div>
         <div className="grid grid-cols-4 gap-4 mb-10">
-          <img src={Visits} alt="Round-trip" className="col-span-1 w-full" />
+          <img src={Food} alt="Round-trip" className="col-span-1 w-full" />
           <div className="col-span-3">
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-extrabold mb-2 md:mb-4 lg:mb-[22px]">
               05
@@ -131,7 +132,11 @@ function Hajj_Group() {
           </div>
         </div>
         <div className="grid grid-cols-4 gap-4 mb-10 ">
-          <img src={Visits} alt="Round-trip" className="col-span-1 w-full" />
+          <img
+            src={PersonalCare}
+            alt="Round-trip"
+            className="col-span-1 w-full"
+          />
           <div className="col-span-3">
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-extrabold mb-2 md:mb-4 lg:mb-[22px]">
               06

@@ -5,14 +5,25 @@ import Logo from "../assets/Arabic Logo.svg";
 // import TikTok from "../assets/Social Icons/tik-tok.svg";
 // import X from "../assets/Social Icons/X.svg";
 // import Youtube from "../assets/Social Icons/youtube.svg";
+import { useLocation } from "react-router-dom";
 
 function Footer() {
+  const location = useLocation();
+  const isAboutPage = location.pathname.includes("/About"); 
+
   return (
     <div
-      className="flex flex-col md:flex-row gap-8 justify-between p-16 xs:gap-2 text-center md:text-left bg-gradient-to-t from-[#edc077] to-transparent px-[10%] md:mt-36 xs:mt-10 pb-36 "
+      className={`flex flex-col md:flex-row gap-8 justify-between p-16 xs:gap-2 text-center md:text-left 
+      ${
+        isAboutPage
+          ? "bg-gradient-to-t from-[#1D408A] to-transparent"
+          : "bg-gradient-to-t from-[#edc077] to-transparent"
+      } 
+      px-[10%] md:mt-36 xs:mt-10 pb-36`}
       style={{
         position: "relative",
         zIndex: 9999,
+        color: isAboutPage ? "white" : "black",
       }}
     >
       <div className="flex flex-col items-center gap-4 w-full md:w-1/4 mx-auto md:items-start mb-0  ">

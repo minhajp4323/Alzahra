@@ -6,6 +6,11 @@ import Home from "./Pages/Home";
 import Welcome from "./Pages/Welcome";
 import Hajj_Individual from "./Pages/Hajj/Hajj_Individual";
 import Hajj_Group from "./Pages/Hajj/Hajj_Group";
+import About from "./Pages/About";
+import Umrah_Standard from "./Pages/Umrah/UmrahStandard";
+import Umrah_Ramzan from "./Pages/Umrah/UmrahRamzan";
+import Umrah_Family from "./Pages/Umrah/UmrahFamily";
+import Umrah_VIP from "./Pages/Umrah/UmrahVIP";
 
 function App() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -29,6 +34,8 @@ function App() {
         background:
           location.pathname === "/"
             ? "repeating-linear-gradient(to bottom, #FFDEA8, #FFF1DE, #FFDEA8 33%)"
+            : location.pathname === "/About"
+            ? "linear-gradient(to bottom, #1D408A, #576D9C, #1D408A)"
             : "linear-gradient(to bottom, #FFDEA8, #FFF1DE, #FFDEA8)",
       }}
     >
@@ -36,8 +43,13 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
           <Route path="/Hajj-individual" element={<Hajj_Individual />} />
           <Route path="/Hajj-group" element={<Hajj_Group />} />
+          <Route path="/Umrah-standard" element={<Umrah_Standard />} />
+          <Route path="/Umrah-ramzan-package" element={ <Umrah_Ramzan/> } />
+          <Route path="/Umrah-family-package" element={ <Umrah_Family/> } />
+          <Route path="/Umrah-VIP-package" element={ <Umrah_VIP/> } />
         </Routes>
       </>
     </div>

@@ -51,7 +51,9 @@ function Features() {
             </h3>
             <p className="text-gray-700 text-sm sm:text-base md:text-xl">
               Experience the convenience of staying near the Holy Harams in
-              Makkah and Madinah...
+              Makkah and Madinah. Our accommodations come in various options to
+              suit groups, families, and individuals, each designed to provide
+              comfort and accessibility.
             </p>
           </div>
           <div className="flex justify-center md:justify-start md:mt-10 w-full">
