@@ -11,6 +11,7 @@ import Umrah_Standard from "./Pages/Umrah/UmrahStandard";
 import Umrah_Ramzan from "./Pages/Umrah/UmrahRamzan";
 import Umrah_Family from "./Pages/Umrah/UmrahFamily";
 import Umrah_VIP from "./Pages/Umrah/UmrahVIP";
+import Contact from "./Pages/Contact";
 
 function App() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -44,12 +45,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
+          <Route path="/Contact" element={<Contact />} />
           <Route path="/Hajj-individual" element={<Hajj_Individual />} />
           <Route path="/Hajj-group" element={<Hajj_Group />} />
           <Route path="/Umrah-standard" element={<Umrah_Standard />} />
-          <Route path="/Umrah-ramzan-package" element={ <Umrah_Ramzan/> } />
-          <Route path="/Umrah-family-package" element={ <Umrah_Family/> } />
-          <Route path="/Umrah-VIP-package" element={ <Umrah_VIP/> } />
+          <Route path="/Umrah-ramzan-package" element={<Umrah_Ramzan />} />
+          <Route path="/Umrah-family-package" element={<Umrah_Family />} />
+          <Route path="/Umrah-VIP-package" element={<Umrah_VIP />} />
         </Routes>
       </>
     </div>

@@ -47,7 +47,7 @@ function Header() {
           </li>
           <li className="p-2">HAJJ</li>
           <li className="p-2">UMRAH</li>
-          <li className="p-2">OTHER SERVICES</li>
+          <li className="p-2" onClick={()=>nav("/contact")}>OTHER SERVICES</li>
           {/* <li className="p-2" >CONTACT US</li> */}
         </ul>
 
