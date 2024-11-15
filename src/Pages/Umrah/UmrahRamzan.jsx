@@ -32,35 +32,35 @@ function Umrah_Ramzan() {
             Experience the blessings of Ramazan in Makkah <br /> and Madinah
             with our special packages:
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-items-center">
-            <div className=" grid grid-cols-3 ">
-              <p className="col-span-2 text-right text-[30px] mr-[14px]">
+          <div className="flex gap-4 justify-center items-center px-4">
+            <div className="flex items-center justify-center w-full sm:w-1/3 md:w-auto flex-wrap-reverse">
+              <p className="text-center text-[16px] sm:text-[20px] md:text-[30px] mr-[14px]">
                 First <br /> 10 Days
               </p>
               <img
                 src={Calender}
                 alt="Sample Image"
-                className="col-span-1 w-[85px]"
+                className="w-[40px] sm:w-[50px] md:w-[85px]"
               />
             </div>
-            <div className=" grid grid-cols-3 ">
-              <p className="col-span-2 text-right text-[30px] mr-[14px]">
+            <div className="flex items-center justify-center w-full sm:w-1/3 md:w-auto flex-wrap-reverse">
+              <p className="text-center text-[16px] sm:text-[20px] md:text-[30px] mr-[14px]">
                 Second <br /> 10 Days
               </p>
               <img
                 src={Calender}
                 alt="Sample Image"
-                className="col-span-1 w-[85px] "
+                className="w-[40px] sm:w-[50px] md:w-[85px]"
               />
             </div>
-            <div className=" grid grid-cols-3 ">
-              <p className="col-span-2 text-right text-[30px] mr-[14px]">
+            <div className="flex items-center justify-center w-full sm:w-1/3 md:w-auto flex-wrap-reverse">
+              <p className="text-center text-[16px] sm:text-[20px] md:text-[30px] mr-[14px]">
                 Last <br /> 10 Days
               </p>
               <img
                 src={Calender}
                 alt="Sample Image"
-                className="col-span-1 w-[85px]"
+                className="w-[40px] sm:w-[50px] md:w-[85px]"
               />
             </div>
           </div>
