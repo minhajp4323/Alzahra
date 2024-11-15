@@ -27,28 +27,24 @@ function About() {
           </div>
 
           <div
-            className="flex justify-center relative md:pt-20 sm:pt-5 mx-0 md:mx-[150px] bg-cover bg-center bg-no-repeat rounded-[20px] w-full md:w-[calc(100%-300px)]"
+            className="flex justify-center items-center relative md:pt-20 sm:pt-5 mx-0 md:mx-[150px] bg-cover bg-center bg-no-repeat rounded-[20px] w-full md:w-[calc(100%-300px)]"
             style={{
               backgroundImage: `url(${MasjidBG})`,
               height: "110vh", // Adjust height as necessary
             }}
           >
-            <div className="absolute bottom-0 left-0 w-full h-full flex items-end justify-center">
-              {/* Border overlay div with matching responsive classes */}
-              <div className="absolute border-2 border-white bg-transparent md:p-[59px] xs:p-[20px] lg:-ml-[50%] md:-ml-110 xs:h-[69.8%] sm:h-[70.8%]  avg:h-[70.8%] md:h-[60.3%] lg:h-[72%] w-[370px] "></div>
-
-              {/* Black background div */}
-              <div className="bg-[#171717] bg-opacity-70 md:p-[59px] xs:p-[20px] lg:-ml-[50%] md:-ml-110 shadow-md xs:h-[66.8%] sm:h-[66.8%] avg:h-[66.8%] md:h-[50.3%] lg:h-[67.3%] w-[420px] text-center backdrop-blur-[10px] flex items-center justify-center">
-                <p className="text-white text-[24px] text-left leading-relaxed">
-                  Our commitment goes beyond just travel; we aim to make your
-                  journey to Makkah and Madinah a seamless, comfortable, &
-                  memorable experience.
-                </p>
-              </div>
+            {/* Black background div */}
+            <div className="absolute border-2 border-white bg-transparent shadow-md md:p-[55px] xs:p-[15px] xs:ml-[320px] h-[75%] md:w-[380px] xs:w-[320px] flex items-center justify-center -bottom-[32px] lg:-ml-[14%] md:ml-[340px]  transform -translate-x-1/2"></div>
+            <div className="absolute bg-[#171717] bg-opacity-70 md:p-[59px] xs:p-[20px] lg:ml-[10%] md:ml-[110px] shadow-md xs:h-[66.8%] sm:h-[66.8%] avg:h-[66.8%] md:h-[50.3%] lg:h-[67.3%] md:w-[420px] xs:w-screen text-center backdrop-blur-[10px] flex items-center justify-center bottom-0 left-0">
+              <p className="text-white text-[24px] text-left leading-relaxed">
+                Our commitment goes beyond just travel; we aim to make your
+                journey to Makkah and Madinah a seamless, comfortable, &
+                memorable experience.
+              </p>
             </div>
           </div>
         </div>
-        <div className="w-full sm:w-3/4 md:w-1/2 lg:w-[38%] text-lg sm:text-xl md:text-2xl lg:text-[24px] text-center mt-8 sm:mt-12 md:mt-16 lg:mt-[100px] px-4 sm:px-8">
+        <div className="w-full sm:w-3/4 md:w-1/2 lg:w-[38%] text-lg sm:text-xl md:text-2xl lg:text-[24px] text-center mt-8  sm:mt-12 md:mt-16 lg:mt-[100px] px-4 sm:px-8">
           <p>
             With a team of certified professionals and scholars well-versed in
             Islamic teachings, we’re honored to support you every step of the
