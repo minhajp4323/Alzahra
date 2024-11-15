@@ -30,12 +30,12 @@ function About() {
             className="flex justify-center items-center relative md:pt-20 sm:pt-5 mx-0 md:mx-[150px] bg-cover bg-center bg-no-repeat rounded-[20px] w-full md:w-[calc(100%-300px)]"
             style={{
               backgroundImage: `url(${MasjidBG})`,
-              height: "110vh", // Adjust height as necessary
+              height: "110vh", 
             }}
           >
             {/* Black background div */}
-            <div className="absolute border-2 border-white bg-transparent shadow-md md:p-[55px] xs:p-[15px] xs:ml-[320px] h-[75%] md:w-[380px] xs:w-[320px] flex items-center justify-center -bottom-[32px] lg:-ml-[14%] md:ml-[340px]  transform -translate-x-1/2"></div>
-            <div className="absolute bg-[#171717] bg-opacity-70 md:p-[59px] xs:p-[20px] lg:ml-[10%] md:ml-[110px] shadow-md xs:h-[66.8%] sm:h-[66.8%] avg:h-[66.8%] md:h-[50.3%] lg:h-[67.3%] md:w-[420px] xs:w-screen text-center backdrop-blur-[10px] flex items-center justify-center bottom-0 left-0">
+            <div className="absolute bg-transparent border-[3px] border-white md:p-[59px] xs:p-[20px] sm:ml-[5%]  lg:ml-[13%] md:ml-[70px] -mb-7 xs:ml-[8%] shadow-md xs:h-[74.5%] sm:h-[74.5%]  md:h-[74.5%] lg:h-[74.5%] md:w-[350px] sm:w-[90%] xs:w-[85%] text-center flex items-center justify-center bottom-0 left-0"></div>
+            <div className="absolute bg-[#171717] bg-opacity-70 md:p-[59px] xs:p-[20px] lg:ml-[10%] md:ml-[110px] shadow-md xs:h-[67.4%] sm:h-[66.9%]  md:h-[66.9%] lg:h-[67.3%] md:w-[420px] xs:w-screen text-center backdrop-blur-[10px] flex items-center justify-center bottom-0 left-0">
               <p className="text-white text-[24px] text-left leading-relaxed">
                 Our commitment goes beyond just travel; we aim to make your
                 journey to Makkah and Madinah a seamless, comfortable, &
