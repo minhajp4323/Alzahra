@@ -25,20 +25,18 @@ function Header() {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!isOpen) {
-        if (
-          dropdown === "hajj" &&
-          hajjDropdownRef.current &&
-          !hajjDropdownRef.current.contains(event.target)
-        ) {
-          closeDropdown();
-        } else if (
-          dropdown === "umrah" &&
-          umrahDropdownRef.current &&
-          !umrahDropdownRef.current.contains(event.target)
-        ) {
-          closeDropdown();
-        }
+      if (
+        dropdown === "hajj" &&
+        hajjDropdownRef.current &&
+        !hajjDropdownRef.current.contains(event.target)
+      ) {
+        closeDropdown();
+      } else if (
+        dropdown === "umrah" &&
+        umrahDropdownRef.current &&
+        !umrahDropdownRef.current.contains(event.target)
+      ) {
+        closeDropdown();
       }
     };
 
@@ -47,7 +45,7 @@ function Header() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [dropdown, isOpen]);
+  }, [dropdown]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -243,9 +241,9 @@ function Header() {
               HAJJ
             </li>
             {dropdown === "hajj" && (
-              <ul className="absolute bg-white shadow-md mt-2 py-2 w-36 rounded-md">
+              <ul className={`absolute shadow-md mt-2 py-2 w-36 rounded-md   ${isAboutPage ? "bg-white text-black" : "bg-white text-black"}  `}>
                 <li
-                  className="p-2 text-sm cursor-pointer hover:bg-gray-200"
+                  className={`p-2 text-sm cursor-pointer hover:bg-gray-200 `}
                   onClick={() => {
                     setDropdown(null);
                     nav("/Hajj-group");
@@ -277,7 +275,7 @@ function Header() {
               UMRAH
             </li>
             {dropdown === "umrah" && (
-              <ul className="absolute bg-white shadow-md mt-2 py-2 w-36 rounded-md">
+              <ul className={`absolute shadow-md mt-2 py-2 w-36 rounded-md  ${isAboutPage ? "bg-white text-black" : "bg-white text-black"} `}>
                 <li
                   className="p-2 text-sm cursor-pointer hover:bg-gray-200"
                   onClick={() => {
