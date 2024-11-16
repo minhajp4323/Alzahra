@@ -52,7 +52,7 @@ function Contact() {
       </section>
 
       <section aria-labelledby="contact-form">
-        {/* <ContactForm /> */}
+        <ContactForm />
         {/* <GoogleForm /> */}
         <TestForm/>
       </section>
