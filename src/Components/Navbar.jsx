@@ -1,13 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Logo from "../assets/Arabic Logo.svg";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [dropdown, setDropdown] = useState(null);
   const nav = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const isAboutPage = location.pathname.includes("/About");
+  const dropdownRef = useRef(null);
+  const hajjDropdownRef = useRef(null);
+  const umrahDropdownRef = useRef(null);
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
@@ -17,6 +21,34 @@ function Header() {
     }
   };
 
+  const closeDropdown = () => setDropdown(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!isOpen) {
+        if (
+          dropdown === "hajj" &&
+          hajjDropdownRef.current &&
+          !hajjDropdownRef.current.contains(event.target)
+        ) {
+          closeDropdown();
+        } else if (
+          dropdown === "umrah" &&
+          umrahDropdownRef.current &&
+          !umrahDropdownRef.current.contains(event.target)
+        ) {
+          closeDropdown();
+        }
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdown, isOpen]);
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -25,7 +57,12 @@ function Header() {
     };
   }, []);
 
-  const isActive = (path) => location.pathname === path;
+  const isActive = (path) => {
+    if (path === "/") {
+      return location.pathname === "/";
+    }
+    return location.pathname.includes(path);
+  };
 
   return (
     <div className={`top-0 z-50 ${isAboutPage ? "text-white" : ""}`}>
@@ -45,17 +82,16 @@ function Header() {
           </button>
         </div>
 
+        {/* Mobile Menu */}
         <div
           className={`fixed top-0 left-0 w-full shadow-lg z-40 transform transition-transform duration-300 ${
             isOpen ? "translate-y-0" : "-translate-y-full"
-          } ${
-            isAboutPage ? "bg-black text-white" : "bg-white text-black"
-          }`}
+          } ${isAboutPage ? "bg-black text-white" : "bg-white text-black"}`}
         >
           <ul className="list-none flex flex-col p-6 gap-4 text-center">
             <li
               className={`p-2 text-lg cursor-pointer hover:font-bold ${
-                isActive("/") ? "font-bold" : ""
+                isActive("/") ? "font-extrabold" : ""
               }`}
               onClick={() => {
                 setIsOpen(false);
@@ -66,7 +102,7 @@ function Header() {
             </li>
             <li
               className={`p-2 text-lg cursor-pointer hover:font-bold ${
-                isActive("/About") ? "font-bold" : ""
+                isActive("/About") ? "font-extrabold" : ""
               }`}
               onClick={() => {
                 setIsOpen(false);
@@ -75,25 +111,97 @@ function Header() {
             >
               ABOUT US
             </li>
+
+            {/* Hajj Dropdown */}
             <li
               className={`p-2 text-lg cursor-pointer hover:font-bold ${
-                isActive("/Hajj") ? "font-bold" : ""
+                isActive("/Hajj") ? "font-extrabold" : ""
               }`}
-              onClick={() => setIsOpen(false)}
+              onClick={() => setDropdown(dropdown === "hajj" ? null : "hajj")}
             >
               HAJJ
             </li>
+            {dropdown === "hajj" && (
+              <ul
+                className="list-none pl-6 text-center bg-gray-100"
+                ref={dropdownRef}
+              >
+                <li
+                  className="p-2 text-md cursor-pointer hover:font-semibold"
+                  onClick={() => {
+                    setIsOpen(false);
+                    nav("/Hajj-Individual");
+                  }}
+                >
+                  Individual Package
+                </li>
+                <li
+                  className="p-2 text-md cursor-pointer hover:font-semibold"
+                  onClick={() => {
+                    setIsOpen(false);
+                    nav("/Hajj-group");
+                  }}
+                >
+                  Group Package
+                </li>
+              </ul>
+            )}
+
+            {/* Umrah Dropdown */}
             <li
               className={`p-2 text-lg cursor-pointer hover:font-bold ${
-                isActive("/Umrah") ? "font-bold" : ""
+                isActive("/Umrah") ? "font-extrabold" : ""
               }`}
-              onClick={() => setIsOpen(false)}
+              onClick={() => setDropdown(dropdown === "umrah" ? null : "umrah")}
             >
               UMRAH
             </li>
+            {dropdown === "umrah" && (
+              <ul
+                className="list-none pl-6 text-center bg-gray-100 rounded-md"
+                ref={dropdownRef}
+              >
+                <li
+                  className="p-2 text-md cursor-pointer hover:font-semibold"
+                  onClick={() => {
+                    setIsOpen(false);
+                    nav("/Umrah-standard");
+                  }}
+                >
+                  Standard Group Package
+                </li>
+                <li
+                  className="p-2 text-md cursor-pointer hover:font-semibold"
+                  onClick={() => {
+                    setIsOpen(false);
+                    nav("/Umrah-ramzan-package");
+                  }}
+                >
+                  Ramzan Package
+                </li>
+                <li
+                  className="p-2 text-md cursor-pointer hover:font-semibold"
+                  onClick={() => {
+                    setIsOpen(false);
+                    nav("/Umrah-family-package");
+                  }}
+                >
+                  Family Package
+                </li>
+                <li
+                  className="p-2 text-md cursor-pointer hover:font-semibold"
+                  onClick={() => {
+                    setIsOpen(false);
+                    nav("/Umrah-VIP-package");
+                  }}
+                >
+                  Individual & VIP Package
+                </li>
+              </ul>
+            )}
             <li
               className={`p-2 text-lg cursor-pointer hover:font-bold ${
-                isActive("/contact") ? "font-bold" : ""
+                isActive("/contact") ? "font-extrabold" : ""
               }`}
               onClick={() => {
                 setIsOpen(false);
@@ -105,10 +213,11 @@ function Header() {
           </ul>
         </div>
 
-        <ul className="hidden md:flex gap-10 pr-10">
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-10 pr-10 items-center">
           <li
             className={`p-2 cursor-pointer hover:font-bold ${
-              isActive("/") ? "font-bold" : ""
+              isActive("/") ? "font-extrabold" : ""
             }`}
             onClick={() => nav("/")}
           >
@@ -116,29 +225,102 @@ function Header() {
           </li>
           <li
             className={`p-2 cursor-pointer hover:font-bold ${
-              isActive("/About") ? "font-bold" : ""
+              isActive("/About") ? "font-extrabold" : ""
             }`}
             onClick={() => nav("/About")}
           >
             ABOUT US
           </li>
+
+          {/* Hajj Dropdown */}
+          <div className="relative" ref={hajjDropdownRef}>
+            <li
+              className={`p-2 cursor-pointer hover:font-bold ${
+                isActive("/Hajj") ? "font-extrabold" : ""
+              }`}
+              onClick={() => setDropdown(dropdown === "hajj" ? null : "hajj")}
+            >
+              HAJJ
+            </li>
+            {dropdown === "hajj" && (
+              <ul className="absolute bg-white shadow-md mt-2 py-2 w-36 rounded-md">
+                <li
+                  className="p-2 text-sm cursor-pointer hover:bg-gray-200"
+                  onClick={() => {
+                    setDropdown(null);
+                    nav("/Hajj-group");
+                  }}
+                >
+                  Group Package
+                </li>
+                <li
+                  className="p-2 text-sm cursor-pointer hover:bg-gray-200"
+                  onClick={() => {
+                    setDropdown(null);
+                    nav("/Hajj-Individual");
+                  }}
+                >
+                  Individual Package
+                </li>
+              </ul>
+            )}
+          </div>
+
+          {/* Umrah Dropdown */}
+          <div className="relative" ref={umrahDropdownRef}>
+            <li
+              className={`p-2 cursor-pointer hover:font-bold ${
+                isActive("/Umrah") ? "font-extrabold" : ""
+              }`}
+              onClick={() => setDropdown(dropdown === "umrah" ? null : "umrah")}
+            >
+              UMRAH
+            </li>
+            {dropdown === "umrah" && (
+              <ul className="absolute bg-white shadow-md mt-2 py-2 w-36 rounded-md">
+                <li
+                  className="p-2 text-sm cursor-pointer hover:bg-gray-200"
+                  onClick={() => {
+                    setDropdown(null);
+                    nav("/Umrah-standard");
+                  }}
+                >
+                  Standard Group Package
+                </li>
+                <li
+                  className="p-2 text-sm cursor-pointer hover:bg-gray-200"
+                  onClick={() => {
+                    setDropdown(null);
+                    nav("/Umrah-ramzan-package");
+                  }}
+                >
+                  Ramzan Package
+                </li>
+                <li
+                  className="p-2 text-sm cursor-pointer hover:bg-gray-200"
+                  onClick={() => {
+                    setDropdown(null);
+                    nav("/Umrah-family-package");
+                  }}
+                >
+                  Family Package
+                </li>
+                <li
+                  className="p-2 text-sm cursor-pointer hover:bg-gray-200"
+                  onClick={() => {
+                    setDropdown(null);
+                    nav("/Umrah-VIP-package");
+                  }}
+                >
+                  Individual & VIP Package
+                </li>
+              </ul>
+            )}
+          </div>
+
           <li
             className={`p-2 cursor-pointer hover:font-bold ${
-              isActive("/Hajj") ? "font-bold" : ""
-            }`}
-          >
-            HAJJ
-          </li>
-          <li
-            className={`p-2 cursor-pointer hover:font-bold ${
-              isActive("/Umrah") ? "font-bold" : ""
-            }`}
-          >
-            UMRAH
-          </li>
-          <li
-            className={`p-2 cursor-pointer hover:font-bold ${
-              isActive("/contact") ? "font-bold" : ""
+              isActive("/contact") ? "font-extrabold" : ""
             }`}
             onClick={() => nav("/contact")}
           >
