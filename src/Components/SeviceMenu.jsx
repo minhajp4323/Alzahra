@@ -11,7 +11,6 @@ function ServicesMenu() {
     setOpenMenu(openMenu === menu ? null : menu);
   };
 
-  // Close menu when clicking outside the component
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {

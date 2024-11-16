@@ -1,42 +1,51 @@
 function Contact() {
   function Submit(e) {
     e.preventDefault(); // Prevent the default form submission behavior
-  
+
     const formEle = document.querySelector("form");
     const formData = new FormData(formEle);
-  
+
     fetch(
       "https://script.google.com/macros/s/AKfycbyMO_OlZagrdaWKdypphoXYdYEOkMMFEEYzy81m7kGjHaQa9Vf37gokxmA_Zo99jTzm/exec",
       {
         method: "POST",
         body: formData,
+        headers: {
+          Accept: "application/json",
+        },
       }
     )
-      .then((res) => res.json())
+      .then((res) => {
+        // The response will not be accessible in 'no-cors' mode
+        // So we don't attempt to parse the response in that case
+        if (!res.ok) {
+          throw new Error("Failed to submit form");
+        }
+        return res.json(); // This will work if CORS is set up correctly in Apps Script
+      })
       .then((data) => {
         console.log(data);
-        alert("Message sent successfully!");
+        if (data.status === "success") {
+          alert("Message sent successfully!");
+          formEle.reset(); // Optional: Reset the form after successful submission
+        } else {
+          alert(`Error: ${data.message}`);
+        }
       })
       .catch((error) => {
         console.error("Error:", error);
         alert("An error occurred. Please try again.");
       });
   }
-  
 
   return (
-    <div
-      className="w-full flex justify-center"
-      style={{ fontFamily: "Jeko, sans-serif" }}
-    >
-      <form
-        className="form flex flex-col gap-5 sm:gap-6 max-w-[800px]"
-        onSubmit={(e) => Submit(e)}
-      >
+    <div className="w-full flex justify-center" style={{ fontFamily: "Jeko, sans-serif" }}>
+      <form className="form flex flex-col gap-5 sm:gap-6 max-w-[800px]" onSubmit={(e) => Submit(e)}>
         <div className="flex flex-col">
           <label htmlFor="NAME">NAME</label>
           <input
             type="text"
+            name="name"
             className="rounded-[15px] w-full max-w-[800px] h-[50px] sm:h-[62px] bg-[#E2BC7E] placeholder:text-black p-4 sm:p-5"
             placeholder="Type your Name"
           />

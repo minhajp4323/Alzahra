@@ -12,7 +12,6 @@ import Footer from "../../Components/Footer";
 function Hajj_Group() {
   return (
     <div className="flex flex-col">
-      {/* Section 1 */}
       <div className="flex flex-col text-center items-center mb-20 md:mb-28 lg:mb-[90px] px-4">
         <div className="mb-16 lg:mb-[60px] -ml-2 md:-ml-4 lg:-ml-8">
           <div

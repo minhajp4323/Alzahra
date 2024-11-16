@@ -3,7 +3,9 @@ import ContactForm from "../Components/ContactForm";
 import GetInTouch from "../assets/Get in Touch/GetInTouch.png";
 import Mail from "../assets/Get in Touch/Mail.svg";
 import Phone from "../assets/Get in Touch/Phone.svg";
+import GoogleForm from "../Components/GoogleFrom";
 import Footer from "../Components/Footer";
+import TestForm from "../Components/TestForm";
 
 function Contact() {
   return (
@@ -50,7 +52,9 @@ function Contact() {
       </section>
 
       <section aria-labelledby="contact-form">
-        <ContactForm />
+        {/* <ContactForm /> */}
+        {/* <GoogleForm /> */}
+        <TestForm/>
       </section>
 
       <Footer />

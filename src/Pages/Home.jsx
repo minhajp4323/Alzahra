@@ -1,14 +1,13 @@
-// import kaba from "../assets/K'aba.png";
 import banner from "../assets/Desert BG.svg";
 import bannerMobile from "../assets/MobileBanner.svg";
 import BG from "../assets/Part 2 BG.svg";
 import Corner from "../assets/Corner Vector.svg";
 import prayer from "../assets/Praying.svg";
 import Pilgrims from "../assets/Pilgrims.svg";
-// import { Dropdown } from "flowbite-react";
 import Footer from "../Components/Footer";
 import Features from "../Components/Features";
 import ServicesMenu from "../Components/SeviceMenu";
+import TestForm from "../Components/TestForm";
 
 function Home() {
   return (
@@ -16,6 +15,7 @@ function Home() {
       className="Home"
       style={{ fontFamily: "Jeko, sans-serif", zIndex: 9999 }}
     >
+      {/* <TestForm/> */}
       <div className="First xs:mb-[18%] lg:mb-[18%] md:mb-[19%] sm:mb-[29%] mt-5">
         <div className="flex flex-col text-center gap-4 md:-mb-10 md:mt-20 xs:mt-20 xs:-mb-40">
           <h1 className="font-bold text-[#C05D1B] text-4xl md:text-5xl lg:text-5xl">
