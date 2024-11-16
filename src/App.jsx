@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Navbar";
 import Home from "./Pages/Home";
-import Welcome from "./Pages/Welcome";
+// import Welcome from "./Pages/Welcome";
 import Hajj_Individual from "./Pages/Hajj/Hajj_Individual";
 import Hajj_Group from "./Pages/Hajj/Hajj_Group";
 import About from "./Pages/About";
@@ -14,20 +14,20 @@ import Umrah_VIP from "./Pages/Umrah/UmrahVIP";
 import Contact from "./Pages/Contact";
 
 function App() {
-  const [showWelcome, setShowWelcome] = useState(true);
+  // const [showWelcome, setShowWelcome] = useState(true);
   const location = useLocation(); // Get the current path
 
-  useEffect(() => {
-    const hasVisited = localStorage.getItem("hasVisited");
-    if (hasVisited) {
-      setShowWelcome(false);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const hasVisited = localStorage.getItem("hasVisited");
+  //   if (hasVisited) {
+  //     setShowWelcome(false);
+  //   }
+  // }, []);
 
-  const handleWelcomeClose = () => {
-    localStorage.setItem("hasVisited", "true");
-    setShowWelcome(false);
-  };
+  // const handleWelcomeClose = () => {
+  //   localStorage.setItem("hasVisited", "true");
+  //   setShowWelcome(false);
+  // };
 
   return (
     <div

@@ -6,7 +6,7 @@ import ScholarlyGuide from "../../assets/Hajj/ScholarlyGuide.png";
 import Visits from "../../assets/Hajj/Visits.png";
 import Food from "../../assets/Hajj/Food.png";
 import PersonalCare from "../../assets/Hajj/PersonalCare.png";
-import Contact from "../../Components/ContactForm";
+// import Contact from "../../Components/ContactForm";
 import Footer from "../../Components/Footer";
 
 function Hajj_Group() {
@@ -32,7 +32,7 @@ function Hajj_Group() {
           <div className="md:text-start sm:text-center text-[#7D7D7D] text-[20px] md:text-[24px] lg:text-[30px] -mt-6 md:-mt-8 lg:-mt-12 ml-0 md:ml-24 lg:ml-[272px] font-bold">
             Make Your Pilgrimage
             <br />
-            Memorable with Alzahra's Group Services
+            Memorable with Alzahra`s Group Services
           </div>
         </div>
 
@@ -166,7 +166,7 @@ function Hajj_Group() {
         </div>
       </div>
 
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </div>
   );

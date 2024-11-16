@@ -6,7 +6,7 @@ import ScholarlyGuide from "../../assets/Hajj/ScholarlyGuide.png";
 import Visits from "../../assets/Hajj/Visits.png";
 import PersonalCare from "../../assets/Hajj/PersonalCare.png";
 import FullSupport from "../../assets/Hajj/FullSupport.png";
-import Contact from "../../Components/ContactForm";
+// import Contact from "../../Components/ContactForm";
 import Footer from "../../Components/Footer";
 
 function Umrah_VIP() {
@@ -168,7 +168,7 @@ function Umrah_VIP() {
         </div>
       </div>
 
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </div>
   );

@@ -146,14 +146,14 @@ function Features() {
               Accommodation Arrangements
             </h3>
             <p className="text-gray-700 text-sm sm:text-base md:text-xl">
-              <p>
+              <span>
                 {" "}
                 <i> Makkah: 5 Nights</i>
-              </p>
-              <p>
+              </span>
+              <span>
                 {" "}
                 <i> Madinah: 7 Nights</i>{" "}
-              </p>
+              </span>
               Each stay offers Comfort, Proximity, & Tranquility in sacred
               surroundings.
             </p>

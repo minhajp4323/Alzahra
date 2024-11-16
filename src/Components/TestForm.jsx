@@ -13,10 +13,9 @@ function TestForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const scriptURL =
-      "https://script.google.com/macros/s/AKfycbyrOzs8Q6aMlGqzWoMV_BEh3FbSvhDbekc0H3jxuVTwCyJBaPPTeeM_ikwb1WrKBe5w/exec"; // Replace with your web app URL
-
+  
+    const scriptURL = "https://script.google.com/macros/s/AKfycbyrOzs8Q6aMlGqzWoMV_BEh3FbSvhDbekc0H3jxuVTwCyJBaPPTeeM_ikwb1WrKBe5w/exec"; // Replace with your web app URL
+  
     try {
       const response = await fetch(scriptURL, {
         method: "POST",
@@ -29,7 +28,7 @@ function TestForm() {
           "Content-Type": "application/json",
         },
       });
-
+  
       const result = await response.json();
       if (result.status === "success") {
         alert("Form submitted successfully!");
@@ -39,6 +38,8 @@ function TestForm() {
       alert("Failed to submit the form.");
     }
   };
+  
+  
 
   return (
     <form

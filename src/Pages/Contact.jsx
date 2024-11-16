@@ -1,11 +1,9 @@
-import React from "react";
-import ContactForm from "../Components/ContactForm";
+// import ContactForm from "../Components/ContactForm";
 import GetInTouch from "../assets/Get in Touch/GetInTouch.png";
 import Mail from "../assets/Get in Touch/Mail.svg";
 import Phone from "../assets/Get in Touch/Phone.svg";
-import GoogleForm from "../Components/GoogleFrom";
 import Footer from "../Components/Footer";
-import TestForm from "../Components/TestForm";
+// import TestForm from "../Components/TestForm";
 
 function Contact() {
   return (
@@ -52,10 +50,28 @@ function Contact() {
       </section>
 
       <section aria-labelledby="contact-form">
-        <ContactForm />
+        {/* <ContactForm /> */}
         {/* <GoogleForm /> */}
-        <TestForm/>
+        {/* <TestForm/> */}
       </section>
+      <div className="flex gap-10 flex-wrap justify-center text-[#5D5D5D] text-[20px] mt-5" >
+        <div className="flex  items-center ">
+          <img src={Phone} alt="Phone Icon" className="mr-2" />
+          <div>+966594995016</div>
+        </div>
+
+        <div className="flex items-center ">
+          <img src={Phone} alt="Phone Icon" className="mr-2" />
+          <div>+966566087162</div>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <img src={Mail} alt="" />
+          <p>info@alzahrahajj.com</p>
+        </div>
+
+        
+      </div>
 
       <Footer />
     </div>
