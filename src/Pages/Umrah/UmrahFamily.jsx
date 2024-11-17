@@ -5,7 +5,6 @@ import Airport from "../../assets/Hajj/Airport.png";
 import ScholarlyGuide from "../../assets/Hajj/ScholarlyGuide.png";
 import Visits from "../../assets/Hajj/Visits.png";
 import PersonalCare from "../../assets/Hajj/PersonalCare.png";
-import Contact from "../../Components/ContactForm";
 import Footer from "../../Components/Footer";
 
 function Umrah_Family() {
@@ -154,7 +153,6 @@ function Umrah_Family() {
         </div>
       </div>
 
-      <Contact />
       <Footer />
     </div>
   );
