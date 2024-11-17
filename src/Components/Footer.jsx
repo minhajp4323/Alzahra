@@ -5,11 +5,12 @@ import Logo from "../assets/Arabic Logo.svg";
 // import TikTok from "../assets/Social Icons/tik-tok.svg";
 // import X from "../assets/Social Icons/X.svg";
 // import Youtube from "../assets/Social Icons/youtube.svg";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Footer() {
   const location = useLocation();
-  const isAboutPage = location.pathname.includes("/About"); 
+  const isAboutPage = location.pathname.includes("/About");
+  const nav = useNavigate()
 
   return (
     <div
@@ -33,7 +34,7 @@ function Footer() {
           // className="w-[260px] md:w[240px]  mx-auto md:mx-0 xs:w-[160px]"
           className="w-auto ml-0 xs:w-40"
         />
-        {/* <div className="flex gap-6 justify-center mt-16 items-center mx-auto md:mx-0  ">
+        {/* <div className="flex gap-4 justify-center mt-16 items-center mx-auto md:mx-0  ">
           <img src={Facebook} alt="Facebook" className="w-6 h-6" />
           <img src={Instagram} alt="Instagram" className="w-6 h-6" />
           <img src={Snapchat} alt="Snapchat" className="w-6 h-6" />
@@ -43,27 +44,27 @@ function Footer() {
         </div> */}
       </div>
 
-      {/* <div className="flex flex-col items-center md:items-start gap-4 w-full md:w-1/4">
-        <p className="text-2xl font-gilroy-light md:text-left text-center">
+      
+      <div className="flex flex-col items-center md:items-start md:gap-2 xs:gap-0 md:mt-0 xs:mt-10 w-full md:w-1/3">
+        <p className="text-lg font-gilroy-light md:text-left text-center">
           Quick Links
         </p>
-        <hr className="border-t-2 border-[#757575] my-4 w-full mx-auto opacity-20" />
+        <hr className="border-t-[1px] border-[#757575] my-4 w-[80%] md:ml-0 mt-0 mb-2 xs:mx-auto md:mx-auto" />
 
-        <div className="flex flex-wrap justify-center gap-8">
-          <ul className="list-none flex flex-col items-center md:items-start font-extrabold">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
+        <div className="flex flex-row justify-start gap-8 cursor-pointer ">
+          <ul className="list-none flex flex-col gap-2 items-center md:items-start font-extrabold">
+            <li onClick={()=>nav("/")}>Home</li>
+            <li onClick={()=>nav("/About")}>About Us</li>
+            <li onClick={()=>nav("/contact")}>Contact Us</li>
           </ul>
-          <ul className="list-none flex flex-col items-center md:items-start font-extrabold">
-            <li>Hajj</li>
-            <li>Umrah</li>
-            <li>Other Services</li>
+          <ul className="list-none flex flex-col gap-2 items-center md:items-start font-extrabold">
+            <li onClick={()=>nav("/Hajj-group")}>Hajj</li>
+            <li onClick={()=>nav("/Umrah-standard")}>Umrah</li>
+            <li onClick={()=>nav("/contact")}>Other Services</li>
           </ul>
         </div>
-      </div> */}
+      </div>
 
-      {/* <div className="flex flex-col items-center md:items-start md:gap-4 xs:gap-0 md:mt-0 xs:mt-10 w-full md:w-1/4"> */}
       <div className="flex flex-col items-center md:items-start md:gap-2 xs:gap-0 md:mt-0 xs:mt-10 w-full md:w-1/3">
         <p className="text-lg font-gilroy-light md:text-left text-center">
           Location
@@ -75,13 +76,10 @@ function Footer() {
             <li>7385 Al Aasha Al Mazeni,</li>
             <li> 3262, Jeddah 23454,</li>
             <li> Saudi Arabia</li>
-            {/* <li>Address here adder</li>
-              <li>Address here,</li> */}
           </ul>
         </div>
       </div>
 
-      {/* <div className="flex flex-col items-center md:items-start md:gap-4 xs:gap-0 md:mt-0 xs:mt-10  w-full md:w-1/4"> */}
       <div className="flex flex-col items-center md:items-start md:gap-2 xs:gap-0 md:mt-0 xs:mt-10  w-full md:w-1/3">
         <p className="text-lg font-gilroy-light md:text-left text-center">
           Contact Info
