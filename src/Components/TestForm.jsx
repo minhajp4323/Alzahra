@@ -1,75 +1,143 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-function TestForm() {
+const TestForm = () => {
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbz9sojySgm-2MnNNyQTZT88wczoAAV2i9JkMtT1QH4c4Ja3B-xIfm7oL9vcaOKAp9g/exec";
   const [formData, setFormData] = useState({
     name: "",
+    nationality: "",
+    countryCode: "",
     number: "",
     email: "",
   });
+  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-  
-    const scriptURL = "https://script.google.com/macros/s/AKfycbyrOzs8Q6aMlGqzWoMV_BEh3FbSvhDbekc0H3jxuVTwCyJBaPPTeeM_ikwb1WrKBe5w/exec"; // Replace with your web app URL
-  
-    try {
-      const response = await fetch(scriptURL, {
-        method: "POST",
-        body: JSON.stringify({
-          name: "John Doe",
-          number: "1234567890",
-          email: "john.doe@example.com",
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
+
+    fetch(scriptURL, {
+      method: "POST",
+      body: new FormData(e.target),
+    })
+      .then(() => {
+        setStatus("Thank you! Your form was submitted successfully.");
+        setFormData({
+          name: "",
+          nationality: "",
+          countryCode: "",
+          number: "",
+          email: "",
+        });
+        console.log(formData);
+      })
+      .catch((error) => {
+        setStatus(`Error: ${error.message}`);
       });
-  
-      const result = await response.json();
-      if (result.status === "success") {
-        alert("Form submitted successfully!");
-      }
-    } catch (error) {
-      console.error("Error!", error);
-      alert("Failed to submit the form.");
-    }
   };
-  
-  
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex flex-col gap-3 w-[90%] justify-center items-center"
-    >
-      <input
-        type="text"
-        name="name"
-        placeholder="Name"
-        value={formData.name}
-        onChange={handleChange}
-      />
-      <input
-        type="number"
-        name="number"
-        placeholder="Number"
-        value={formData.number}
-        onChange={handleChange}
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={formData.email}
-        onChange={handleChange}
-      />
-      <button type="submit">Submit</button>
-    </form>
+    <div className="container mx-auto p-4">
+      <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
+      <form name="contact-form" onSubmit={handleSubmit}>
+        <div className="mb-4">
+          <label
+            htmlFor="name"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Name
+          </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="nationality"
+            className="block text-sm font-medium text-gray-700"
+          >
+            nationality
+          </label>
+          <input
+            type="text"
+            name="nationality"
+            id="nationality"
+            value={formData.nationality}
+            onChange={handleChange}
+            required
+            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="countryCode"
+            className="block text-sm font-medium text-gray-700"
+          >
+            CountryCode
+          </label>
+          <input
+            type="number"
+            name="countryCode"
+            id="countryCode"
+            value={formData.countryCode}
+            onChange={handleChange}
+            required
+            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="number"
+            className="block text-sm font-medium text-gray-700"
+          >
+            number
+          </label>
+          <input
+            type="number"
+            name="number"
+            id="number"
+            value={formData.number}
+            onChange={handleChange}
+            required
+            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-gray-700"
+          >
+            email
+          </label>
+          <input
+            name="email"
+            id="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+          ></input>
+        </div>
+        <button
+          type="submit"
+          className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+        >
+          Submit
+        </button>
+      </form>
+      {status && <p className="mt-4 text-green-600">{status}</p>}
+    </div>
   );
-}
+};
 
 export default TestForm;

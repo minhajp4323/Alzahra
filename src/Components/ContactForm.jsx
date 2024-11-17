@@ -1,51 +1,64 @@
+import { useState } from "react";
+
 function Contact() {
-  function Submit(e) {
-    e.preventDefault(); // Prevent the default form submission behavior
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbz9sojySgm-2MnNNyQTZT88wczoAAV2i9JkMtT1QH4c4Ja3B-xIfm7oL9vcaOKAp9g/exec";
+  const [formData, setFormData] = useState({
+    name: "",
+    nationality: "",
+    countryCode: "",
+    number: "",
+    email: "",
+  });
+  const [status, setStatus] = useState("");
 
-    const formEle = document.querySelector("form");
-    const formData = new FormData(formEle);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
-    fetch(
-      "https://script.google.com/macros/s/AKfycbyMO_OlZagrdaWKdypphoXYdYEOkMMFEEYzy81m7kGjHaQa9Vf37gokxmA_Zo99jTzm/exec",
-      {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      }
-    )
-      .then((res) => {
-        // The response will not be accessible in 'no-cors' mode
-        // So we don't attempt to parse the response in that case
-        if (!res.ok) {
-          throw new Error("Failed to submit form");
-        }
-        return res.json(); // This will work if CORS is set up correctly in Apps Script
-      })
-      .then((data) => {
-        console.log(data);
-        if (data.status === "success") {
-          alert("Message sent successfully!");
-          formEle.reset(); // Optional: Reset the form after successful submission
-        } else {
-          alert(`Error: ${data.message}`);
-        }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch(scriptURL, {
+      method: "POST",
+      body: new FormData(e.target),
+    })
+      .then(() => {
+        setStatus("Thank you! Your form was submitted successfully.");
+        setFormData({
+          name: "",
+          nationality: "",
+          countryCode: "",
+          number: "",
+          email: "",
+        });
+        console.log(formData);
       })
       .catch((error) => {
-        console.error("Error:", error);
-        alert("An error occurred. Please try again.");
+        setStatus(`Error: ${error.message}`);
       });
-  }
+  };
 
   return (
-    <div className="w-full flex justify-center" style={{ fontFamily: "Jeko, sans-serif" }}>
-      <form className="form flex flex-col gap-5 sm:gap-6 max-w-[800px]" onSubmit={(e) => Submit(e)}>
+    <div
+      className="w-full flex justify-center flex-col items-center"
+      style={{ fontFamily: "Jeko, sans-serif" }}
+    >
+      <form
+        className="form flex flex-col gap-5 sm:gap-6 max-w-[800px]"
+        name="contact-form "
+        onSubmit={handleSubmit}
+      >
         <div className="flex flex-col">
           <label htmlFor="NAME">NAME</label>
           <input
             type="text"
             name="name"
+            id="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
             className="rounded-[15px] w-full max-w-[800px] h-[50px] sm:h-[62px] bg-[#E2BC7E] placeholder:text-black p-4 sm:p-5"
             placeholder="Type your Name"
           />
@@ -57,16 +70,23 @@ function Contact() {
             <input
               type="text"
               name="nationality"
+              id="nationality"
+              value={formData.nationality}
+              onChange={handleChange}
+              required
               className="rounded-[15px] w-full h-[50px] sm:h-[62px] bg-[#E2BC7E] placeholder:text-black p-4 sm:p-5"
               placeholder="Type your Nationality"
             />
           </div>
           <div className="flex flex-col w-full sm:w-2/3">
-            <label htmlFor="phoneNumber">PHONE</label>
+            <label htmlFor="number">PHONE</label>
             <div className="flex gap-2 sm:gap-3">
               <select
-                id="countryCode"
+                type="countryCode"
                 name="countryCode"
+                id="countryCode"
+                value={formData.countryCode}
+                onChange={handleChange}
                 className="rounded-[15px] w-[90px] sm:w-[112px] h-[50px] sm:h-[62px] bg-[#E2BC7E] placeholder:text-black p-4 sm:p-5 text-md"
               >
                 <option value="+91">INDIA</option>
@@ -75,9 +95,9 @@ function Contact() {
               </select>
               <input
                 type="tel"
-                id="phoneNumber"
-                name="phoneNumber"
-                placeholder="Phone number"
+                id="number"
+                name="number"
+                placeholder="number"
                 className="rounded-[15px] w-full h-[50px] sm:h-[62px] bg-[#E2BC7E] placeholder:text-black p-4 sm:p-5"
               />
             </div>
@@ -87,8 +107,11 @@ function Contact() {
         <div className="flex flex-col">
           <label htmlFor="email">EMAIL</label>
           <input
-            type="email"
             name="email"
+            id="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
             className="rounded-[15px] w-full max-w-[800px] h-[50px] sm:h-[62px] bg-[#E2BC7E] placeholder:text-black p-4 sm:p-5"
             placeholder="Email"
           />
@@ -101,6 +124,7 @@ function Contact() {
           Enquire
         </button>
       </form>
+      {status && <p className="mt-4 text-green-600">{status}</p>}
     </div>
   );
 }

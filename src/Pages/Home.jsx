@@ -7,6 +7,7 @@ import Pilgrims from "../assets/Pilgrims.svg";
 import Footer from "../Components/Footer";
 import Features from "../Components/Features";
 import ServicesMenu from "../Components/SeviceMenu";
+import TestForm from "../Components/TestForm";
 
 function Home() {
   return (

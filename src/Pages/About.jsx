@@ -4,7 +4,7 @@ import Footer from "../Components/Footer";
 
 function About() {
   return (
-    <div className="text-white md:mt-[150px] sm:mt-[100px] xs:mt-[100px]">
+    <div className="text-white md:mt-[150px] sm:mt-[100px] xs:mt-[0px] xs:pt">
       <div className="items-center flex justify-center flex-col">
         <div
           className="relative w-[100%] bg-cover bg-center  text-center "
@@ -14,7 +14,7 @@ function About() {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="text-center px-4 sm:px-8 md:px-16 lg:px-36">
+          <div className="text-center px-4 sm:px-8 md:px-16 lg:px-36 xs:pt-[100px]">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[54px] font-bold leading-tight sm:leading-snug md:leading-normal lg:leading-tight xl:leading-snug">
               Your Trusted Partner <br /> for a Blessed Journey
             </h1>
