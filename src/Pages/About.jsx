@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import MasjidBG from "../assets/About Us/Masjid.png";
 // import Stars from "../assets/About Us/Stars.svg";
 import Stars from "../assets/About Us/Stars.png";
 import Footer from "../Components/Footer";
 
 function About() {
+  const nav = useNavigate()
   return (
     <div className="text-white md:mt-[0px] sm:mt-[100px] xs:mt-[0px] xs:pt">
       <div className="items-center flex justify-center flex-col">
@@ -45,13 +47,14 @@ function About() {
             </div>
           </div>
         </div>
-        <div className="w-full sm:w-3/4 md:w-1/2 lg:w-[38%] text-lg sm:text-xl md:text-2xl lg:text-[24px] text-center mt-8  sm:mt-12 md:mt-16 lg:mt-[100px] px-4 sm:px-8">
+        <div className="w-full sm:w-3/4 md:w-1/2 lg:w-[38%] text-lg sm:text-xl md:text-2xl lg:text-[24px] text-center mt-8 xs:mt-16 sm:mt-12 md:mt-16 lg:mt-[100px] px-4 sm:px-8">
           <p>
             With a team of certified professionals and scholars well-versed in
             Islamic teachings, we’re honored to support you every step of the
             way, from visa processing to guided religious insights.
           </p>
-          <div className="border rounded-lg sm:rounded-xl lg:rounded-[20px] inline-block px-6 py-3 sm:px-8 sm:py-4 lg:px-[15px] lg:py-[15px] mt-8 sm:mt-10 lg:mt-[50px] text-base sm:text-lg md:text-xl lg:text-2xl font-medium">
+          <div className="border rounded-lg sm:rounded-xl lg:rounded-[20px] inline-block px-6 py-3 sm:px-8 sm:py-4 lg:px-[15px] lg:py-[15px] mt-8 sm:mt-10 lg:mt-[50px] text-base sm:text-lg md:text-xl lg:text-2xl font-medium"
+          onClick={()=>nav("/contact")} >
             Get in touch
           </div>
         </div>
