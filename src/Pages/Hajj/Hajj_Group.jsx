@@ -49,7 +49,6 @@ function Hajj_Group() {
           </p>
         </div>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-start text-lg px-4 md:px-12 lg:px-[153px] mb-12 md:mb-20 lg:mb-[132px]">
         <div className="grid grid-cols-4 gap-4 mb-10">
           <img src={Visa} alt="Visa Processing" className="col-span-1 w-full" />
@@ -164,6 +163,17 @@ function Hajj_Group() {
             </p>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center w-[100%] h-[100%]">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSddH8cJ5JrFTMlbtrLL8kc4b22w0l0DIKCdB-boZTpY-EU_IQ/viewform?embedded=true"
+          width="640"
+          height="1150"
+          
+          
+        >
+          Loading…
+        </iframe>
       </div>
 
       {/* <Contact /> */}

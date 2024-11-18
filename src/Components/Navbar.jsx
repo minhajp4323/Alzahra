@@ -26,7 +26,7 @@ function Header() {
         dropdownRefMobHajj.current &&
         !dropdownRefMobHajj.current.contains(event.target)
       ) {
-        setDropdownMobHajj(null); // Updated to use setDropdownMobHajj
+        setDropdownMobHajj(null); 
       }
     };
 
@@ -42,7 +42,7 @@ function Header() {
         dropdownRefMobUmrah.current &&
         !dropdownRefMobUmrah.current.contains(event.target)
       ) {
-        setDropdownMobUmrah(null); // Updated to use setDropdownMobHajj
+        setDropdownMobUmrah(null); 
       }
     };
 
@@ -52,7 +52,6 @@ function Header() {
     };
   }, []);
 
-  //////////////////////////////
   const handleScroll = () => {
     if (window.scrollY > 50) {
       setIsScrolled(true);
@@ -103,7 +102,7 @@ function Header() {
   };
 
   return (
-    <div className={`top-0 z-50 ${isAboutPage ? "text-white" : ""}`}>
+    <div className={`sticky top-0 z-50 ${isAboutPage ? "text-white" : ""}`}>
       <div
         className={`p-6 flex justify-between items-center relative transition-all duration-300 ${
           isScrolled ? "bg-white bg-opacity-20 backdrop-blur-md" : ""

@@ -163,6 +163,15 @@ function Umrah_Ramzan() {
           & smart facilities for a peaceful stay during this holy month.
         </div>
       </div>
+      <div className="flex justify-center  h-[100%]">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdVmP0-uMvIj23ZifTL6j0XXi9v9pe_vsGxO7xEbWysQmbTWw/viewform?embedded=true"
+          width="640"
+          height="1150"
+        >
+          Loading…
+        </iframe>
+      </div>
 
       {/* <Contact /> */}
       <Footer />

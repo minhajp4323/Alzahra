@@ -24,15 +24,11 @@ function Umrah_Standard() {
             />
             <div className="text-[48px] md:text-[80px] lg:text-[124px] leading-tight flex flex-col justify-center mt-2 md:mt-0">
               <h1 className="m-0">Standard</h1>
-              <h1 className="m-0">Group</h1>
-              <h1 className="m-0 -mt-2 md:-mt-5 lg:-mt-10">Package</h1>
+              <h1 className="m-0 mt-2 md:-mt-5 lg:-mt-10">Group</h1>
+              <h1 className="m-0 mt-2 md:-mt-5 lg:-mt-10">Package</h1>
             </div>
           </div>
-          {/* 
-          <div className="md:text-start sm:text-center text-[#7D7D7D] text-[20px] md:text-[24px] lg:text-[30px] -mt-6 md:-mt-8 lg:-mt-12 ml-0 md:ml-24 lg:ml-[272px] font-bold">
-            Our Standard Group Package includes <br /> everything you need for a
-            smooth pilgrimage:
-          </div> */}
+         
         </div>
 
         <div className="text-[16px] md:text-[20px] lg:text-[24px] w-full md:w-[600px] lg:w-[859px] text-[#5D5D5D] mb-[100px]">
@@ -152,6 +148,16 @@ function Umrah_Standard() {
           Enjoy comfortable rooms with modern facilities to make your stay both
           restful and hygienic.
         </div>
+      </div>
+      <div className="flex justify-center  h-[100%]">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSefoESkL9nSq8SrJ_FqKWCFCEKm1r55VwT1LhIcfd1FhCMEBQ/viewform?embedded=true"
+          width="640"
+          height="1150"
+          
+        >
+          Loading…
+        </iframe>
       </div>
 
       {/* <Contact /> */}

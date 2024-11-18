@@ -25,7 +25,7 @@ function Umrah_VIP() {
             />
             <div className="text-[48px] md:text-[80px] lg:text-[124px] leading-tight flex flex-col justify-center mt-2 md:mt-0">
               <h1 className="m-0">Individual</h1>
-              <h1> & VIP</h1>
+              <h1 className="m-0 -mt-2 md:-mt-5 lg:-mt-10"> & VIP</h1>
               <h1 className="m-0 -mt-2 md:-mt-5 lg:-mt-10">Package</h1>
             </div>
           </div>
@@ -166,6 +166,16 @@ function Umrah_VIP() {
           VIP and individual rooms provide top-quality facilities and extra
           comfort, designed for privacy and relaxation.
         </div>
+      </div>
+      <div className="flex justify-center  h-[100%]">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeVJUsJ4IU_-SG5_4g47HjQJuSedMonhmgfrVoEwb5fw6ydig/viewform?embedded=true"
+          width="640"
+          height="1200"
+          
+        >
+          Loading…
+        </iframe>
       </div>
 
       {/* <Contact /> */}

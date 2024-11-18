@@ -130,6 +130,16 @@ function Hajj_Individual() {
           </div>
         </div>
       </div>
+      <div className="flex justify-center  h-[100%]">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSei4SV2eA9B35TKt58qyXuIqbz2JDgBniv2W8VBmdconem6RQ/viewform?embedded=true"
+          width="640"
+          height="1150"
+          
+        >
+          Loading…
+        </iframe>
+      </div>
 
       {/* <Contact /> */}
       <Footer />

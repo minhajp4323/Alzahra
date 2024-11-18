@@ -152,6 +152,15 @@ function Umrah_Family() {
           amenities to ensure your comfort.
         </div>
       </div>
+      <div className="flex justify-center  h-[100%]">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdoaOhfzcTQWQ3xRBDUS_xjWAO-yJ_LvaqI7QaF8UtWJZySUg/viewform?embedded=true"
+          width="640"
+          height="1150"
+        >
+          Loading…
+        </iframe>
+      </div>
 
       <Footer />
     </div>
