@@ -1,11 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaGlobe } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const nav = useNavigate();
+
+  useEffect(() => {
+    // Load the saved language from localStorage and set it on the initial load
+    const savedLanguage = localStorage.getItem("language") || "en"; // Default to English if no language is saved
+    i18n.changeLanguage(savedLanguage);
+  }, [i18n]);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
@@ -16,8 +24,10 @@ const LanguageSwitcher = () => {
   };
 
   const changeLanguage = (language) => {
-    i18n.changeLanguage(language);  // Change the language
-    setIsOpen(false);  // Close the dropdown after selection
+    i18n.changeLanguage(language); // Change the language
+    localStorage.setItem("language", language); // Save the selected language to localStorage
+    setIsOpen(false); // Close the dropdown after selection
+    nav("/"); // Navigate to the home page
   };
 
   useEffect(() => {

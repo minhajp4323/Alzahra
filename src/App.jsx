@@ -12,6 +12,8 @@ import Umrah_Ramzan from "./Pages/Umrah/UmrahRamzan";
 import Umrah_Family from "./Pages/Umrah/UmrahFamily";
 import Umrah_VIP from "./Pages/Umrah/UmrahVIP";
 import Contact from "./Pages/Contact";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 function App() {
   // const [showWelcome, setShowWelcome] = useState(true);
@@ -28,7 +30,12 @@ function App() {
   //   localStorage.setItem("hasVisited", "true");
   //   setShowWelcome(false);
   // };
+const {i18n} = useTranslation()
 
+  // useEffect(() => {
+  //   document.documentElement.setAttribute("dir", i18n.language === "ar" ? "rtl" : "ltr");
+  // }, [i18n.language]);
+  
   return (
     <div
       style={{

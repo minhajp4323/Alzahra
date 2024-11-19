@@ -267,6 +267,17 @@ function Header() {
             >
               OTHER SERVICES
             </li>
+            
+            <li
+              className={`p-2 text-lg cursor-pointer hover:font-bold `}
+              onClick={() => {
+                // setIsOpen(false);
+                // nav("/contact");
+              }}
+            >
+              <LanguageSwitcher />
+            </li>
+
           </ul>
         </div>
 
