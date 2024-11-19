@@ -1,0 +1,55 @@
+{
+    "sections": [
+      {
+        "title": "Individual Package",
+        "subtitle": "Experience a Personalized & Fulfilling Pilgrimage Journey",
+        "description": "At Alzahra Hajj and Umrah, part of the Alzahra Group, we understand the importance of a deeply personal and spiritually enriching pilgrimage. Our Individual Package is thoughtfully crafted to cater to those seeking a private and flexible journey to Makkah and Madinah, with all essential services included for your comfort and peace of mind.",
+        "highlight": "What’s Included in Our Individual Package..?",
+        "icon": "../../assets/Hajj/HajjIcon.png"
+      },
+      {
+        "services": [
+          {
+            "id": 1,
+            "icon": "../../assets/Hajj/Visa.png",
+            "title": "Visa Processing",
+            "description": "We handle all the necessary visa arrangements, ensuring a smooth and hassle-free entry process."
+          },
+          {
+            "id": 2,
+            "icon": "../../assets/Hajj/RoundTrip.png",
+            "title": "Round-Trip Airfare",
+            "description": "Seamless travel with round-trip flights—focus solely on your spiritual journey."
+          },
+          {
+            "id": 3,
+            "icon": "../../assets/Hajj/Airport.png",
+            "title": "Airport Pickup & Drop-Off",
+            "description": "Arrive and depart with ease through our reliable airport transfers."
+          },
+          {
+            "id": 4,
+            "icon": "../../assets/Hajj/ScholarlyGuide.png",
+            "title": "Dedicated Scholarly Guide",
+            "description": "Gain insights and guidance from an experienced scholar throughout your journey."
+          },
+          {
+            "id": 5,
+            "icon": "../../assets/Hajj/Visits.png",
+            "title": "Visits to Historical and Sacred Sites",
+            "description": "Explore historic landmarks in Makkah and Madinah with our insightful guided visits."
+          }
+        ]
+      },
+      {
+        "form": {
+          "iframeSrc": "https://docs.google.com/forms/d/e/1FAIpQLSei4SV2eA9B35TKt58qyXuIqbz2JDgBniv2W8VBmdconem6RQ/viewform?embedded=true",
+          "dimensions": {
+            "width": 640,
+            "height": 1150
+          }
+        }
+      }
+    ]
+  }
+  

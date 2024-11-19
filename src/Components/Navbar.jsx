@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Logo from "../assets/Arabic Logo.svg";
 import { useLocation, useNavigate } from "react-router-dom";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,7 @@ function Header() {
         dropdownRefMobHajj.current &&
         !dropdownRefMobHajj.current.contains(event.target)
       ) {
-        setDropdownMobHajj(null); 
+        setDropdownMobHajj(null);
       }
     };
 
@@ -42,7 +43,7 @@ function Header() {
         dropdownRefMobUmrah.current &&
         !dropdownRefMobUmrah.current.contains(event.target)
       ) {
-        setDropdownMobUmrah(null); 
+        setDropdownMobUmrah(null);
       }
     };
 
@@ -383,6 +384,9 @@ function Header() {
             onClick={() => nav("/contact")}
           >
             OTHER SERVICES
+          </li>
+          <li>
+            <LanguageSwitcher />
           </li>
         </ul>
       </div>

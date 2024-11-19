@@ -1,0 +1,50 @@
+{
+  "contentSections": [
+    {
+      "main": "Group Package",
+      "title": "Make Your Pilgrimage Memorable with Alzahra's Group Services",
+      "description": "<span class='font-extrabold'>Alzahra Hajj and Umrah</span>, part of Alzahra Group, offers group packages for pilgrims who wish to share the journey with friends, family, or community members. Our packages are designed to make your pilgrimage smooth, comfortable, and spiritually fulfilling.",
+      "subheading": "What’s Included in Our Group Package..?"
+    },
+    {
+      "title": "Included Services",
+      "services": [
+        {
+          "id": 1,
+          "title": "Visa Processing",
+          "description": "We handle the visa process so each group member can focus on their journey."
+        },
+        {
+          "id": 2,
+          "title": "Round-Trip Airfare",
+          "description": "Travel easily with round-trip tickets included in the package for a worry-free experience."
+        },
+        {
+          "id": 3,
+          "title": "Airport Pickup & Drop-Off",
+          "description": "Arrive and depart with ease through our reliable airport transfers."
+        },
+        {
+          "id": 4,
+          "title": "Dedicated Scholarly Guide",
+          "description": "A knowledgeable guide will accompany your group, offering spiritual support and insights."
+        },
+        {
+          "id": 5,
+          "title": "Food Based on Needs",
+          "description": "Meals are arranged according to the needs of the group."
+        },
+        {
+          "id": 6,
+          "title": "Personal Care and Support",
+          "description": "We provide personalized assistance to ensure each group member’s comfort."
+        },
+        {
+          "id": 7,
+          "title": "Visits to Historical and Sacred Sites",
+          "description": "Discover significant sites in Makkah and Madinah with guided tours."
+        }
+      ]
+    }
+  ]
+}
