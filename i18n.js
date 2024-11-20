@@ -11,7 +11,20 @@ i18n
     },
     lng: "en",
     fallbackLng: "en",
-    ns: ["home", "features", "aboutUs", "HajjGroupPackage"],
+    ns: [
+      "home",
+      "features",
+      "aboutUs",
+      "HajjGroupPackage",
+      "HajjIndividual",
+      "ServiceMenu",
+      "Contact",
+      "STDGroupUmrah",
+      "UmrahRamzanGroup",
+      "UmrahFamily",
+      "UmrahIndiVIP",
+      "Navbar",
+    ],
     defaultNS: "common",
     interpolation: {
       escapeValue: false,
@@ -19,7 +32,6 @@ i18n
     react: {
       useSuspense: true,
     },
-    
   });
 
 export default i18n;

@@ -1,18 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaGlobe } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState("en"); // Track current language
   const dropdownRef = useRef(null);
-  const nav = useNavigate();
 
   useEffect(() => {
-    // Load the saved language from localStorage and set it on the initial load
-    const savedLanguage = localStorage.getItem("language") || "en"; // Default to English if no language is saved
+    const savedLanguage = localStorage.getItem("language") || "en";
     i18n.changeLanguage(savedLanguage);
+    setCurrentLanguage(savedLanguage); // Set the initial language
   }, [i18n]);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
@@ -24,10 +23,10 @@ const LanguageSwitcher = () => {
   };
 
   const changeLanguage = (language) => {
-    i18n.changeLanguage(language); // Change the language
-    localStorage.setItem("language", language); // Save the selected language to localStorage
-    setIsOpen(false); // Close the dropdown after selection
-    nav("/"); // Navigate to the home page
+    i18n.changeLanguage(language);
+    localStorage.setItem("language", language);
+    setCurrentLanguage(language); // Update the current language
+    setIsOpen(false);
   };
 
   useEffect(() => {
@@ -41,9 +40,11 @@ const LanguageSwitcher = () => {
     <div ref={dropdownRef} className="relative inline-block text-left">
       <button
         onClick={toggleDropdown}
-        className="flex items-center px-3 py-2 text-gray-700 hover:text-gray-900"
+        className="flex items-center px-3 py-2 text-gray-700 hover:text-gray-900  border rounded-lg border-white border-opacity-30"
       >
         <FaGlobe className="mr-2" />
+        <span>{currentLanguage === "en" ? "English" : "عربي"}</span>{" "}
+        {/* Show language name */}
       </button>
 
       {isOpen && (
@@ -58,7 +59,7 @@ const LanguageSwitcher = () => {
             onClick={() => changeLanguage("ar")}
             className="block w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100"
           >
-            Arabic
+            عربي
           </button>
         </div>
       )}

@@ -1,51 +1,28 @@
 {
-    "contentSections": [
-      {
-        "main": "حزمة المجموعة",
-        "title": "اجعل رحلتك الروحانية لا تُنسى مع خدمات مجموعة الزهراء",
-        "description": "<span class='font-extrabold'>حج وعمرة الزهراء</span>، جزء من مجموعة الزهراء، تقدم باقات جماعية للحجاج الذين يرغبون في مشاركة الرحلة مع الأصدقاء أو العائلة أو أفراد المجتمع. تم تصميم باقاتنا لتجعل رحلتك سلسة ومريحة ومليئة بالروحانية.",
-        "subheading": "ما الذي يتضمنه باقتنا الجماعية..؟"
-      },
-      {
-        "title": "الخدمات المشمولة",
-        "services": [
-          {
-            "id": 1,
-            "title": "معالجة التأشيرات",
-            "description": "نقوم بتولي عملية استخراج التأشيرات حتى يتمكن كل عضو في المجموعة من التركيز على رحلته."
-          },
-          {
-            "id": 2,
-            "title": "تذاكر السفر ذهابًا وإيابًا",
-            "description": "سافر بسهولة مع تذاكر ذهاب وإياب مشمولة في الباقة لتجربة خالية من القلق."
-          },
-          {
-            "id": 3,
-            "title": "التنقل من وإلى المطار",
-            "description": "وصول ومغادرة مريحة من خلال خدمات النقل الموثوقة من وإلى المطار."
-          },
-          {
-            "id": 4,
-            "title": "دليل علمي مخصص",
-            "description": "سيكون هناك دليل متمرس يرافق مجموعتك، لتقديم الدعم الروحي والرؤى المفيدة."
-          },
-          {
-            "id": 5,
-            "title": "وجبات حسب الاحتياجات",
-            "description": "تُرتب الوجبات بما يتناسب مع احتياجات المجموعة."
-          },
-          {
-            "id": 6,
-            "title": "رعاية ودعم شخصي",
-            "description": "نقدم مساعدة مخصصة لضمان راحة كل عضو في المجموعة."
-          },
-          {
-            "id": 7,
-            "title": "زيارات إلى المواقع التاريخية والمقدسة",
-            "description": "استكشف المواقع المهمة في مكة والمدينة من خلال جولات إرشادية."
-          }
-        ]
-      }
-    ]
-  }
-  
+  "Group": "Group",
+  "package": "Package",
+  "makeYour": "Make Your Pilgrimage <br/> Memorable with Alzahra`s Group Services",
+  "description": " <strong> Alzahra Hajj and Umrah </strong> , part of Alzahra Group, offers group packages for pilgrims who wish to share the journey with friends, family, or community members. Our packages are designed to make your pilgrimage smooth, comfortable, and spiritually fulfilling.",
+  "include": "What’s Included in Our Group Package..?",
+
+  "visa": "Visa Processing",
+  "visaDes": "We handle the visa process so each group member can focus on their journey.",
+
+  "roundTrip": "Round-Trip Airfare",
+  "roundTripDes": "Travel easily with round-trip tickets included in the package for a worry-free experience.",
+
+  "airport": "Airport Pickup & Drop-Off",
+  "airportdes": "Arrive and depart with ease through our reliable airport transfers.",
+
+  "guide": "Dedicated Scholarly Guide",
+  "guideDes": "A knowledgeable guide will accompany your group, offering spiritual support and insights.",
+
+  "food": "Food Based on Needs",
+  "foodDes": "Meals are arranged according to the needs of the group.",
+
+  "personal": "Personal Care and Support",
+  "personalDes": "We provide personalized assistance to ensure each group member’s comfort.",
+
+  "visits": "Visits to Historical and Sacred Sites",
+  "visitsDes": "Discover significant sites in Makkah and Madinah with guided tours."
+}

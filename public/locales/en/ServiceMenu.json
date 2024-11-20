@@ -1,0 +1,12 @@
+{
+  "hajj": "HAJJ",
+  "umrah": "UMRAH",
+  "services": "SERVICES",
+  "IndividualPackage": "Individual Package",
+  "GroupPackage": "Group Package",
+  "StdGroupPackage": "Standard Group Package",
+  "RamzanPackage": "Ramzan Package",
+  "FamilyPackage": "Family Package",
+  "IndiVIPPackage": "Individual & VIP Package",
+  "OtherServices": "Other Services"
+}

@@ -1,0 +1,26 @@
+{
+  "Family": "Family",
+  "Package": "Package",
+  "description": "The Family Package is designed for families seeking <br /> a private and comfortable experience:",
+  "Included": "What’s Included in Our Standard Family Package..?",
+
+  "visa": "Visa Processing",
+  "visaDes": "We handle the visa process so each group member can focus on their journey.",
+
+  "roundTrip": "Round-Trip Airfare",
+  "roundTripDes": "Travel easily with round-trip tickets included in the package for a worry-free experience.",
+
+  "airport": "Airport Pickup & Drop-Off",
+  "airportDes": "Arrive and depart with ease through our reliable airport transfers.",
+
+  "guide": "Dedicated Scholarly Guide",
+  "guideDes": "A knowledgeable guide will accompany your group, offering spiritual support and insights.",
+
+  "personal": "Personal Care and Support",
+  "personalDes": "We provide personalized assistance to ensure each group member’s comfort.",
+
+  "visits": "Visits to Historical and Sacred Sites",
+  "visitsDes": "Discover significant sites in Makkah and Madinah with guided tours.",
+
+  "ourFamily": "Our family rooms are spacious, hygienic, and equipped with modern amenities to ensure your comfort."
+}

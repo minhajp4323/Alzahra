@@ -1,0 +1,17 @@
+{
+  "Home": "الصفحة الرئيسية",
+  "About": "من نحن",
+
+  "Hajj": "الحج",
+  "Umrah": "العمرة",
+
+  "OtherServices": "خدمات أخرى",
+
+  "groupPackage": "الحزمة الفردية",
+  "IndividualPackage": "باقة فردية",
+  
+  "STDGroupPackage": "حزمة المجموعة القياسية",
+  "RamzanPackage": "باقة رمضان",
+  "FamilyPackage": "حزمة الأسرة",
+  "IndiVIPPackage": "باقة فردية وVIP"
+}

@@ -1,0 +1,30 @@
+{
+  "Individual": "Individual",
+  "VIP": "& VIP",
+  "Package": "Package",
+  "description": "For those seeking a personalized or luxury experience.",
+  "Included": " What’s Included in Our Individual & VIP Package..?",
+
+  "visa": "Visa Processing",
+  "visaDes": "We handle the visa process so each group member can focus on their journey.",
+
+  "roundTrip": "Round-Trip Airfare",
+  "roundTripDes": "Travel easily with round-trip tickets included in the package for a worry-free experience.",
+
+  "airport": "Airport Pickup & Drop-Off",
+  "airportDes": "Arrive and depart with ease through our reliable airport transfers.",
+
+  "guide": "A private guide",
+  "guideDes": "Enjoy personalized spiritual support with a one-on-one guide throughout your journey.",
+
+  "visits": "Exclusive visits to important sites",
+  "visitsDes": "Experience exclusive visits to key historical sites, deepening your understanding of Islamic heritage.",
+
+  "personal": "Personal Care and Support",
+  "personalDes": "We provide personalized assistance to ensure each group member’s comfort.",
+
+  "fullSupport": "Full support throughout the journey",
+  "fullSupportDes":"Meals are arranged according to the needs of the group." ,
+
+  "lastDes":"Meals are arranged according to the needs of the group."
+}

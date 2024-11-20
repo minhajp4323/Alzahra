@@ -52,11 +52,10 @@ function Features() {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-r-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pt-28">
           <div className="absolute left-0 top-0 h-1/5 border-l-2 border-[#894A1B]"></div>
 
-          {/* Conditional text alignment */}
           <div
             className={`text-${
               i18n.language === "ar" ? "right" : "left"
-            } space-y-2 md:space-y-4 p-4 sm:p-6 md:ml-10`}
+            } space-y-2 md:space-y-4 p-4 sm:p-6 md:ml-10 md:mr-4`}
           >
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-[#B57439]">
               02
@@ -69,7 +68,6 @@ function Features() {
             </p>
           </div>
 
-          {/* Conditional image alignment */}
           <div
             className={`flex justify-center md:justify-${
               i18n.language === "ar" ? "start" : "end"
@@ -86,7 +84,6 @@ function Features() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-28">
-          {/* Conditional image alignment */}
           <div
             className={`flex justify-center md:justify-${
               i18n.language === "ar" ? "start" : "end"
@@ -101,7 +98,6 @@ function Features() {
             />
           </div>
 
-          {/* Conditional text alignment */}
           <div
             className={`text-${
               i18n.language === "ar" ? "right" : "left"
@@ -122,14 +118,12 @@ function Features() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-r-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pt-24">
-          {/* Left border line */}
           <div className="absolute left-0 top-0 h-1/5 border-l-2 border-[#894A1B]"></div>
 
-          {/* Conditional text alignment */}
           <div
             className={`text-${
               i18n.language === "ar" ? "right" : "left"
-            } space-y-2 md:space-y-4 p-4 sm:p-6 md:ml-10`}
+            } space-y-2 md:space-y-4 p-4 sm:p-6 md:ml-10  md:mr-5`}
           >
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-[#B57439]">
               04
@@ -142,7 +136,6 @@ function Features() {
             </p>
           </div>
 
-          {/* Conditional image alignment */}
           <div
             className={`flex justify-center md:justify-${
               i18n.language === "ar" ? "end" : "start"
@@ -159,7 +152,6 @@ function Features() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-20">
-          {/* Image */}
           <div
             className={`flex justify-center md:justify-${
               i18n.language === "ar" ? "start" : "end"
@@ -174,7 +166,6 @@ function Features() {
             />
           </div>
 
-          {/* Text */}
           <div
             className={`text-${
               i18n.language === "ar" ? "right" : "left"
@@ -191,19 +182,16 @@ function Features() {
             </p>
           </div>
 
-          {/* Right border line */}
           <div className="absolute right-0 bottom-0 h-[20%] border-l-2 border-[#894A1B]"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-r-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pt-24">
-          {/* Left border line */}
           <div className="absolute left-0 top-0 h-1/5 border-l-2 border-[#894A1B]"></div>
 
-          {/* Text Section */}
           <div
             className={`text-${
               i18n.language === "ar" ? "right" : "left"
-            } space-y-2 md:space-y-4 p-4 sm:p-6 md:ml-10`}
+            } space-y-2 md:space-y-4 p-4 sm:p-6 md:ml-10 md:mr-5`}
           >
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-[#B57439]">
               06
@@ -216,7 +204,6 @@ function Features() {
             </p>
           </div>
 
-          {/* Image Section */}
           <div
             className={`flex justify-center md:justify-${
               i18n.language === "ar" ? "start" : "end"
@@ -233,7 +220,6 @@ function Features() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-24">
-          {/* Image Section */}
           <div className="flex justify-center md:justify-end w-full">
             <img
               srcSet={`${Guidance} 320w, ${Guidance} 480w, ${Guidance} 800w`}
@@ -244,7 +230,6 @@ function Features() {
             />
           </div>
 
-          {/* Text Section */}
           <div
             className={`${
               i18n.language === "ar" ? "text-right" : "text-left"
@@ -261,15 +246,12 @@ function Features() {
             </p>
           </div>
 
-          {/* Border Section */}
           <div className="absolute right-0 bottom-0 h-[20%] border-l-2 border-[#894A1B]"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-r-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pt-24">
-          {/* Left Border */}
           <div className="absolute left-0 top-0 h-1/5 border-l-2 border-[#894A1B]"></div>
 
-          {/* Text Section */}
           <div
             className={`${
               i18n.language === "ar"
@@ -288,7 +270,6 @@ function Features() {
             </p>
           </div>
 
-          {/* Image Section */}
           <div className="flex justify-center md:justify-start w-full">
             <img
               srcSet={`${Packages} 320w, ${Packages} 480w, ${Packages} 800w`}
@@ -301,7 +282,6 @@ function Features() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-l-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pr-10 md:pt-24">
-          {/* Image Section */}
           <div className="flex justify-center md:justify-end w-full">
             <img
               srcSet={`${Services} 320w, ${Services} 480w, ${Services} 800w`}
@@ -312,7 +292,6 @@ function Features() {
             />
           </div>
 
-          {/* Text Section */}
           <div
             className={`${
               i18n.language === "ar"
@@ -331,15 +310,12 @@ function Features() {
             </p>
           </div>
 
-          {/* Border on the Right */}
           <div className="absolute right-0 bottom-0 h-[20%] border-l-2 border-[#894A1B]"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 items-center border-b-2 border-r-2 border-[#894A1B] p-4 sm:p-6 md:p-8 w-full md:max-w-screen-xl mx-auto relative md:pt-24">
-          {/* Border on the Left */}
           <div className="absolute left-0 top-0 h-1/5 border-l-2 border-[#894A1B]"></div>
 
-          {/* Text Section */}
           <div
             className={`${
               i18n.language === "ar"
@@ -358,7 +334,6 @@ function Features() {
             </p>
           </div>
 
-          {/* Image Section */}
           <div className="flex justify-center md:justify-start w-full">
             <img
               srcSet={`${Airport} 320w, ${Airport} 480w, ${Airport} 800w`}

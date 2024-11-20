@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Logo from "../assets/Arabic Logo.svg";
 import { useLocation, useNavigate } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { Trans } from "react-i18next";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,10 +16,10 @@ function Header() {
   const dropDownUmrahRef = useRef(null);
 
   //////////////////////////////////////////////////
-  const [dropdownMobHajj, setDropdownMobHajj] = useState(null); // Updated variable names
-  const [dropdownMobUmrah, setDropdownMobUmrah] = useState(null); // Updated variable names
-  const dropdownRefMobHajj = useRef(null); // Ref for tracking clicks outside the dropdown
-  const dropdownRefMobUmrah = useRef(null); // Ref for tracking clicks outside the dropdown
+  const [dropdownMobHajj, setDropdownMobHajj] = useState(null);
+  const [dropdownMobUmrah, setDropdownMobUmrah] = useState(null);
+  const dropdownRefMobHajj = useRef(null);
+  const dropdownRefMobUmrah = useRef(null);
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -136,7 +137,7 @@ function Header() {
                 nav("/");
               }}
             >
-              HOME
+              <Trans ns="Navbar" i18nKey="Home" />
             </li>
             <li
               className={`p-2 text-lg cursor-pointer hover:font-bold ${
@@ -147,7 +148,7 @@ function Header() {
                 nav("/About");
               }}
             >
-              ABOUT US
+              <Trans ns="Navbar" i18nKey="About" />
             </li>
 
             {/* Hajj Dropdown */}
@@ -160,7 +161,7 @@ function Header() {
                   setDropdownMobHajj(dropdownMobHajj === "hajj" ? null : "hajj")
                 } // Updated to setDropdownMobHajj
               >
-                HAJJ
+                <Trans ns="Navbar" i18nKey="Hajj" />
               </li>
               {dropdownMobHajj === "hajj" && (
                 <ul
@@ -176,7 +177,7 @@ function Header() {
                       setIsOpen(false);
                     }}
                   >
-                    Individual Package
+                    <Trans ns="Navbar" i18nKey="IndividualPackage" />
                   </li>
                   <li
                     className="p-2 text-md cursor-pointer hover:font-semibold"
@@ -186,7 +187,7 @@ function Header() {
                       setIsOpen(false);
                     }}
                   >
-                    Group Package
+                    <Trans ns="Navbar" i18nKey="groupPackage" />
                   </li>
                 </ul>
               )}
@@ -204,7 +205,7 @@ function Header() {
                   )
                 }
               >
-                UMRAH
+                <Trans ns="Navbar" i18nKey="Umrah" />
               </li>
               {dropdownMobUmrah === "umrah" && (
                 <ul
@@ -220,7 +221,7 @@ function Header() {
                       setIsOpen(false);
                     }}
                   >
-                    Standard Group Package
+                    <Trans ns="Navbar" i18nKey="STDGroupPackage" />
                   </li>
                   <li
                     className="p-2 text-md cursor-pointer hover:font-semibold"
@@ -230,7 +231,7 @@ function Header() {
                       setIsOpen(false);
                     }}
                   >
-                    Ramzan Package
+                    <Trans ns="Navbar" i18nKey="RamzanPackage" />
                   </li>
                   <li
                     className="p-2 text-md cursor-pointer hover:font-semibold"
@@ -240,7 +241,7 @@ function Header() {
                       setIsOpen(false);
                     }}
                   >
-                    Family Package
+                    <Trans ns="Navbar" i18nKey="FamilyPackage" />
                   </li>
                   <li
                     className="p-2 text-md cursor-pointer hover:font-semibold"
@@ -250,7 +251,7 @@ function Header() {
                       setIsOpen(false);
                     }}
                   >
-                    Individual & VIP Package
+                    <Trans ns="Navbar" i18nKey="IndiVIPPackage" />
                   </li>
                 </ul>
               )}
@@ -265,9 +266,9 @@ function Header() {
                 nav("/contact");
               }}
             >
-              OTHER SERVICES
+              <Trans ns="Navbar" i18nKey="OtherServices" />
             </li>
-            
+
             <li
               className={`p-2 text-lg cursor-pointer hover:font-bold `}
               onClick={() => {
@@ -277,19 +278,18 @@ function Header() {
             >
               <LanguageSwitcher />
             </li>
-
           </ul>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-10 pr-10 items-center">
+        <ul className="hidden md:flex gap-5 pr-10 items-center">
           <li
             className={`p-2 cursor-pointer hover:font-bold ${
               isActive("/") ? "font-extrabold" : ""
             }`}
             onClick={() => nav("/")}
           >
-            HOME
+            <Trans ns="Navbar" i18nKey="Home" />
           </li>
           <li
             className={`p-2 cursor-pointer hover:font-bold ${
@@ -297,7 +297,7 @@ function Header() {
             }`}
             onClick={() => nav("/About")}
           >
-            ABOUT US
+            <Trans ns="Navbar" i18nKey="About" />
           </li>
 
           {/* Hajj Dropdown */}
@@ -308,7 +308,7 @@ function Header() {
               }`}
               onClick={() => setDropdown(dropdown === "hajj" ? null : "hajj")}
             >
-              HAJJ
+              <Trans ns="Navbar" i18nKey="Hajj" />
             </li>
             {dropdown === "hajj" && (
               <ul
@@ -322,7 +322,7 @@ function Header() {
                     nav("/Hajj-group");
                   }}
                 >
-                  Group Package
+                  <Trans ns="Navbar" i18nKey="groupPackage" />
                 </li>
                 <li
                   className="p-2 text-sm cursor-pointer hover:bg-gray-200"
@@ -330,7 +330,7 @@ function Header() {
                     nav("/Hajj-Individual");
                   }}
                 >
-                  Individual Package
+                  <Trans ns="Navbar" i18nKey="IndividualPackage" />
                 </li>
               </ul>
             )}
@@ -344,7 +344,7 @@ function Header() {
               }`}
               onClick={() => setDropdown(dropdown === "umrah" ? null : "umrah")}
             >
-              UMRAH
+              <Trans ns="Navbar" i18nKey="Umrah" />
             </li>
             {dropdown === "umrah" && (
               <ul
@@ -358,7 +358,7 @@ function Header() {
                     nav("/Umrah-standard");
                   }}
                 >
-                  Standard Group Package
+                  <Trans ns="Navbar" i18nKey="STDGroupPackage" />
                 </li>
                 <li
                   className="p-2 text-sm cursor-pointer hover:bg-gray-200"
@@ -366,7 +366,7 @@ function Header() {
                     nav("/Umrah-ramzan-package");
                   }}
                 >
-                  Ramzan Package
+                  <Trans ns="Navbar" i18nKey="RamzanPackage" />
                 </li>
                 <li
                   className="p-2 text-sm cursor-pointer hover:bg-gray-200"
@@ -374,7 +374,7 @@ function Header() {
                     nav("/Umrah-family-package");
                   }}
                 >
-                  Family Package
+                  <Trans ns="Navbar" i18nKey="FamilyPackage" />
                 </li>
                 <li
                   className="p-2 text-sm cursor-pointer hover:bg-gray-200"
@@ -382,7 +382,7 @@ function Header() {
                     nav("/Umrah-VIP-package");
                   }}
                 >
-                  Individual & VIP Package
+                  <Trans ns="Navbar" i18nKey="IndiVIPPackage" />
                 </li>
               </ul>
             )}
@@ -394,7 +394,7 @@ function Header() {
             }`}
             onClick={() => nav("/contact")}
           >
-            OTHER SERVICES
+            <Trans ns="Navbar" i18nKey="OtherServices" />
           </li>
           <li>
             <LanguageSwitcher />

@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Trans } from "react-i18next";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
@@ -36,7 +37,7 @@ function ServicesMenu() {
             openMenu === "hajj" ? "text-[#B57439] font-bold" : ""
           }`}
         >
-          HAJJ
+          <Trans ns="ServiceMenu" i18nKey="hajj" />
           <MdKeyboardArrowDown className="mt-1 xs:mt-[2px] ml-2" />
         </button>
         <div className="border-l-2 border-gray-300 h-[20px] sm:h-[30px] mx-1 sm:mx-2"></div>
@@ -47,7 +48,7 @@ function ServicesMenu() {
             openMenu === "umrah" ? "text-[#B57439] font-bold" : ""
           }`}
         >
-          UMRAH
+          <Trans ns="ServiceMenu" i18nKey="umrah" />
           <MdKeyboardArrowDown className="mt-1 xs:mt-[2px] ml-2" />
         </button>
         <div className="border-l-2 border-gray-300 h-[20px] sm:h-[30px] mx-1 sm:mx-2"></div>
@@ -58,7 +59,7 @@ function ServicesMenu() {
             openMenu === "services" ? "text-[#B57439] font-bold" : ""
           }`}
         >
-          SERVICES
+          <Trans ns="ServiceMenu" i18nKey="services" />
           <MdKeyboardArrowDown className="mt-1 xs:mt-[2px] ml-2" />
         </button>
       </div>
@@ -76,13 +77,13 @@ function ServicesMenu() {
               className="text-md md:text-[18px] cursor-pointer hover:bg-gray-200 p-2 rounded"
               onClick={() => nav("/Hajj-Individual")}
             >
-              Individual Package
+              <Trans ns="ServiceMenu" i18nKey="IndividualPackage" />
             </div>
             <div
               className="text-md md:text-[18px] cursor-pointer hover:bg-gray-200 p-2 rounded"
               onClick={() => nav("/Hajj-group")}
             >
-              Group Package
+              <Trans ns="ServiceMenu" i18nKey="GroupPackage" />
             </div>
           </div>
         )}
@@ -94,25 +95,25 @@ function ServicesMenu() {
               className="text-md md:text-[18px] cursor-pointer hover:bg-gray-200 p-2 rounded"
               onClick={() => nav("/Umrah-standard")}
             >
-              Standard Group Package
+              <Trans ns="ServiceMenu" i18nKey="StdGroupPackage" />
             </div>
             <div
               className="text-md md:text-[18px] cursor-pointer hover:bg-gray-200 p-2 rounded"
               onClick={() => nav("/Umrah-ramzan-package")}
             >
-              Ramzan Package
+              <Trans ns="ServiceMenu" i18nKey="RamzanPackage" />
             </div>
             <div
               className="text-md md:text-[18px] cursor-pointer hover:bg-gray-200 p-2 rounded"
               onClick={() => nav("/Umrah-family-package")}
             >
-              Family Package
+              <Trans ns="ServiceMenu" i18nKey="FamilyPackage" />
             </div>
             <div
               className="text-md md:text-[18px] cursor-pointer hover:bg-gray-200 p-2 rounded"
               onClick={() => nav("/Umrah-VIP-package")}
             >
-              Individual & VIP Package
+              <Trans ns="ServiceMenu" i18nKey="IndiVIPPackage" />
             </div>
           </div>
         )}
@@ -120,7 +121,7 @@ function ServicesMenu() {
           <div>
             <hr className="border-t-[1px] border-gray-300 my-4 w-full md:ml-0 mt-0 mb-2 xs:mx-auto md:mx-auto " />
             <div className="text-md md:text-[18px] cursor-pointer hover:bg-gray-200 p-2 rounded ">
-              Other Services
+              <Trans ns="ServiceMenu" i18nKey="OtherServices" />
             </div>
           </div>
         )}

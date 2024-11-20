@@ -12,7 +12,7 @@ import ServicesMenu from "../Components/SeviceMenu";
 function Home() {
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
-
+ 
   return (
     <div
       className="Home"
