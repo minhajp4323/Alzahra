@@ -1,3 +1,4 @@
+import { Trans, useTranslation } from "react-i18next";
 import Logo from "../assets/Arabic Logo.svg";
 // import Facebook from "../assets/Social Icons/facebook.svg";
 // import Instagram from "../assets/Social Icons/instagram.svg";
@@ -10,7 +11,10 @@ import { useLocation, useNavigate } from "react-router-dom";
 function Footer() {
   const location = useLocation();
   const isAboutPage = location.pathname.includes("/About");
-  const nav = useNavigate()
+  const nav = useNavigate();
+
+  const { i18n } = useTranslation();
+  const currentLang = i18n.language;
 
   return (
     <div
@@ -23,7 +27,7 @@ function Footer() {
       px-[10%] md:mt-36 xs:mt-10 pb-36`}
       style={{
         position: "relative",
-        zIndex: 9999,
+        // zIndex: 9999,
         color: isAboutPage ? "white" : "black",
       }}
     >
@@ -44,45 +48,64 @@ function Footer() {
         </div> */}
       </div>
 
-      
       <div className="flex flex-col items-center md:items-start md:gap-2 xs:gap-0 md:mt-0 xs:mt-10 w-full md:w-1/3">
         <p className="text-lg font-gilroy-light md:text-left text-center">
-          Quick Links
+          <Trans ns="footer" i18nKey="QuickLinks" />
         </p>
         <hr className="border-t-[1px] border-[#757575] my-4 w-[80%] md:ml-0 mt-0 mb-2 xs:mx-auto md:mx-auto" />
 
-        <div className="flex flex-row justify-start gap-8 cursor-pointer ">
-          <ul className="list-none flex flex-col gap-2 items-center md:items-start font-extrabold">
-            <li onClick={()=>nav("/")}>Home</li>
-            <li onClick={()=>nav("/About")}>About Us</li>
-            <li onClick={()=>nav("/contact")}>Contact Us</li>
+        <div
+          className={`flex flex-row justify-start gap-8 cursor-pointer ${
+            currentLang === "ar" ? "text-right" : "text-left"
+          }`}
+        >
+          <ul
+            className={`list-none flex flex-col gap-2 items-center md:items-start font-extrabold ${
+              currentLang === "ar" ? "text-right" : "text-left"
+            }`}
+          >
+            <li onClick={() => nav("/")}>
+              <Trans ns="footer" i18nKey="Home" />
+            </li>
+            <li onClick={() => nav("/About")}>
+              <Trans ns="footer" i18nKey="About" />
+            </li>
+            <li onClick={() => nav("/contact")}>
+              <Trans ns="footer" i18nKey="Contact" />
+            </li>
           </ul>
           <ul className="list-none flex flex-col gap-2 items-center md:items-start font-extrabold">
-            <li onClick={()=>nav("/Hajj-group")}>Hajj</li>
-            <li onClick={()=>nav("/Umrah-standard")}>Umrah</li>
-            <li onClick={()=>nav("/contact")}>Other Services</li>
+            <li onClick={() => nav("/Hajj-group")}>
+              <Trans ns="footer" i18nKey="Hajj" />
+            </li>
+            <li onClick={() => nav("/Umrah-standard")}>
+              <Trans ns="footer" i18nKey="Umrah" />
+            </li>
+            <li onClick={() => nav("/contact")}>
+              <Trans ns="footer" i18nKey="OtherServices" />
+            </li>
           </ul>
         </div>
       </div>
 
       <div className="flex flex-col items-center md:items-start md:gap-2 xs:gap-0 md:mt-0 xs:mt-10 w-full md:w-1/3">
         <p className="text-lg font-gilroy-light md:text-left text-center">
-          Location
+          <Trans ns="footer" i18nKey="Location" />
         </p>
         <hr className="border-t-[1px] border-[#757575] my-4 w-[80%] md:ml-0 mt-0 mb-2 xs:mx-auto md:mx-auto" />
 
         <div className="flex flex-wrap justify-center gap-8">
           <ul className="list-none flex flex-col gap-2 items-center md:items-start font-extrabold">
-            <li>7385 Al Aasha Al Mazeni,</li>
-            <li> 3262, Jeddah 23454,</li>
-            <li> Saudi Arabia</li>
+            <li><Trans ns="footer" i18nKey="address1" /></li>
+            <li> <Trans ns="footer" i18nKey="address2" /></li>
+            <li><Trans ns="footer" i18nKey="address3" /></li>
           </ul>
         </div>
       </div>
 
       <div className="flex flex-col items-center md:items-start md:gap-2 xs:gap-0 md:mt-0 xs:mt-10  w-full md:w-1/3">
         <p className="text-lg font-gilroy-light md:text-left text-center">
-          Contact Info
+          <Trans ns="footer" i18nKey="ContactInfo" />
         </p>
         <hr className="border-t-[1px] border-[#757575] my-4 w-[80%] md:ml-0 mt-0 mb-2 xs:mx-auto md:mx-auto " />
         <div className="window  flex-wrap justify-center gap-8 md:block hidden">

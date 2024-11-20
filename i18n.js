@@ -24,6 +24,7 @@ i18n
       "UmrahFamily",
       "UmrahIndiVIP",
       "Navbar",
+      "footer",
     ],
     defaultNS: "common",
     interpolation: {

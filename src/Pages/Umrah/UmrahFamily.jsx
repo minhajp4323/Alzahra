@@ -24,7 +24,11 @@ function Umrah_Family() {
               alt="Individual Icon"
               className="w-[200px] md:w-[280px] lg:w-[380px] -mb-20 md:mb-0 md:-mr-20 lg:-mr-28 z-10"
             />
-            <div className="text-[48px] md:text-[80px] lg:text-[124px] leading-tight flex flex-col justify-center mt-2 md:mt-0">
+            <div
+              className={`text-[48px] md:text-[80px] lg:text-[124px] leading-tight flex flex-col justify-center mt-2 md:mt-0 ${
+                currentLang === "ar" ? "text-right" : "text-left"
+              }`}
+            >
               <h1 className="m-0">
                 <Trans ns="UmrahFamily" i18nKey="Family" />
               </h1>

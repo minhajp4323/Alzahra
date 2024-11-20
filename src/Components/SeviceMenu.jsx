@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
@@ -7,6 +7,9 @@ function ServicesMenu() {
   const nav = useNavigate();
   const [openMenu, setOpenMenu] = useState(null);
   const menuRef = useRef(null);
+
+  const { i18n } = useTranslation();
+  const currentLang = i18n.language;
 
   const toggleMenu = (menu) => {
     setOpenMenu(openMenu === menu ? null : menu);
@@ -71,7 +74,9 @@ function ServicesMenu() {
         }`}
       >
         {openMenu === "hajj" && (
-          <div className="">
+          <div
+            className={`${currentLang === "ar" ? "text-right" : "text-left"}`}
+          >
             <hr className="border-t-[1px] border-gray-300 my-4 w-full md:ml-0 mt-0 mb-2 xs:mx-auto md:mx-auto " />
             <div
               className="text-md md:text-[18px] cursor-pointer hover:bg-gray-200 p-2 rounded"
@@ -89,7 +94,9 @@ function ServicesMenu() {
         )}
 
         {openMenu === "umrah" && (
-          <div className="">
+          <div
+            className={`${currentLang === "ar" ? "text-right" : "text-left"}`}
+          >
             <hr className="border-t-[1px] border-gray-300 my-4 w-full md:ml-0 mt-0 mb-2 xs:mx-auto md:mx-auto " />
             <div
               className="text-md md:text-[18px] cursor-pointer hover:bg-gray-200 p-2 rounded"
@@ -118,7 +125,9 @@ function ServicesMenu() {
           </div>
         )}
         {openMenu === "services" && (
-          <div>
+          <div
+            className={`${currentLang === "ar" ? "text-right" : "text-left"}`}
+          >
             <hr className="border-t-[1px] border-gray-300 my-4 w-full md:ml-0 mt-0 mb-2 xs:mx-auto md:mx-auto " />
             <div className="text-md md:text-[18px] cursor-pointer hover:bg-gray-200 p-2 rounded ">
               <Trans ns="ServiceMenu" i18nKey="OtherServices" />

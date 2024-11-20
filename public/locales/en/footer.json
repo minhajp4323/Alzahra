@@ -9,5 +9,12 @@
   "OtherServices": "Other Services",
 
   "Location": "Location",
-  "ContactInfo": "Contact Info"
+
+  "address1": "7385 Al Aasha Al Mazeni,",
+  "address2": "3262, Jeddah 23454,",
+  "address3": "Saudi Arabia",
+
+  "ContactInfo": "Contact Info",
+  "Phone": "Phone",
+  "Email": "Email"
 }
