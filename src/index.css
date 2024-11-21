@@ -31,6 +31,8 @@
   font-style: normal;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Filoson+Pro&display=swap");
+
 /* Tailwind imports */
 @tailwind base;
 @tailwind components;
@@ -50,5 +52,3 @@ body {
 .font-gilroy-light {
   font-family: "Gilroy Light", sans-serif;
 }
-
-

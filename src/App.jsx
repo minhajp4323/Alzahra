@@ -1,9 +1,9 @@
-// import { useState, useEffect } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./Components/Navbar";
 import Home from "./Pages/Home";
-// import Welcome from "./Pages/Welcome";
+import Welcome from "./Pages/Welcome"; 
 import Hajj_Individual from "./Pages/Hajj/Hajj_Individual";
 import Hajj_Group from "./Pages/Hajj/Hajj_Group";
 import About from "./Pages/About";
@@ -12,30 +12,25 @@ import Umrah_Ramzan from "./Pages/Umrah/UmrahRamzan";
 import Umrah_Family from "./Pages/Umrah/UmrahFamily";
 import Umrah_VIP from "./Pages/Umrah/UmrahVIP";
 import Contact from "./Pages/Contact";
-import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 function App() {
-  // const [showWelcome, setShowWelcome] = useState(true);
-  const location = useLocation(); // Get the current path
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { i18n } = useTranslation();
 
-  // useEffect(() => {
-  //   const hasVisited = localStorage.getItem("hasVisited");
-  //   if (hasVisited) {
-  //     setShowWelcome(false);
-  //   }
-  // }, []);
+  const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem("language") || "en");
+  const [isFirstVisit, setIsFirstVisit] = useState(localStorage.getItem("visited") ? false : true);
 
-  // const handleWelcomeClose = () => {
-  //   localStorage.setItem("hasVisited", "true");
-  //   setShowWelcome(false);
-  // };
-const {i18n} = useTranslation()
+  useEffect(() => {
+    if (isFirstVisit) {
+      localStorage.setItem("visited", true);  
+      navigate("/welcome");  
+    } else {
+      i18n.changeLanguage(currentLanguage);  
+    }
+  }, [i18n, currentLanguage, isFirstVisit, navigate]);
 
-  // useEffect(() => {
-  //   document.documentElement.setAttribute("dir", i18n.language === "ar" ? "rtl" : "ltr");
-  // }, [i18n.language]);
-  
   return (
     <div
       style={{
@@ -48,9 +43,12 @@ const {i18n} = useTranslation()
       }}
     >
       <>
-        <Header />
+        {/* Conditionally render Header only if not on the Welcome page */}
+        {location.pathname !== "/welcome" && <Header />}
+        
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/welcome" element={<Welcome onClose={() => setIsFirstVisit(false)} setCurrentLanguage={setCurrentLanguage} />} />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Hajj-individual" element={<Hajj_Individual />} />
