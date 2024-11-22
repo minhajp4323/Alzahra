@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../assets/Main Logo.svg";
 import Desert from "../assets/DesertWelcome.svg";
@@ -8,16 +7,16 @@ function Welcome({ onClose, setCurrentLanguage }) {
 
   const handleLanguageSelect = (language) => {
     localStorage.setItem("language", language);
-    setCurrentLanguage(language); // Change the language immediately
+    setCurrentLanguage(language);
     onClose();
-    navigate("/"); // Navigate to home
-    window.location.reload(); // Optionally reload to apply language change
+    navigate("/");
+    window.location.reload();
   };
 
   return (
     <div
       className="relative h-[100vh] flex flex-col justify-center items-center gap-10"
-      style={{ fontFamily: "Jeko, sans-serif" }}
+      // style={{ fontFamily: "Jeko, sans-serif" }}
     >
       <div className="Logo mb-4">
         <img src={Logo} alt="Logo" className="h-20" />
@@ -28,15 +27,22 @@ function Welcome({ onClose, setCurrentLanguage }) {
           <div className="w-full sm:w-56 mr-16">
             <b>Welcome to Alzahra Hajj & Umrah Services</b>
           </div>
-          <div className="w-full sm:w-56 sm:text-right text-center">
-            <span style={{fontFamily:"Filson Pro, sans-serif"}}>مرحبا بكم في خدمات الزهراء للحج والعمرة</span>
+          <div
+            className="w-full sm:w-56 sm:text-right text-center  "
+          >
+            <span
+              className="font-filson"
+              
+            >
+              مرحبا بكم في خدمات الزهراء للحج والعمرة
+            </span>
           </div>
         </div>
         <hr className="w-full md:w-full border-t-2 border-[#E0C293] xs:w-[80%] mx-auto" />
       </div>
 
       <div className="flex flex-col sm:flex-row justify-start gap-6 sm:gap-[200px] md:gap-[110px] px-4 sm:px-10 text-[20px]">
-        <div className="text-center sm:text-left ">
+        <div className="text-center sm:text-left">
           <h1 className="text-[20px] font-jeko-medium">Select Your Language</h1>
           <div
             className="border-2 border-black rounded-[20px] w-full sm:w-[309px] h-[65px] flex items-center justify-center mt-2 text-[20px] cursor-pointer"
@@ -46,13 +52,11 @@ function Welcome({ onClose, setCurrentLanguage }) {
           </div>
         </div>
 
-        <div className="text-center sm:text-left ">
-          <h1 className="text-[20px] font-jeko-medium sm:text-right">
-            اخترك اللغة
-          </h1>
+        <div className="text-center sm:text-left">
+          <h1 className="text-[20px] font-arabic sm:text-right">اخترك اللغة</h1>
           <div
             onClick={() => handleLanguageSelect("ar")}
-            className="border-2 border-black rounded-[20px] w-full sm:w-[309px] h-[65px] flex items-center justify-center mt-2 text-[20px] cursor-pointer"
+            className="border-2 border-black rounded-[20px] w-full sm:w-[309px] h-[65px] flex items-center justify-center mt-2 text-[20px] cursor-pointer font-arabic"
           >
             عربي
           </div>

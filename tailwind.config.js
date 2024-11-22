@@ -7,6 +7,7 @@ export default {
         jekoMedium: ["Jeko-Medium", "sans-serif"],
         gilroyLight: ["Gilroy-Light", "sans-serif"],
         gilroyUltraLight: ["Gilroy Ultra Light", "sans-serif"],
+        filson: ['Filson Pro', 'sans-serif'],
       },
       screens: {
         xs: "320px",

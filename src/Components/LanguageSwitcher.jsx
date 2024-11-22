@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaGlobe } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
@@ -43,14 +43,14 @@ const LanguageSwitcher = () => {
   return (
     <div ref={dropdownRef} className="relative inline-block text-left">
       <button
-      onClick={toggleDropdown}
-      className={`flex items-center px-3 py-2 border rounded-lg border-white border-opacity-30 ${
-        isAboutPage ? "text-white" : "text-gray-700 hover:text-gray-900"
-      }`}
-    >
-      <FaGlobe className="mr-2" />
-      <span>{currentLanguage === "en" ? "ENGLISH" : "عربي"}</span>
-    </button>
+        onClick={toggleDropdown}
+        className={`flex items-center px-3 py-2 border rounded-lg border-white border-opacity-30 ${
+          isAboutPage ? "text-white" : "text-gray-700 hover:text-gray-900"
+        }`}
+      >
+        <FaGlobe className="mr-2" />
+        <span>{currentLanguage === "en" ? "ENGLISH" : "عربي"}</span>
+      </button>
 
       {isOpen && (
         <div className="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg">
