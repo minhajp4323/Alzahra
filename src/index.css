@@ -5,7 +5,7 @@
 @font-face {
   font-family: "Jeko";
   src: url("../src/assets/Fonts/FontsFree-Net-Jeko-Bold.ttf") format("truetype");
-  font-weight: 700; /* Use numerical weight for better control */
+  font-weight: 700; 
   font-style: normal;
 }
 
@@ -31,23 +31,9 @@
   font-style: normal;
 }
 
-/* @import url("https://fonts.googleapis.com/css2?family=Filoson+Pro&display=swap"); */
 
-@font-face {
-  font-family: 'Filson Pro';
-  src: url('../src/assets/Fonts/filson/FilsonProMedium.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  unicode-range: U+0600-06FF; /* Arabic Unicode Range */
-}
 
-@font-face {
-  font-family: 'Filson Pro';
-  src: url('../assets/fonts/FilsonPro-Bold.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-  unicode-range: U+0600-06FF; /* Arabic Unicode Range */
-}
+
 
 
 
@@ -63,10 +49,10 @@ body {
 }
 
 /* Add to your global CSS file (e.g., index.css) */
-/* .font-gilroy {
+.font-gilroy {
   font-family: "Gilroy", sans-serif;
 }
 
 .font-gilroy-light {
   font-family: "Gilroy Light", sans-serif;
-} */
+}
