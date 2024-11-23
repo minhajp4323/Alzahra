@@ -15,7 +15,8 @@
 
 @font-face {
   font-family: "Filson Pro";
-  src: url("../src/assets/Fonts/filson/FilsonPro-Regular.ttf") format("truetype");
+  src: url("../src/assets/Fonts/filson/FilsonPro-Regular.ttf")
+    format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -46,9 +47,10 @@ body.lang-ar {
   /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
   /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   /* font-family: monospace; */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: "Tajawal", sans-serif;
 
+}
 
 .font-gilroy {
   font-family: "Gilroy", sans-serif;
