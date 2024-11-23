@@ -26,7 +26,7 @@ function Contact() {
   return (
     <div className="flex flex-col  ">
       <header className="mb-4 md:mb-8 w-full flex flex-col items-center justify-center text-center">
-        <h1 className="text-[#C05D1B] text-[32px] md:text-[54px] font-extrabold">
+        <h1 className="text-[#C05D1B] text-[32px] md:text-[54px] font-bold">
           {/* Get in Touch: */}
           <Trans ns="Contact" i18nKey="getin" />
         </h1>

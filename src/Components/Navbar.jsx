@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from "react";
-import Logo from "../assets/Arabic Logo.svg";
+import EnglishLogo from "../assets/English Logo.svg";
+import ArabicLogo from "../assets/Arabic Logo.svg";
 import { useLocation, useNavigate } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +15,9 @@ function Header() {
   const hajjDropdownRef = useRef(null);
   const umrahDropdownRef = useRef(null);
   const dropDownUmrahRef = useRef(null);
+
+  const { i18n } = useTranslation();
+  const currentLang = i18n.language;
 
   //////////////////////////////////////////////////
   const [dropdownMobHajj, setDropdownMobHajj] = useState(null);
@@ -110,7 +114,12 @@ function Header() {
           isScrolled ? "bg-white bg-opacity-20 backdrop-blur-md" : ""
         }`}
       >
-        <img src={Logo} alt="Logo" className="h-12" onClick={() => nav("/")} />
+        <img
+          src={currentLang === "ar" ? ArabicLogo : EnglishLogo}
+          alt="Logo"
+          className="h-12"
+          onClick={() => nav("/")}
+        />
 
         <div
           className="md:hidden flex items-center z-50"
@@ -130,7 +139,7 @@ function Header() {
           <ul className="list-none flex flex-col p-6 gap-4 text-center">
             <li
               className={`p-2 text-lg cursor-pointer hover:font-bold ${
-                isActive("/") ? "font-extrabold" : ""
+                isActive("/") ? "font-bold" : ""
               }`}
               onClick={() => {
                 setIsOpen(false);
@@ -141,7 +150,7 @@ function Header() {
             </li>
             <li
               className={`p-2 text-lg cursor-pointer hover:font-bold ${
-                isActive("/About") ? "font-extrabold" : ""
+                isActive("/About") ? "font-bold" : ""
               }`}
               onClick={() => {
                 setIsOpen(false);
@@ -155,7 +164,7 @@ function Header() {
             <div ref={dropdownRefMobHajj}>
               <li
                 className={`p-2 text-lg cursor-pointer hover:font-bold ${
-                  dropdownMobHajj === "hajj" ? "font-extrabold" : ""
+                  dropdownMobHajj === "hajj" ? "font-bold" : ""
                 }`}
                 onClick={() =>
                   setDropdownMobHajj(dropdownMobHajj === "hajj" ? null : "hajj")
@@ -197,7 +206,7 @@ function Header() {
             <div ref={dropDownUmrahRef}>
               <li
                 className={`p-2 text-lg cursor-pointer hover:font-bold ${
-                  isActive("/Umrah") ? "font-extrabold" : ""
+                  isActive("/Umrah") ? "font-bold" : ""
                 }`}
                 onClick={() =>
                   setDropdownMobUmrah(
@@ -259,7 +268,7 @@ function Header() {
 
             <li
               className={`p-2 text-lg cursor-pointer hover:font-bold ${
-                isActive("/contact") ? "font-extrabold" : ""
+                isActive("/contact") ? "font-bold" : ""
               }`}
               onClick={() => {
                 setIsOpen(false);
@@ -285,7 +294,7 @@ function Header() {
         <ul className="hidden md:flex gap-5 pr-10 items-center">
           <li
             className={`p-2 cursor-pointer hover:font-bold ${
-              isActive("/") ? "font-extrabold" : ""
+              isActive("/") ? "font-bold" : ""
             }`}
             onClick={() => nav("/")}
           >
@@ -293,7 +302,7 @@ function Header() {
           </li>
           <li
             className={`p-2 cursor-pointer hover:font-bold ${
-              isActive("/About") ? "font-extrabold" : ""
+              isActive("/About") ? "font-bold" : ""
             }`}
             onClick={() => nav("/About")}
           >
@@ -304,7 +313,7 @@ function Header() {
           <div className="relative" ref={hajjDropdownRef}>
             <li
               className={`p-2 cursor-pointer hover:font-bold ${
-                isActive("/Hajj") ? "font-extrabold" : ""
+                isActive("/Hajj") ? "font-bold" : ""
               }`}
               onClick={() => setDropdown(dropdown === "hajj" ? null : "hajj")}
             >
@@ -340,7 +349,7 @@ function Header() {
           <div className="relative" ref={umrahDropdownRef}>
             <li
               className={`p-2 cursor-pointer hover:font-bold ${
-                isActive("/Umrah") ? "font-extrabold" : ""
+                isActive("/Umrah") ? "font-bold" : ""
               }`}
               onClick={() => setDropdown(dropdown === "umrah" ? null : "umrah")}
             >
@@ -390,7 +399,7 @@ function Header() {
 
           <li
             className={`p-2 cursor-pointer hover:font-bold ${
-              isActive("/contact") ? "font-extrabold" : ""
+              isActive("/contact") ? "font-bold" : ""
             }`}
             onClick={() => nav("/contact")}
           >

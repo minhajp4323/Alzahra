@@ -16,7 +16,7 @@ function Home() {
   return (
     <div
       className="Home"
-      style={{ fontFamily: "Jeko, sans-serif", zIndex: 9999 }}
+      // style={{ fontFamily: "Jeko, sans-serif", zIndex: 9999 }}
     >
       <div className="First xs:mb-[18%] lg:mb-[18%] md:mb-[19%] sm:mb-[29%] mt-5">
         <div

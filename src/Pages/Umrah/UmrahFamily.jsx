@@ -17,7 +17,7 @@ function Umrah_Family() {
         <div className="mb-16 lg:mb-[60px] -ml-2 md:-ml-4 lg:-ml-8">
           <div
             className="text-start flex flex-col md:flex-row items-center text-[#C05D1B] font-bold xs:mb-10 md:mb-0 "
-            style={{ fontFamily: "Jeko, sans-serif" }}
+            // style={{ fontFamily: "Jeko, sans-serif" }}
           >
             <img
               src={HajjGroup}
@@ -58,10 +58,10 @@ function Umrah_Family() {
         >
           <img src={Visa} alt="Visa Processing" className="col-span-1 w-full" />
           <div className="col-span-3">
-            <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-extrabold mb-2 md:mb-4 lg:mb-[22px]">
+            <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               01
             </h1>
-            <p className="text-[18px] md:text-[20px] lg:text-[24px] mb-2 md:mb-4 text-[#5D5D5D] font-extrabold">
+            <p className="text-[18px] md:text-[20px] lg:text-[24px] mb-2 md:mb-4 text-[#5D5D5D] font-bold">
               <Trans ns="UmrahFamily" i18nKey="visa" />
             </p>
             <p className="text-[16px] md:text-[18px] lg:text-[24px] text-[#5D5D5D]">
@@ -77,10 +77,10 @@ function Umrah_Family() {
         >
           <img src={RoundTrip} alt="Round-trip" className="col-span-1 w-full" />
           <div className="col-span-3">
-            <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-extrabold mb-2 md:mb-4 lg:mb-[22px]">
+            <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               02
             </h1>
-            <p className="text-[18px] md:text-[20px] lg:text-[24px] mb-2 md:mb-4 text-[#5D5D5D] font-extrabold">
+            <p className="text-[18px] md:text-[20px] lg:text-[24px] mb-2 md:mb-4 text-[#5D5D5D] font-bold">
               <Trans ns="UmrahFamily" i18nKey="roundTrip" />
             </p>
             <p className="text-[16px] md:text-[18px] lg:text-[24px] text-[#5D5D5D]">
@@ -95,10 +95,10 @@ function Umrah_Family() {
         >
           <img src={Airport} alt="Round-trip" className="col-span-1 w-full" />
           <div className="col-span-3">
-            <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-extrabold mb-2 md:mb-4 lg:mb-[22px]">
+            <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               03
             </h1>
-            <p className="text-[18px] md:text-[20px] lg:text-[24px] mb-2 md:mb-4 text-[#5D5D5D] font-extrabold">
+            <p className="text-[18px] md:text-[20px] lg:text-[24px] mb-2 md:mb-4 text-[#5D5D5D] font-bold">
               <Trans ns="UmrahFamily" i18nKey="airport" />
             </p>
             <p className="text-[16px] md:text-[18px] lg:text-[24px] text-[#5D5D5D]">
@@ -117,10 +117,10 @@ function Umrah_Family() {
             className="col-span-1 w-full"
           />
           <div className="col-span-3">
-            <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-extrabold mb-2 md:mb-4 lg:mb-[22px]">
+            <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               04
             </h1>
-            <p className="text-[18px] md:text-[20px] lg:text-[24px] mb-2 md:mb-4 text-[#5D5D5D] font-extrabold">
+            <p className="text-[18px] md:text-[20px] lg:text-[24px] mb-2 md:mb-4 text-[#5D5D5D] font-bold">
               <Trans ns="UmrahFamily" i18nKey="guide" />
             </p>
             <p className="text-[16px] md:text-[18px] lg:text-[24px] text-[#5D5D5D]">
@@ -139,10 +139,10 @@ function Umrah_Family() {
             className="col-span-1 w-full"
           />
           <div className="col-span-3">
-            <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-extrabold mb-2 md:mb-4 lg:mb-[22px]">
+            <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               05
             </h1>
-            <p className="text-[18px] md:text-[20px] lg:text-[24px] mb-2 md:mb-4 text-[#5D5D5D] font-extrabold">
+            <p className="text-[18px] md:text-[20px] lg:text-[24px] mb-2 md:mb-4 text-[#5D5D5D] font-bold">
               <Trans ns="UmrahFamily" i18nKey="personal" />
             </p>
             <p className="text-[16px] md:text-[18px] lg:text-[24px] text-[#5D5D5D]">
@@ -157,10 +157,10 @@ function Umrah_Family() {
         >
           <img src={Visits} alt="Round-trip" className="col-span-1 w-full" />
           <div className="col-span-3">
-            <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-extrabold mb-2 md:mb-4 lg:mb-[22px]">
+            <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               06
             </h1>
-            <p className="text-[18px] md:text-[20px] lg:text-[24px] mb-2 md:mb-4 text-[#5D5D5D] font-extrabold">
+            <p className="text-[18px] md:text-[20px] lg:text-[24px] mb-2 md:mb-4 text-[#5D5D5D] font-bold">
               <Trans ns="UmrahFamily" i18nKey="visits" />
             </p>
             <p className="text-[16px] md:text-[18px] lg:text-[24px] text-[#5D5D5D]">

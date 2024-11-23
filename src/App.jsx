@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./Components/Navbar";
 import Home from "./Pages/Home";
-import Welcome from "./Pages/Welcome"; 
+import Welcome from "./Pages/Welcome";
 import Hajj_Individual from "./Pages/Hajj/Hajj_Individual";
 import Hajj_Group from "./Pages/Hajj/Hajj_Group";
 import About from "./Pages/About";
@@ -18,16 +18,28 @@ function App() {
   const location = useLocation();
   const navigate = useNavigate();
   const { i18n } = useTranslation();
+  const [currentLanguage, setCurrentLanguage] = useState(
+    localStorage.getItem("language") || "en"
+  );
+  const [isFirstVisit, setIsFirstVisit] = useState(
+    localStorage.getItem("visited") ? false : true
+  );
 
-  const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem("language") || "en");
-  const [isFirstVisit, setIsFirstVisit] = useState(localStorage.getItem("visited") ? false : true);
+  useEffect(() => {
+    // Remove existing language classes
+    document.body.classList.remove("lang-ar", "lang-en");
+
+    // Add the appropriate class for the current language
+    const langClass = i18n.language === "ar" ? "lang-ar" : "lang-en";
+    document.body.classList.add(langClass);
+  }, [i18n.language]);
 
   useEffect(() => {
     if (isFirstVisit) {
-      localStorage.setItem("visited", true);  
-      navigate("/welcome");  
+      localStorage.setItem("visited", true);
+      navigate("/welcome");
     } else {
-      i18n.changeLanguage(currentLanguage);  
+      i18n.changeLanguage(currentLanguage);
     }
   }, [i18n, currentLanguage, isFirstVisit, navigate]);
 
@@ -43,12 +55,19 @@ function App() {
       }}
     >
       <>
-        {/* Conditionally render Header only if not on the Welcome page */}
         {location.pathname !== "/welcome" && <Header />}
-        
+
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/welcome" element={<Welcome onClose={() => setIsFirstVisit(false)} setCurrentLanguage={setCurrentLanguage} />} />
+          <Route
+            path="/welcome"
+            element={
+              <Welcome
+                onClose={() => setIsFirstVisit(false)}
+                setCurrentLanguage={setCurrentLanguage}
+              />
+            }
+          />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Hajj-individual" element={<Hajj_Individual />} />

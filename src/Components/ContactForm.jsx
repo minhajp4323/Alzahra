@@ -43,7 +43,7 @@ function Contact() {
   return (
     <div
       className="w-full flex justify-center flex-col items-center"
-      style={{ fontFamily: "Jeko, sans-serif" }}
+      // style={{ fontFamily: "Jeko, sans-serif" }}
     >
       <form
         className="form flex flex-col gap-5 sm:gap-6 max-w-[800px]"
