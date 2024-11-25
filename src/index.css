@@ -35,19 +35,10 @@
 body {
   overflow-x: hidden;
   font-family: "Jeko", sans-serif;
-  /* font-family: "Filson Pro", sans-serif */
 }
 
 body.lang-ar {
-  /* font-family:'Courier New', Courier, monospace */
-  /* font-family: "Jeko", sans-serif; */
-  /* font-family: "Filson Pro", sans-serif */
-  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
-  /* font-family: monospace; */
-  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  
   font-family: "Tajawal", sans-serif;
 
 }
