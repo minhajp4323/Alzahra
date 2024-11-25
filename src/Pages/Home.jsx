@@ -1,4 +1,4 @@
-import { Trans, useTranslation } from "react-i18next"; // Import useTranslation instead of useTransition
+import { Trans, useTranslation } from "react-i18next";
 import banner from "../assets/Home/Desert BG.svg";
 import bannerMobile from "../assets/Home/MobileBanner.svg";
 import BG from "../assets/Home/Prayer BG.png";

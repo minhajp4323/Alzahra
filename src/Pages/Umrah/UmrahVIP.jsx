@@ -6,7 +6,6 @@ import ScholarlyGuide from "../../assets/Hajj/ScholarlyGuide.png";
 import Visits from "../../assets/Hajj/Visits.png";
 import PersonalCare from "../../assets/Hajj/PersonalCare.png";
 import FullSupport from "../../assets/Hajj/FullSupport.png";
-// import Contact from "../../Components/ContactForm";
 import Footer from "../../Components/Footer";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -220,7 +219,6 @@ function Umrah_VIP() {
         </iframe>
       </div>
 
-      {/* <Contact /> */}
       <Footer />
     </div>
   );

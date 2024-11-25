@@ -6,7 +6,6 @@ import ScholarlyGuide from "../../assets/Hajj/ScholarlyGuide.png";
 import Visits from "../../assets/Hajj/Visits.png";
 import Food from "../../assets/Hajj/Food.png";
 import PersonalCare from "../../assets/Hajj/PersonalCare.png";
-// import Contact from "../../Components/ContactForm";
 import Footer from "../../Components/Footer";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -211,7 +210,6 @@ function Hajj_Group() {
         </iframe>
       </div>
 
-      {/* <Contact /> */}
       <Footer />
     </div>
   );

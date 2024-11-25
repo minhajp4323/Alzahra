@@ -21,12 +21,7 @@
   font-style: normal;
 }
 
-/* @font-face {
-  font-family: "Filson Pro";
-  src: url("../src/assets/Fonts/filson/FilsonProRegular.otf") format("opentype");
-  font-weight: bold;
-  font-style: normal;
-} */
+
 
 @tailwind base;
 @tailwind components;

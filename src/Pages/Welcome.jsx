@@ -26,7 +26,6 @@ function Welcome({ onClose, setCurrentLanguage }) {
           </div>
           <div
             className="w-full sm:w-56 sm:text-right text-center font-[Tajawal]"
-            // style={{ fontFamily: "Tajawal, sans-serif" }}
           >
             <span className="font-bold">
               مرحبا بكم في خدمات الزهراء للحج والعمرة
@@ -53,7 +52,6 @@ function Welcome({ onClose, setCurrentLanguage }) {
         <div className="text-center sm:text-left relative">
           <h1
             className="text-[20px] sm:text-right font-[Tajawal]"
-            // style={{ fontFamily: "Tajawal, sans-serif" }}
           >
             اخترك اللغة
           </h1>
@@ -63,7 +61,6 @@ function Welcome({ onClose, setCurrentLanguage }) {
                   hover:scale-105 transition-all duration-300 z-10 relative font-[Tajawal]"
             role="button"
             tabIndex={0}
-            // style={{ fontFamily: "Tajawal, sans-serif" }}
           >
             عربي
           </div>

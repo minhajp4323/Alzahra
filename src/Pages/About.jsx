@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import MasjidBG from "../assets/About Us/Masjid.png";
-// import Stars from "../assets/About Us/Stars.svg";
 import Stars from "../assets/About Us/Stars.png";
 import Footer from "../Components/Footer";
 import { Trans, useTranslation } from "react-i18next";

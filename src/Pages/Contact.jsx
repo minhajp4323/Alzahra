@@ -18,7 +18,7 @@ function Contact() {
       setBackgroundImage(window.innerWidth < 768 ? GetInTouchMob : GetInTouch);
     };
 
-    updateBackground(); // Run on mount
+    updateBackground(); 
     window.addEventListener("resize", updateBackground);
 
     return () => window.removeEventListener("resize", updateBackground);
@@ -27,11 +27,10 @@ function Contact() {
     <div className="flex flex-col  ">
       <header className="mb-4 md:mb-8 w-full flex flex-col items-center justify-center text-center">
         <h1 className="text-[#C05D1B] text-[32px] md:text-[54px] font-bold">
-          {/* Get in Touch: */}
           <Trans ns="Contact" i18nKey="getin" />
         </h1>
         <h2 className="text-[#5D5D5D] text-[18px] md:text-[24px] font-bold">
-          {/* Your Journey Awaits */}
+        
           <Trans ns="Contact" i18nKey="yourJourney" />
         </h2>
       </header>
@@ -46,7 +45,6 @@ function Contact() {
             backgroundImage: `url(${backgroundImage})`,
           }}
         >
-          {/* Black background div */}
           <div className="absolute bg-transparent border-[3px] border-[#B0876B] md:p-[59px] xs:p-[20px] sm:ml-[5%]  lg:ml-[13%] md:ml-[70px] -mb-7 xs:ml-[8%] shadow-md xs:h-[80.2%] sm:h-[80.8%]  md:h-[80.2%] lg:h-[80.2%] md:w-[350px] sm:w-[90%] xs:w-[85%] text-center flex items-center justify-center bottom-0 left-0"></div>
           <div className="absolute bg-[#171717] md:bg-opacity-70 xs:bg-opacity-50 md:p-[59px] xs:p-[20px] lg:ml-[10%] md:ml-[35px] xs:ml-0 shadow-md xs:h-[72.8%] sm:h-[72.8%]  md:h-[72.1%] lg:h-[72.2%] md:w-[420px] xs:w-screen text-center backdrop-blur-[10px] flex items-center justify-center bottom-0 left-0">
             <p
@@ -65,16 +63,11 @@ function Contact() {
         aria-labelledby="spiritual-adventure"
       >
         <p className="text-[16px] md:text-[24px] mt-[50px] text-[#5D5D5D] px-4">
-          {/* Your spiritual adventure and more start with just a message! */}
           <Trans ns="Contact" i18nKey="yourSpiritual" />
         </p>
       </section>
 
-      <section aria-labelledby="contact-form">
-        {/* <ContactForm /> */}
-        {/* <GoogleForm /> */}
-        {/* <TestForm/> */}
-      </section>
+     
       <div className="flex gap-10 flex-wrap justify-center text-[#5D5D5D] text-[20px] mt-5">
         <div className="flex  items-center ">
           <img src={Phone} alt="Phone Icon" className="mr-2" />

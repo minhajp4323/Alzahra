@@ -5,7 +5,6 @@ import Airport from "../../assets/Hajj/Airport.png";
 import ScholarlyGuide from "../../assets/Hajj/ScholarlyGuide.png";
 import PersonalCare from "../../assets/Hajj/PersonalCare.png";
 import Calender from "../../assets/Hajj/Calender.png";
-// import Contact from "../../Components/ContactForm";
 import Footer from "../../Components/Footer";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -206,7 +205,6 @@ function Umrah_Ramzan() {
         </iframe>
       </div>
 
-      {/* <Contact /> */}
       <Footer />
     </div>
   );

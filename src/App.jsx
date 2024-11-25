@@ -26,10 +26,8 @@ function App() {
   );
 
   useEffect(() => {
-    // Remove existing language classes
     document.body.classList.remove("lang-ar", "lang-en");
 
-    // Add the appropriate class for the current language
     const langClass = i18n.language === "ar" ? "lang-ar" : "lang-en";
     document.body.classList.add(langClass);
   }, [i18n.language]);

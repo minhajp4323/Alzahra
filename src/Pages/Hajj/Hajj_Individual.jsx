@@ -166,7 +166,6 @@ function Hajj_Individual() {
         </iframe>
       </div>
 
-      {/* <Contact /> */}
       <Footer />
     </div>
   );
