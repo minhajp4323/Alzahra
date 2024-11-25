@@ -98,7 +98,7 @@ function Hajj_Group() {
             }`}
           >
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
-              02
+              022
             </h1>
             <p className="text-[18px] md:text-[20px] lg:text-[24px] mb-2 md:mb-4 text-[#5D5D5D] font-bold">
               <Trans ns="HajjGroupPackage" i18nKey="roundTrip" />
