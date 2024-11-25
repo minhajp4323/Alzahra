@@ -1,10 +1,10 @@
 import { Trans, useTranslation } from "react-i18next"; // Import useTranslation instead of useTransition
-import banner from "../assets/Desert BG.svg";
-import bannerMobile from "../assets/MobileBanner.svg";
-import BG from "../assets/Part 2 BG.svg";
-import Corner from "../assets/Corner Vector.svg";
-import prayer from "../assets/Praying.svg";
-import Pilgrims from "../assets/Pilgrims.svg";
+import banner from "../assets/Home/Desert BG.svg";
+import bannerMobile from "../assets/Home/MobileBanner.svg";
+import BG from "../assets/Home/Prayer BG.png";
+import Corner from "../assets/Home/Corner Vector.svg";
+import prayer from "../assets/Home/Praying.png";
+import Pilgrims from "../assets/Home/Pilgrims.svg";
 import Footer from "../Components/Footer";
 import Features from "../Components/Features";
 import ServicesMenu from "../Components/SeviceMenu";

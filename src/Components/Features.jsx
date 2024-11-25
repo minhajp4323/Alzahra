@@ -1,14 +1,14 @@
-import Licensed from "../assets/Lisenced.png";
-import Accommodation from "../assets/Accomedation.png";
-import Room from "../assets/Room.png";
-import Transparent from "../assets/Transparent.png";
-import Arrangement from "../assets/Arrangements.png";
-import CustomerSupport from "../assets/CustomerSupport.png";
-import Guidance from "../assets/Guidance.png";
-import Packages from "../assets/Packages.png";
-import Services from "../assets/Services.png";
-import Airport from "../assets/Airport.png";
-import Crowd from "../assets/Crowd.svg";
+import Licensed from "../assets/Home/Licensed.png";
+import Accommodation from "../assets/Home/Accomedation.png";
+import Room from "../assets/Home/Room.png";
+import Transparent from "../assets/Home/Transparent.png";
+import Arrangement from "../assets/Home/Arrangements.png";
+import CustomerSupport from "../assets/Home/CustomerSupport.png";
+import Guidance from "../assets/Home/Guidance.png";
+import Packages from "../assets/Home/Packages.png";
+import Services from "../assets/Home/Services.png";
+import Airport from "../assets/Home/Airport.png";
+import Crowd from "../assets/Home/Crowd.svg";
 import { Trans, useTranslation } from "react-i18next";
 
 function Features() {
