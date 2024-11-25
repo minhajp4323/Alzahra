@@ -15,7 +15,7 @@ const LanguageSwitcher = () => {
   useEffect(() => {
     const savedLanguage = localStorage.getItem("language") || "en";
     i18n.changeLanguage(savedLanguage);
-    setCurrentLanguage(savedLanguage); // Set the initial language
+    setCurrentLanguage(savedLanguage);
   }, [i18n]);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
@@ -29,8 +29,9 @@ const LanguageSwitcher = () => {
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
     localStorage.setItem("language", language);
-    setCurrentLanguage(language); // Update the current language
+    setCurrentLanguage(language);
     setIsOpen(false);
+    window.location.reload();
   };
 
   useEffect(() => {

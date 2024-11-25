@@ -19,13 +19,11 @@ function Header() {
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
 
-  //////////////////////////////////////////////////
   const [dropdownMobHajj, setDropdownMobHajj] = useState(null);
   const [dropdownMobUmrah, setDropdownMobUmrah] = useState(null);
   const dropdownRefMobHajj = useRef(null);
   const dropdownRefMobUmrah = useRef(null);
 
-  // Close dropdown on outside click
   useEffect(() => {
     const handleClickOutsideHajj = (event) => {
       if (
@@ -125,7 +123,12 @@ function Header() {
           className="md:hidden flex items-center z-50"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <button className="text-2xl">
+          <button
+            className="text-2xl"
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
             {isOpen ? <span>&#10005;</span> : <span>&#9776;</span>}
           </button>
         </div>
@@ -144,6 +147,7 @@ function Header() {
               onClick={() => {
                 setIsOpen(false);
                 nav("/");
+                window.scrollTo(0, 0);
               }}
             >
               <Trans ns="Navbar" i18nKey="Home" />
@@ -155,6 +159,7 @@ function Header() {
               onClick={() => {
                 setIsOpen(false);
                 nav("/About");
+                window.scrollTo(0, 0);
               }}
             >
               <Trans ns="Navbar" i18nKey="About" />
@@ -168,7 +173,7 @@ function Header() {
                 }`}
                 onClick={() =>
                   setDropdownMobHajj(dropdownMobHajj === "hajj" ? null : "hajj")
-                } // Updated to setDropdownMobHajj
+                }
               >
                 <Trans ns="Navbar" i18nKey="Hajj" />
               </li>
@@ -184,6 +189,7 @@ function Header() {
                       setDropdownMobHajj(null); // Updated to setDropdownMobHajj
                       nav("/Hajj-Individual");
                       setIsOpen(false);
+                      window.scrollTo(0, 0);
                     }}
                   >
                     <Trans ns="Navbar" i18nKey="IndividualPackage" />
@@ -194,6 +200,7 @@ function Header() {
                       setDropdownMobHajj(null);
                       nav("/Hajj-group");
                       setIsOpen(false);
+                      window.scrollTo(0, 0);
                     }}
                   >
                     <Trans ns="Navbar" i18nKey="groupPackage" />
@@ -225,9 +232,10 @@ function Header() {
                   <li
                     className="p-2 text-md cursor-pointer hover:font-semibold"
                     onClick={() => {
-                      setDropdownMobUmrah(null); // Close the dropdown
+                      setDropdownMobUmrah(null);
                       nav("/Umrah-standard");
                       setIsOpen(false);
+                      window.scrollTo(0, 0);
                     }}
                   >
                     <Trans ns="Navbar" i18nKey="STDGroupPackage" />
@@ -235,9 +243,10 @@ function Header() {
                   <li
                     className="p-2 text-md cursor-pointer hover:font-semibold"
                     onClick={() => {
-                      setDropdownMobUmrah(null); // Close the dropdown
+                      setDropdownMobUmrah(null);
                       nav("/Umrah-ramzan-package");
                       setIsOpen(false);
+                      window.scrollTo(0, 0);
                     }}
                   >
                     <Trans ns="Navbar" i18nKey="RamzanPackage" />
@@ -245,9 +254,10 @@ function Header() {
                   <li
                     className="p-2 text-md cursor-pointer hover:font-semibold"
                     onClick={() => {
-                      setDropdownMobUmrah(null); // Close the dropdown
+                      setDropdownMobUmrah(null);
                       nav("/Umrah-family-package");
                       setIsOpen(false);
+                      window.scrollTo(0, 0);
                     }}
                   >
                     <Trans ns="Navbar" i18nKey="FamilyPackage" />
@@ -255,9 +265,10 @@ function Header() {
                   <li
                     className="p-2 text-md cursor-pointer hover:font-semibold"
                     onClick={() => {
-                      setDropdownMobUmrah(null); // Close the dropdown
+                      setDropdownMobUmrah(null);
                       nav("/Umrah-VIP-package");
                       setIsOpen(false);
+                      window.scrollTo(0, 0);
                     }}
                   >
                     <Trans ns="Navbar" i18nKey="IndiVIPPackage" />
@@ -273,6 +284,7 @@ function Header() {
               onClick={() => {
                 setIsOpen(false);
                 nav("/contact");
+                window.scrollTo(0, 0);
               }}
             >
               <Trans ns="Navbar" i18nKey="OtherServices" />
@@ -281,8 +293,7 @@ function Header() {
             <li
               className={`p-2 text-lg cursor-pointer hover:font-bold `}
               onClick={() => {
-                // setIsOpen(false);
-                // nav("/contact");
+                window.scrollTo(0, 0);
               }}
             >
               <LanguageSwitcher />
@@ -296,7 +307,10 @@ function Header() {
             className={`p-2 cursor-pointer hover:font-bold ${
               isActive("/") ? "font-bold" : ""
             }`}
-            onClick={() => nav("/")}
+            onClick={() => {
+              nav("/");
+              window.scrollTo(0, 0);
+            }}
           >
             <Trans ns="Navbar" i18nKey="Home" />
           </li>
@@ -304,7 +318,10 @@ function Header() {
             className={`p-2 cursor-pointer hover:font-bold ${
               isActive("/About") ? "font-bold" : ""
             }`}
-            onClick={() => nav("/About")}
+            onClick={() => {
+              nav("/About");
+              window.scrollTo(0, 0);
+            }}
           >
             <Trans ns="Navbar" i18nKey="About" />
           </li>
@@ -329,6 +346,7 @@ function Header() {
                   className={`p-2 text-sm cursor-pointer hover:bg-gray-200 `}
                   onClick={() => {
                     nav("/Hajj-group");
+                    window.scrollTo(0, 0);
                   }}
                 >
                   <Trans ns="Navbar" i18nKey="groupPackage" />
@@ -337,6 +355,7 @@ function Header() {
                   className="p-2 text-sm cursor-pointer hover:bg-gray-200"
                   onClick={() => {
                     nav("/Hajj-Individual");
+                    window.scrollTo(0, 0);
                   }}
                 >
                   <Trans ns="Navbar" i18nKey="IndividualPackage" />
@@ -357,14 +376,15 @@ function Header() {
             </li>
             {dropdown === "umrah" && (
               <ul
-                className={`absolute shadow-md mt-2 py-2 w-36 rounded-md  ${
+                className={`absolute shadow-md mt-2 py-2 w-36 rounded-md ${
                   isAboutPage ? "bg-white text-black" : "bg-white text-black"
-                }    `}
+                }`}
               >
                 <li
                   className="p-2 text-sm cursor-pointer hover:bg-gray-200"
                   onClick={() => {
                     nav("/Umrah-standard");
+                    window.scrollTo(0, 0);
                   }}
                 >
                   <Trans ns="Navbar" i18nKey="STDGroupPackage" />
@@ -373,6 +393,7 @@ function Header() {
                   className="p-2 text-sm cursor-pointer hover:bg-gray-200"
                   onClick={() => {
                     nav("/Umrah-ramzan-package");
+                    window.scrollTo(0, 0);
                   }}
                 >
                   <Trans ns="Navbar" i18nKey="RamzanPackage" />
@@ -381,6 +402,7 @@ function Header() {
                   className="p-2 text-sm cursor-pointer hover:bg-gray-200"
                   onClick={() => {
                     nav("/Umrah-family-package");
+                    window.scrollTo(0, 0);
                   }}
                 >
                   <Trans ns="Navbar" i18nKey="FamilyPackage" />
@@ -389,6 +411,7 @@ function Header() {
                   className="p-2 text-sm cursor-pointer hover:bg-gray-200"
                   onClick={() => {
                     nav("/Umrah-VIP-package");
+                    window.scrollTo(0, 0);
                   }}
                 >
                   <Trans ns="Navbar" i18nKey="IndiVIPPackage" />
@@ -401,7 +424,10 @@ function Header() {
             className={`p-2 cursor-pointer hover:font-bold ${
               isActive("/contact") ? "font-bold" : ""
             }`}
-            onClick={() => nav("/contact")}
+            onClick={() => {
+              nav("/contact");
+              window.scrollTo(0, 0);
+            }}
           >
             <Trans ns="Navbar" i18nKey="OtherServices" />
           </li>
