@@ -69,7 +69,11 @@ function Hajj_Group() {
           } `}
         >
           <img src={Visa} alt="Visa Processing" className="col-span-1 w-full" />
-          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
+          <div
+            className={`col-span-3 order-last ${
+              currentLang === "ar" ? "order-first" : "order-last"
+            }`}
+          >
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               01
             </h1>
@@ -88,7 +92,11 @@ function Hajj_Group() {
           }`}
         >
           <img src={RoundTrip} alt="Round-trip" className="col-span-1 w-full" />
-          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
+          <div
+            className={`col-span-3 order-last ${
+              currentLang === "ar" ? "order-first" : "order-last"
+            }`}
+          >
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               02
             </h1>
@@ -106,7 +114,11 @@ function Hajj_Group() {
           }`}
         >
           <img src={Airport} alt="Round-trip" className="col-span-1 w-full" />
-          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
+          <div
+            className={`col-span-3 order-last ${
+              currentLang === "ar" ? "order-first" : ""
+            }`}
+          >
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               03
             </h1>
@@ -128,7 +140,11 @@ function Hajj_Group() {
             alt="Round-trip"
             className="col-span-1 w-full"
           />
-          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
+          <div
+            className={`col-span-3 order-last ${
+              currentLang === "ar" ? "order-first" : ""
+            }`}
+          >
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               04
             </h1>
@@ -146,7 +162,11 @@ function Hajj_Group() {
           }`}
         >
           <img src={Food} alt="Round-trip" className="col-span-1 w-full" />
-          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
+          <div
+            className={`col-span-3 order-last ${
+              currentLang === "ar" ? "order-first" : ""
+            }`}
+          >
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               05
             </h1>
@@ -168,7 +188,11 @@ function Hajj_Group() {
             alt="Round-trip"
             className="col-span-1 w-full"
           />
-          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
+          <div
+            className={`col-span-3 order-last ${
+              currentLang === "ar" ? "order-first" : ""
+            }`}
+          >
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               06
             </h1>
@@ -186,7 +210,11 @@ function Hajj_Group() {
           }`}
         >
           <img src={Visits} alt="Round-trip" className="col-span-1 w-full" />
-          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
+          <div
+            className={`col-span-3 order-last ${
+              currentLang === "ar" ? "order-first" : ""
+            }`}
+          >
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               07
             </h1>
