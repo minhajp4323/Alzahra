@@ -19,13 +19,16 @@ function Hajj_Group() {
       <div className="flex flex-col text-center items-center mb-20 md:mb-28 lg:mb-[90px] px-4">
         <div className="mb-16 lg:mb-[60px] -ml-2 md:-ml-4 lg:-ml-8">
           <div
-            className="text-start flex flex-col md:flex-row items-center text-[#C05D1B] font-bold xs:mb-10 md:mb-0 "
-            // style={{ fontFamily: "Jeko, sans-serif" }}
+            className={`text-start flex flex-col md:flex-row items-center justify-center text-[#C05D1B] font-bold xs:mb-1 md:mb-0 ${
+              currentLang === "ar" ? "md:flex-row-reverse " : ""
+            }`}
           >
             <img
               src={HajjGroup}
               alt="Individual Icon"
-              className="w-[200px] md:w-[280px] lg:w-[380px] -mb-20 md:mb-0 md:-mr-20 lg:-mr-28 z-10"
+              className={`w-[200px] md:w-[280px] lg:w-[380px] -mb-14 md:mb-0 md:-mr-20 lg:-mr-28 z-10  ${
+                currentLang === "ar" ? " md:mr-0 lg:-ml-24 " : ""
+              }`}
             />
             <div
               className={`text-[48px] md:text-[80px] lg:text-[124px] leading-tight flex flex-col justify-center mt-2 md:mt-0 ${
@@ -66,7 +69,7 @@ function Hajj_Group() {
           } `}
         >
           <img src={Visa} alt="Visa Processing" className="col-span-1 w-full" />
-          <div className="col-span-3">
+          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               01
             </h1>
@@ -85,7 +88,7 @@ function Hajj_Group() {
           }`}
         >
           <img src={RoundTrip} alt="Round-trip" className="col-span-1 w-full" />
-          <div className="col-span-3">
+          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               02
             </h1>
@@ -103,7 +106,7 @@ function Hajj_Group() {
           }`}
         >
           <img src={Airport} alt="Round-trip" className="col-span-1 w-full" />
-          <div className="col-span-3">
+          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               03
             </h1>
@@ -125,7 +128,7 @@ function Hajj_Group() {
             alt="Round-trip"
             className="col-span-1 w-full"
           />
-          <div className="col-span-3">
+          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               04
             </h1>
@@ -143,7 +146,7 @@ function Hajj_Group() {
           }`}
         >
           <img src={Food} alt="Round-trip" className="col-span-1 w-full" />
-          <div className="col-span-3">
+          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               05
             </h1>
@@ -165,7 +168,7 @@ function Hajj_Group() {
             alt="Round-trip"
             className="col-span-1 w-full"
           />
-          <div className="col-span-3">
+          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               06
             </h1>
@@ -183,7 +186,7 @@ function Hajj_Group() {
           }`}
         >
           <img src={Visits} alt="Round-trip" className="col-span-1 w-full" />
-          <div className="col-span-3">
+          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               07
             </h1>
