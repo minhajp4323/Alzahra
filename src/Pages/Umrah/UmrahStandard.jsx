@@ -14,12 +14,13 @@ function Umrah_Standard() {
   const currentLang = i18n.language;
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col text-center items-center mb-20 md:mb-28 lg:mb-[90px] px-4">
+      <div
+        className="flex flex-col text-center items-center mb-20 md:mb-28 lg:mb-[90px] px-4"
+        dir={currentLang === "ar" ? "rtl" : "ltr"}
+      >
         <div className="mb-16 lg:mb-[60px] -ml-2 md:-ml-4 lg:-ml-8">
           <div
-            className={`text-start flex flex-col md:flex-row items-center text-[#C05D1B] font-bold xs:mb-1 md:mb-0 ${
-              currentLang === "ar" ? "md:flex-row-reverse " : ""
-            }`}
+            className={`text-start flex flex-col md:flex-row items-center text-[#C05D1B] font-bold xs:mb-1 md:mb-0 `}
           >
             <img
               src={HajjGroup}
@@ -57,14 +58,17 @@ function Umrah_Standard() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-start text-lg px-4 md:px-12 lg:px-[153px] mb-12 md:mb-20 lg:mb-[132px]">
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 gap-8 text-start text-lg px-4 md:px-12 lg:px-[153px] mb-12 md:mb-20 lg:mb-[132px]"
+        dir={currentLang === "ar" ? "rtl" : "ltr"}
+      >
         <div
           className={`grid grid-cols-4 gap-4 mb-10 ${
             currentLang === "ar" ? "text-right" : "text-left"
           } `}
         >
           <img src={Visa} alt="Visa Processing" className="col-span-1 w-full" />
-          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
+          <div className={`col-span-3`}>
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               01
             </h1>
@@ -83,7 +87,7 @@ function Umrah_Standard() {
           } `}
         >
           <img src={RoundTrip} alt="Round-trip" className="col-span-1 w-full" />
-          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
+          <div className={`col-span-3`}>
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               02
             </h1>
@@ -101,7 +105,7 @@ function Umrah_Standard() {
           } `}
         >
           <img src={Airport} alt="Round-trip" className="col-span-1 w-full" />
-          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
+          <div className={`col-span-3`}>
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               03
             </h1>
@@ -123,7 +127,7 @@ function Umrah_Standard() {
             alt="Round-trip"
             className="col-span-1 w-full"
           />
-          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
+          <div className={`col-span-3`}>
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               04
             </h1>
@@ -145,7 +149,7 @@ function Umrah_Standard() {
             alt="Round-trip"
             className="col-span-1 w-full"
           />
-          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
+          <div className={`col-span-3`}>
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               05
             </h1>
@@ -163,7 +167,7 @@ function Umrah_Standard() {
           } `}
         >
           <img src={Visits} alt="Round-trip" className="col-span-1 w-full" />
-          <div className={`col-span-3 order-last ${currentLang === "ar" ? "order-first" : ""}`}>
+          <div className={`col-span-3`}>
             <h1 className="text-[32px] md:text-[40px] lg:text-[50px] text-[#B57439] font-bold mb-2 md:mb-4 lg:mb-[22px]">
               06
             </h1>
