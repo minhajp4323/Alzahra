@@ -49,7 +49,7 @@ function Home() {
             className="absolute bottom-0 z-0 sm:hidden w-[92%] max-w-[700px]"
             style={{ height: "auto" }}
           />
-          <div className="mt-auto absolute md:-bottom-9 sm:-bottom-9 xs:-bottom-6 left-1/2 transform -translate-x-1/2 flex justify-center items-center z-50 w-auto max-w-full xs:max-w-[70%]">
+          <div className="mt-auto absolute md:-bottom-9 sm:-bottom-9 xs:-bottom-6 left-1/2 transform -translate-x-1/2 flex justify-center items-center z-0 w-auto max-w-full xs:max-w-[70%] ">
             <ServicesMenu />
           </div>
         </div>

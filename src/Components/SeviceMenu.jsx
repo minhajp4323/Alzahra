@@ -31,7 +31,7 @@ function ServicesMenu() {
   return (
     <div
       ref={menuRef}
-      className="w-auto bg-white rounded-[20px] shadow-[0_4px_40px_#EDB480] mx-auto p-6 px-8 transition-all duration-300 ease-in-out text-[18px] z-50"
+      className="w-auto bg-white rounded-[20px] shadow-[0_4px_40px_#EDB480] mx-auto p-6 px-8 transition-all duration-300 ease-in-out text-[18px]"
     >
       <div className="flex items-center justify-around space-x-6">
         <button

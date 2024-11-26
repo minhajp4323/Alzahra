@@ -15,7 +15,7 @@ function Contact() {
 
   useEffect(() => {
     const updateBackground = () => {
-      setBackgroundImage(window.innerWidth < 768 ? GetInTouchMob : GetInTouch);
+      setBackgroundImage(window.innerWidth < 768 ? "none" : GetInTouch);
     };
 
     updateBackground(); 
@@ -36,7 +36,7 @@ function Contact() {
       </header>
 
       <section
-        className="relative w-full flex justify-center  items-center"
+        className="relative w-full flex justify-center  items-center mt-0 xs:-mt-20"
         aria-labelledby="contact-info"
       >
         <div
@@ -46,7 +46,7 @@ function Contact() {
           }}
         >
           <div className="absolute bg-transparent border-[3px] border-[#B0876B] md:p-[59px] xs:p-[20px] sm:ml-[5%]  lg:ml-[13%] md:ml-[70px] -mb-7 xs:ml-[8%] shadow-md xs:h-[80.2%] sm:h-[80.8%]  md:h-[80.2%] lg:h-[80.2%] md:w-[350px] sm:w-[90%] xs:w-[85%] text-center flex items-center justify-center bottom-0 left-0"></div>
-          <div className="absolute bg-[#171717] md:bg-opacity-70 xs:bg-opacity-50 md:p-[59px] xs:p-[20px] lg:ml-[10%] md:ml-[35px] xs:ml-0 shadow-md xs:h-[72.8%] sm:h-[72.8%]  md:h-[72.1%] lg:h-[72.2%] md:w-[420px] xs:w-screen text-center backdrop-blur-[10px] flex items-center justify-center bottom-0 left-0">
+          <div className="absolute bg-[#171717] md:bg-opacity-70 xs:bg-opacity-80 md:p-[59px] xs:p-[20px] lg:ml-[10%] md:ml-[35px] xs:ml-0 shadow-md xs:h-[72.8%] sm:h-[72.8%]  md:h-[72.1%] lg:h-[72.2%] md:w-[420px] xs:w-screen text-center backdrop-blur-[10px] flex items-center justify-center bottom-0 left-0">
             <p
               className={`text-white text-[24px] text-left leading-relaxed ${
                 currentLang === "ar" ? "text-right" : "text-left"

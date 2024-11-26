@@ -41,7 +41,7 @@ function Hajj_Individual() {
             </div>
           </div>
 
-          <div className="md:text-start sm:text-center text-[#7D7D7D] text-[20px] md:text-[24px] lg:text-[30px] -mt-6 md:-mt-8 lg:-mt-12 ml-0 md:ml-24 lg:ml-[272px] font-bold">
+          <div className="md:text-start sm:text-center text-[#7D7D7D] text-[20px] md:text-[24px] lg:text-[30px] mt-4 md:-mt-8 lg:-mt-12 ml-0 md:ml-24 lg:ml-[272px] font-bold">
             <Trans ns="HajjIndividual" i18nKey="Experience" />
           </div>
         </div>

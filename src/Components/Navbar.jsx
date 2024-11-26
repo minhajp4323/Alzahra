@@ -126,7 +126,7 @@ function Header() {
           <button
             className="text-2xl"
             onClick={() => {
-              window.scrollTo(0, 0);
+              // window.scrollTo(0, 0);
             }}
           >
             {isOpen ? <span>&#10005;</span> : <span>&#9776;</span>}
@@ -135,9 +135,11 @@ function Header() {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed top-0 left-0 w-full shadow-lg z-40 transform transition-transform duration-300 ${
+          className={`fixed top-0 left-0 w-full shadow-lg transform transition-transform duration-300 ${
             isOpen ? "translate-y-0" : "-translate-y-full"
-          } ${isAboutPage ? "bg-black text-white" : "bg-white text-black"}`}
+          } ${
+            isAboutPage ? "bg-black text-white" : "bg-white text-black"
+          } z-[505]`}
         >
           <ul className="list-none flex flex-col p-6 gap-4 text-center">
             <li
@@ -439,7 +441,7 @@ function Header() {
 
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-30"
+          className="fixed inset-0 bg-black bg-opacity-50 -z-10"
           onClick={() => setIsOpen(false)}
         ></div>
       )}
