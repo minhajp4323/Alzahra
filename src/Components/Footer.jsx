@@ -18,7 +18,7 @@ function Footer() {
 
   return (
     <div
-      className={`flex flex-col md:flex-row gap-8 justify-between p-16 xs:gap-2 text-center md:text-left 
+      className={`flex flex-col md:flex-row gap-8 justify-between p-16 xs:gap-2 text-center md:text-left  w-full
       ${
         isAboutPage
           ? "bg-gradient-to-t from-[#1D408A] to-transparent"

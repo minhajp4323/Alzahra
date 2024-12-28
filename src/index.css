@@ -30,6 +30,7 @@
 body {
   overflow-x: hidden;
   font-family: "Jeko", sans-serif;
+  height: 100%;
 }
 
 body.lang-ar {

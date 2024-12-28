@@ -42,7 +42,7 @@ function App() {
   }, [i18n, currentLanguage, isFirstVisit, navigate]);
 
   return (
-    <div
+    <div className=" h-[100%]"
       style={{
         background:
           location.pathname === "/"
